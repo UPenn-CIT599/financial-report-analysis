@@ -12,13 +12,14 @@ import java.util.*;
 
 
 public class FileReader {
-										
+	
+	//Instance variable
 	private String fileName;				// fileName is the file we'll read in
 	private ArrayList<String> fileReadIn;	//	and fileReadIn is the ArrayList we'll create
-	
-	
 		
-	public FileReader(String file) {			//This is our constructor
+	
+	//Constructor
+	public FileReader(String file) {			
 		fileName = file;
 		fileReadIn = new ArrayList<String>();	//fileReadIn is simply an ArrayList of Strings
 		readFile();								//run the readFile method to create the actual object
@@ -40,12 +41,14 @@ public class FileReader {
 				fileReadIn.add(word);
 			}
 			in.close();			//close resource
-		}
+		}//END try loop
 		catch (Exception e) {
 			e.printStackTrace();
-		}
-	}
+		}//END catch loop
+	}//END readFile method
 
+	
+	//Getters (no setters)
 	public String getfileName() {
 		return fileName;
 	}
