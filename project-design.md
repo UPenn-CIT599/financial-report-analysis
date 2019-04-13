@@ -16,11 +16,8 @@ This class takes the string or .txt file from DataReader and parses the appropri
 
 ### Responsibilities
 - Constructor: will call all the below methods, then construct the appropriate FinancialData object. 
+- parseRevenue()
 - parseNetIncome()
-- parseEBITDA()
-- parseEBITA()
-- parseAdjustedEBITDA()
-- parseAdjustedEBITA()
 - parseAdjustedNonGAAPNetIncome()
 - parseFinancialYear()
 - parseFinancialQuarter
@@ -36,8 +33,9 @@ This class takes the string or .txt file from DataReader and parses the appropri
 This Class stores the financial data read from the pdf or url. Each object represent 1 quarter result of 1 company. It also include a hashmap to store word count read from a company statement / financial statements in order to feed into a Sentiment Analysis class
 
 ### Responsibilities
-- Have "Net Income", "EBITDA", "EBITA"
-- Have "Adjusted EBITDA", "Adjusted EBITA", "nonGAAP Net Income"
+- Have "Revenue"
+- Have "Net Income"
+- Have "nonGAAP Net Income"
 - Have "Financial Year", "Financial Quarter", "Company Name"
 - Have a HashMap "Word Count"
 - Have a String "compStatement"
