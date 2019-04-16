@@ -1,0 +1,1590 @@
+ 
+ 
+1 
+ 
+  
+ 
+ 
+Alibaba Group Announces December Quarter 2018 Results 
+Hangzhou, China, January 30, 2019 – Alibaba Group Holding Limited (NYSE: BABA) today announced 
+its financial results for the quarter ended December 31, 2018. 
+“Alibaba had another strong quarter. Our resilient operating and financial performance is a direct reflection 
+of our persistent focus on better serving our growing base of nearly 700 million consumers across retail, 
+digital entertainment and local consumer services,” said Daniel Zhang, Chief Executive Officer of Alibaba 
+Group.  “Our growth is also driven by the power of Alibaba’s cloud and data technology that helps expedite 
+the digital transformation of millions of enterprises.” 
+ 
+“In the December quarter, we delivered strong top-line growth of 41% year-over-year,” said Maggie Wu, 
+Chief Financial Officer of Alibaba Group.  “The profitability of our marketplace-based core commerce 
+business, as measured by adjusted EBITA, was RMB54.3 billion (US$7.9 billion), representing a 31% year-
+over-year growth.  This profitability and US$7.5 billion in free cash flow generated this quarter enable us to 
+continue to invest in other important strategic businesses and technology to support the growth of our 
+ecosystem.” 
+ 
+BUSINESS HIGHLIGHTS  
+In the quarter ended December 31, 2018: 
+ Revenue was RMB117,278 million (US$17,057 million), an increase of 41% year-over-year. 
+ Revenue from core commerce increased 40% year-over-year to RMB102,843 million 
+(US$14,958 million). 
+ Revenue from cloud computing increased 84% year-over-year to RMB6,611 million (US$962 
+million). 
+ Revenue from digital media and entertainment increased 20% year-over-year to RMB6,491 
+million (US$944 million). 
+ Revenue from innovation initiatives and others increased 73% year-over-year to RMB1,333 
+million (US$193 million). 
+ Annual active consumers on our China retail marketplaces reached 636 million, an increase of 35 
+million from the 12-month period ended September 30, 2018.  
+ Mobile MAUs on our China retail marketplaces reached 699 million in December 2018, an increase 
+of 33 million over September 2018. 
+ 
+ 
+2 
+ 
+  
+ Income from operations was RMB26,798 million (US$3,898 million), an increase of 3% year-over-
+year.  Adjusted EBITDA increased 13% year-over-year to RMB40,708 million (US$5,921 million). 
+ Adjusted EBITA for core commerce was RMB46,079 million (US$6,702 million), an increase of 
+20% year-over-year.  Our marketplace-based core commerce adjusted EBITA (see definition at 
+the end of this results announcement), a non-GAAP measurement, increased 31% year-over-year to 
+RMB54,303 million (US$7,898 million). 
+ Net income attributable to ordinary shareholders was RMB33,052 million (US$4,807 million), 
+and net income was RMB30,964 million (US$4,504 million), representing a year-over-year increase 
+of 37% and 33%, respectively. 
+ Non-GAAP net income was RMB29,797 million (US$4,334 million). Diluted EPS was RMB12.64 
+(US$1.84) and non-GAAP diluted EPS was RMB12.19 (US$1.77). 
+ Net cash provided by operating activities was RMB64,898 million (US$9,439 million) and non-
+GAAP free cash flow was RMB51,373 million (US$7,472 million). 
+BUSINESS AND STRATEGIC UPDATES 
+Core Commerce 
+ 
+Taobao – robust user growth and enhanced engagement.  In December 2018, our China retail 
+marketplaces had 699 million mobile MAUs, representing a quarterly net increase of 33 million.  Annual 
+active consumers on our China retail marketplaces was 636 million for the 12 months ended December 31, 
+2018, compared to 601 million for the 12 months ended September 30, 2018, reflecting successful user 
+acquisition programs, such as referrals through the Alipay App, and is an early indicator of transaction 
+activity on our platforms.  Over 70% of the increase in annual active consumers was from third-and-lower 
+tier cities, demonstrating the success of our initiatives to cater to a broader base of users through simpler 
+interfaces for first-time or less frequent users.  Ongoing enhancements in search and personalized 
+recommendations on the Taobao App drove increased user engagement and purchase conversion. 
+ 
+Tmall – extending B2C market leadership.  Tmall continued to extend its B2C market leadership and 
+consumer wallet share.  Excluding unpaid orders, Tmall physical goods GMV grew 29% year-over-year in 
+the quarter ended December 31, 2018, outpacing the industry and reflecting strong secular consumption 
+trends.  This robust growth was driven by strength in the fast-moving consumer goods (FMCG), apparel and 
+home furnishing categories.   
+ 
+Our annual 11.11 Global Shopping Festival was another record-breaking event, generating RMB213.5 billion 
+in GMV settled through Alipay on our marketplaces, up 27% year-over-year.  The robust GMV growth was 
+driven by an increase in the number of buyers through higher user traffic generation and improved 
+conversion rates.  Over 40% of Chinese consumers on 11.11 made purchases from international brands, and 
+overseas consumers from 230 countries and regions also made purchases during the festival.  This year’s 
+Global Shopping Festival saw the most extensive participation and synergy creation by our business units, 
+which this year went well beyond our China retail marketplaces, to encompass our offerings in online video 
+entertainment, local services, cross-border e-commerce and store-based retail.  The success of the festival 
+demonstrated the strength of our technology and logistics infrastructure, as well as payment and other e-
+commerce ecosystem partners, operating at massive scale. 
+ 
+ 
+ 
+3 
+ 
+  
+Tmall extended its leadership position as the engagement and distribution platform of choice in China for 
+global brands.  During the quarter, brands including Valentino, Ermenegildo Zegna, Stuart Weitzman and 
+Sergio Rossi opened Tmall flagship stores and joined the Tmall Luxury Pavilion. 
+ 
+New Retail – redefining the future of brick-and-mortar.  Our New Retail strategy is transforming the 
+traditional retail industry by digitizing all aspects of store-based retail operations.  We enable traditional 
+retailers to deliver an unrivalled consumer experience and achieve operating efficiency through our consumer 
+insight technology, on-demand delivery, inventory tracking, supply chain management and mobile payment 
+solutions.  As of the end of the quarter, we have digitized approximately 470 Sun Art stores with our New 
+Retail know-how and technology, enabling these stores to better manage their retail systems, while allowing 
+consumers to place orders through the Taobao App and secure delivery through our on-demand delivery 
+platform. 
+ 
+Our proprietary grocery retail chain Freshippo (formerly Hema) continued to expand its footprint, optimize 
+its stores and introduce new initiatives that improve customer experience.  As of December 31, 2018, there 
+were 109 self-operated Freshippo stores in China, primarily located in tier 1 and tier 2 cities.  During the 
+quarter, Freshippo continued to achieve robust same-store sales growth.  
+ 
+Local consumer services – driving greater value to consumers and merchants in the local consumer 
+service industry.  In December 2018, we combined our on-demand food delivery platform Ele.me with our 
+restaurant and local service guide platform Koubei to create a discrete business that we call “local consumer 
+services.”  This business is financed with over US$3 billion in equity capital from Alibaba, SoftBank and 
+other third party investors.  During the quarter, daily on-demand orders and GMV continued to show strong 
+growth.  Our local consumer services business is an important part of our consumer-facing platform, which 
+leverages our 636 million annual active consumers to further penetrate the local services market, increasing 
+our ability to tap into China’s ongoing consumption upgrade.  In addition, we expect that our commerce 
+platform technology, know-how and infrastructure will deliver consumer insights and digitized operational 
+solutions to empower local merchants on the platform. 
+ 
+Cainiao Network – facilitating enhanced delivery experiences for the continuing consumption upgrade 
+of Chinese consumers.  During the 2018 11.11 Global Shopping Festival, Cainiao processed an 
+unprecedented over 1 billion delivery orders, demonstrating Cainiao’s capability to coordinate a complex 
+logistics ecosystem at massive scale.  Internationally, we saw continued growth in Chinese consumer 
+demand for high quality imports from Japan, the United States, South Korea, Australia and Germany – the 
+top five countries selling into China during the festival.  To ensure a smooth and timely delivery experience 
+for consumers during the festival, Cainiao and its partners operated 34 bonded warehouses in major ports 
+throughout China to facilitate same-day or next-day delivery of overseas orders. 
+ 
+International – building foundation for growth in Southeast Asia.  During the quarter, we emphasized 
+strengthening Lazada’s third-party marketplace business, which witnessed robust growth in GMV.  At the 
+same time, we reduced exposure to direct product sales in select merchandise categories, as we believe this 
+strategy will best position Lazada for sustainable and scalable long-term growth.  We have upgraded 
+Lazada’s technology, which resulted in robust increase in active users and greater user engagement on 
+Lazada’s mobile app.  We continue to invest resources to integrate Lazada’s business and technology 
+operations into Alibaba with the aim of building a strong foundation for us to extend our offerings in 
+Southeast Asia. 
+ 
+As it relates to cross-border, our priority is to meet rising demand for high-quality imported products to serve 
+Chinese consumers.  At China’s inaugural Global Import Leadership Summit held in Shanghai in November, 
+ 
+ 
+4 
+ 
+  
+we announced a commitment to import US$200 billion of goods from all over the world over the next five 
+years.  To this end, we expect to significantly invest in our supply chain capabilities, overseas supplier 
+enablement, import platform operations as well as cross-border logistics. 
+ 
+Cloud Computing 
+ 
+Cloud computing revenue grew 84% year-over-year to RMB6,611 million (US$962 million), primarily 
+driven by increased spending from enterprise customers.  During the December 2018 quarter, Alibaba Cloud 
+launched 678 new products and features, including those related to core cloud offerings, data intelligence, AI 
+applications, security and enterprise solutions. 
+ 
+In November 2018, we appointed Jeff Zhang as president of Alibaba Cloud, adding to his responsibility on 
+top of his role as our Chief Technology Officer.  We believe that placing Alibaba Cloud under the leadership 
+of our group’s overall technology management will enable our cloud business to leverage the best-in-class 
+technology innovations of the entire group.  Under this framework, we can make available to customers of 
+Alibaba Cloud much of the proprietary technology we use in our own business, such as infrastructure 
+technology, data management and value-added services. 
+ 
+Digital Media and Entertainment 
+ 
+The synergies between our commerce and entertainment businesses continue to deliver a superior user 
+experience that helps us increase paying subscribers for the Youku online video platform. During the quarter, 
+Youku’s average daily subscribers increased 64% year-over-year. 
+ 
+To more closely align the distribution business with our content strategy, during the quarter, we agreed to 
+increase our stake in Alibaba Pictures to approximately 51%, subject to approval by Alibaba Pictures’ 
+independent shareholders.  Upon closing, Alibaba Pictures will become our consolidated subsidiary, and our 
+digital media and entertainment businesses, including Youku, Damai and Alibaba Literature, will begin to 
+collaborate more closely with Alibaba Pictures.  We have also named Luyuan Fan, the Chairman and CEO of 
+Alibaba Pictures, as the president of our digital media and entertainment business.  We believe increased 
+alignment of strategy and management will put our digital media and entertainment business in a stronger 
+position to deliver competitive offerings to consumers.  
+ 
+Cash Flow from Operating Activities and Free Cash Flow 
+Net cash provided by operating activities in the quarter ended December 31, 2018 was RMB64,898 million 
+(US$9,439 million), an increase of 17% compared to RMB55,428 million in the same quarter of 2017.  Free 
+cash flow, a non-GAAP measurement of liquidity, in the quarter ended December 31, 2018 increased by 11% 
+to RMB51,373 million (US$7,472 million), from RMB46,399 million in the same quarter of 2017.  A 
+reconciliation of net cash provided by operating activities to free cash flow is included at the end of this 
+results announcement. 
+Share Repurchase 
+ 
+In September 2018, we announced an ADS repurchase plan to implement the previously announced US$6 
+billion share repurchase program.  Including the repurchase of approximately 9.12 million ADSs already 
+announced in our prior earnings release on November 2, 2018, we have now repurchased approximately 
+10.86 million of our ADSs for a total of approximately US$1.57 billion as of January 29, 2019. 
+ 
+ 
+5 
+ 
+  
+KEY OPERATIONAL METRICS* 
+ 
+December 31, 
+2017 
+September 30, 
+2018 
+December 31, 
+2018 
+Net adds 
+YoY QoQ 
+      
+China Commerce Retail:      
+Annual active consumers(1) (in millions) 515 601 636 121 35 
+Mobile monthly active users (MAUs)(2) (in 
+millions) 580 666 699 119 33 
+  
+* For definitions of terms used but not defined in this results announcement, please refer to our annual report on Form 20-F for 
+the fiscal year ended March 31, 2018.  
+(1) For the twelve months ended on the respective dates. 
+(2) For the month ended on the respective dates. 
+ 
+DECEMBER QUARTER SUMMARY FINANCIAL RESULTS 
+ Three months ended December 31,  
+ 2017 2018  
+ RMB RMB US$(1) 
+YoY %  
+Change 
+ (in millions, except percentages and per share amounts) 
+     
+Revenue 83,028 117,278 17,057 41% 
+     
+Income from operations 25,996 26,798 3,898 3% 
+Operating margin 31% 23%   
+Adjusted EBITDA(2) 36,183 40,708 5,921 13% 
+Adjusted EBITDA margin(2) 44% 35%   
+Adjusted EBITA(2) 33,662 36,567 5,318 9% 
+Adjusted EBITA margin(2) 41% 31%   
+     
+Net income 23,332 30,964 4,504 33% 
+Net income attributable to ordinary 
+shareholders 24,073 33,052 4,807 37% 
+Non-GAAP net income(2) 27,007 29,797 4,334 10% 
+     
+Diluted earnings per share/ADS (EPS) 9.20 12.64 1.84 37% 
+Non-GAAP diluted EPS(2) 10.61 12.19 1.77 15% 
+  
+(1) This results announcement contains translations of certain Renminbi (“RMB”) amounts into U.S. dollars (“US$”) for the 
+convenience of the reader. Unless otherwise stated, all translations of RMB into US$ were made at RMB6.8755 to US$1.00, 
+the exchange rate on December 31, 2018 as set forth in the H.10 statistical release of the Federal Reserve Board. The 
+percentages stated in this announcement are calculated based on the RMB amounts. 
+(2) See the sections entitled “Information about Segments,” “Non-GAAP Financial Measures” and “Reconciliations of Non-
+GAAP Measures to the Nearest Comparable GAAP Measures” for more information about the non-GAAP measures referred 
+to within this results announcement.  
+  
+ 
+ 
+6 
+ 
+  
+DECEMBER QUARTER INFORMATION BY SEGMENTS 
+The table below sets forth selected financial information of our operating segments for the periods indicated:  
+ 
+ Three months ended December 31, 2018 
+  
+Core 
+commerce 
+ 
+Cloud 
+computing 
+Digital media 
+and 
+entertainment 
+Innovation 
+initiatives 
+and others 
+ 
+ 
+Unallocated(1) 
+ 
+ 
+Consolidated 
+ RMB RMB RMB RMB RMB RMB  US$ 
+ (in millions, except percentages) 
+Revenue 102,843 6,611 6,491 1,333 — 117,278 17,057 
+        
+Income (loss) from 
+operations 40,368 (1,233) (7,097) (2,549) (2,691) 26,798 3,898 
+Add: Share-based 
+compensation 
+expense 3,253 954 769 940 1,044 6,960 1,012 
+Add: Amortization 
+of intangible 
+assets 2,458 5 294 13 39 2,809 408 
+         
+Adjusted EBITA 46,079(2) (274) (6,034)(3) (1,596) (1,608) 36,567 5,318 
+Adjusted EBITA 
+margin 45%  (4)%  (93)% (120)% 
+ 
+ 31%  
+         
+ Three months ended December 31, 2017 
+  
+Core 
+commerce 
+ 
+Cloud 
+computing 
+Digital media 
+and 
+entertainment 
+Innovation 
+initiatives 
+and others 
+ 
+ 
+Unallocated(1) 
+ 
+ 
+Consolidated 
+ RMB RMB RMB RMB RMB RMB  
+ (in millions, except percentages) 
+Revenue 73,244 3,599 5,413 772 — 83,028 
+       
+Income (loss) from 
+operations 35,439 (793) (3,828) (1,814) (3,008) 25,996 
+Add: Share-based 
+compensation 
+expense 2,226 
+ 
+ 
+608 
+ 
+ 
+510 808 
+ 
+ 
+963 5,115 
+Add: Amortization 
+of intangible 
+assets 865 4 1,105 — 83 2,057 
+Add: Impairment of 
+goodwill — — — — 494 494 
+        
+Adjusted EBITA 38,530 (181) (2,213) (1,006) (1,468) 33,662 
+Adjusted EBITA 
+margin 53% (5)% (41)% (130)%  41% 
+  
+(1) Unallocated expenses are primarily related to corporate administrative costs and other miscellaneous items that are not 
+allocated to individual segments. 
+(2) Marketplace-based core commerce adjusted EBITA increased 31% year-over-year to RMB54,303 million (US$7,898 million). 
+(3) Adjusted EBITA loss include impairment charges on licensed copyrights of RMB2.8 billion (US$407 million). 
+  
+ 
+ 
+7 
+ 
+  
+DECEMBER QUARTER OPERATIONAL AND FINANCIAL RESULTS 
+Revenue 
+Revenue for the quarter ended December 31, 2018 was RMB117,278 million (US$17,057 million), an 
+increase of 41% compared to RMB83,028 million in the same quarter of 2017.  The increase was mainly 
+driven by the robust revenue growth of our China commerce retail business, the consolidation of Ele.me, as 
+well as strong revenue growth of Alibaba Cloud. 
+The following table sets forth a breakdown of our revenue by segment for the periods indicated: 
+ Three months ended December 31,  
+ 2017 2018  
+ RMB 
+% of 
+Revenue RMB US$ 
+% of 
+Revenue 
+YoY % 
+Change  
+ (in millions, except percentages) 
+Core commerce:       
+China commerce retail       
+   - Customer management 38,800 47% 49,592 7,213 42% 28% 
+   - Commission 16,221 19% 20,165 2,933 17% 24% 
+   - Others 5,084 6% 11,298 1,643 10% 122% 
+ 60,105 72% 81,055 11,789 69% 35% 
+China commerce wholesale 1,926 2% 2,694 392 2% 40% 
+International commerce retail 4,733 6% 5,834 849 5% 23% 
+International commerce wholesale 1,666 2% 2,175 316 2% 31% 
+Cainiao logistics services 3,907 5% 4,491 653 4% 15% 
+Local consumer services — — 5,159 750 5% N/A 
+Others 907 1% 1,435 209 1% 58% 
+Total core commerce 73,244 88% 102,843 14,958 88% 40% 
+       
+Cloud computing 3,599 4% 6,611 962 6% 84% 
+Digital media and entertainment 5,413 7% 6,491 944 5% 20% 
+Innovation initiatives and others 772 1% 1,333 193 1% 73% 
+Total 83,028 100% 117,278 17,057 100% 41% 
+ 
+Core commerce 
+ China commerce retail business 
+Revenue – Revenue from our China commerce retail business in the quarter ended December 31, 
+2018 was RMB81,055 million (US$11,789 million), an increase of 35% compared to RMB60,105 
+million in the same quarter of 2017. Revenue from our China retail marketplaces continued to see 
+strong growth. Combined customer management and commission revenues grew 27% year-over-year, 
+which represents an increase of 28% in customer management revenue and an increase of 24% in 
+commission revenue.  The growth of customer management revenue was primarily the result of 
+increases in the volume of paid clicks driven by higher click-through rate.  The growth of commission 
+revenue was primarily due to strong 29% year-over-year growth of Tmall physical goods GMV 
+(excluding unpaid orders).  The discrepancy of growth rates between commission revenue and Tmall 
+physical goods GMV (excluding unpaid orders) is primarily due to our adoption of a new accounting 
+requirement, which has the effect of spreading out recognition of revenue from annual service fees 
+received from Tmall merchants, whereas we previously recognized these fees at the end of each 
+ 
+ 
+8 
+ 
+  
+calendar year.  “Others” revenue was RMB11,298 million (US$1,643 million), a significant increase 
+compared to RMB5,084 million in the same quarter of 2017, primarily driven by contributions from 
+Freshippo, Tmall Direct Import and other direct sale businesses. 
+Mobile MAUs – Mobile MAUs on our China retail marketplaces grew to 699 million in December 
+2018, compared to 666 million in September 2018, representing a net addition of 33 million MAUs in 
+the quarter, a 21% increase from 580 million in December 2017. 
+Annual active consumers – Our China retail marketplaces had 636 million annual active consumers 
+for the 12 months ended December 31, 2018, compared to 601 million for the 12 months ended 
+September 30, 2018, representing a net addition of 35 million, and a 23% increase from 515 million 
+in the 12 months ended December 31, 2017.  During the quarter, over 70% of the increase in annual 
+active consumers was from third-and-lower tier cities, demonstrating the success of our initiatives to 
+cater to a broader base of users through simpler interfaces for first-time or less frequent users.  The 
+longer consumers have been with our platform, the more they spend and the more orders they place 
+across more product categories. 
+ China commerce wholesale business  
+Revenue from our China commerce wholesale business in the quarter ended December 31, 2018 was 
+RMB2,694 million (US$392 million), an increase of 40% compared to RMB1,926 million in the 
+same quarter of 2017. The increase was primarily due to an increase in the average revenue from 
+paying members on 1688.com, our domestic wholesale marketplace. 
+ International commerce retail business 
+Revenue from our international commerce retail business in the quarter ended December 31, 2018 
+was RMB5,834 million (US$849 million), an increase of 23% compared to RMB4,733 million in the 
+same quarter of 2017.  The increase was primarily due to our consolidation of Trendyol, Turkey’s 
+leading e-commerce platform.  Lazada’s revenue growth was slower than prior quarters primarily due 
+to a decrease in revenue generated from our direct sales business (where revenue is recorded on a 
+gross basis including the cost of inventory).  During the quarter, Lazada strengthened its core 
+marketplace businesses and reduced exposure to direct sales in select merchandise categories.  This 
+business model shift resulted in accelerating marketplace GMV growth, although direct sales revenue 
+declined during the same period.  
+ International commerce wholesale business  
+Revenue from our international commerce wholesale business in the quarter ended December 31, 
+2018 was RMB2,175 million (US$316 million), an increase of 31% compared to RMB1,666 million 
+in the same quarter of 2017.  The increase was primarily due to increases in the average revenue from 
+paying members and the number of paying members on Alibaba.com, our global wholesale 
+marketplace. 
+ Cainiao logistics services  
+Revenue from Cainiao logistics services, which represents revenue from the domestic and 
+international one-stop-shop logistics services and supply chain management solutions provided by 
+Cainiao Network, after elimination of inter-company transactions, was RMB4,491 million (US$653 
+million), an increase of 15% compared to RMB3,907 million in the same quarter of 2017.  
+ 
+ 
+9 
+ 
+  
+ Local consumer services 
+Revenue from local consumer services, which primarily represents revenues from platform 
+commissions, provision of food delivery services and other services provided by our on-demand food 
+delivery platform Ele.me, was RMB5,159 million (US$750 million).  We started to consolidate 
+Ele.me in May 2018 and Koubei in December 2018. 
+Cloud computing 
+Revenue from our cloud computing business in the quarter ended December 31, 2018 was RMB6,611 
+million (US$962 million), an increase of 84% compared to RMB3,599 million in the same quarter of 2017, 
+primarily driven by increased spending from enterprise customers. 
+Digital media and entertainment 
+Revenue from our digital media and entertainment business in the quarter ended December 31, 2018 was 
+RMB6,491 million (US$944 million), an increase of 20% compared to RMB5,413 million in the same 
+quarter of 2017.  The increase was primarily due to an increase in revenue from mobile value-added services 
+provided by UCWeb, such as mobile search and game publishing, and an increase in subscription revenue 
+from Youku. 
+Innovation initiatives and others 
+Revenue from innovation initiatives and others in the quarter ended December 31, 2018 was RMB1,333 
+million (US$193 million), an increase of 73% compared to RMB772 million in the same quarter of 2017.  
+The increase was mainly due to an increase in revenue from Tmall Genie and Amap.  
+Costs and Expenses 
+The following tables set forth a breakdown of our costs and expenses, share-based compensation expense 
+and costs and expenses excluding share-based compensation expense by function for the periods indicated. 
+ Three months ended December 31, 
+% of 
+Revenue 
+YoY 
+change 
+ 
+2017 2018 
+ RMB 
+% of 
+Revenue RMB US$ 
+% of 
+Revenue 
+ (in millions, except percentages) 
+Costs and expenses:       
+Cost of revenue 35,078 42% 60,813 8,845 52% 10% 
+Product development expenses 6,289 7% 8,901 1,295 8% 1% 
+Sales and marketing expenses 8,542 10% 12,104 1,760 10% 0% 
+General and administrative expenses 4,572 6% 5,853 851 5% (1)% 
+Amortization of intangible assets 2,057 3% 2,809 408 2% (1)% 
+Impairment of goodwill 494 1% — — — (1)% 
+Total costs and expenses 57,032 69% 90,480 13,159 77% 8% 
+       
+Share-based compensation expense 
+by function:       
+Cost of revenue 1,328 2% 1,582 230 2% 0% 
+Product development expenses 1,895 2% 2,987 434 3% 1% 
+Sales and marketing expenses 469 0% 838 122 0% 0% 
+ 
+ 
+10 
+ 
+  
+General and administrative expenses  1,423 2% 1,553 226 1% (1)% 
+Total share-based compensation 
+expense  5,115 6% 6,960 1,012 6% 0% 
+       
+Costs and expenses excluding share-
+based compensation expense: 
+      
+Cost of revenue 33,750 40% 59,231 8,615 50% 10% 
+Product development expenses 4,394 5% 5,914 861 5% 0% 
+Sales and marketing expenses 8,073 10% 11,266 1,638 10% 0% 
+General and administrative expenses 3,149 4% 4,300 625 4% 0% 
+Amortization of intangible assets 2,057 3% 2,809 408 2% (1)% 
+Impairment of goodwill 494 1% — — — (1)% 
+Total costs and expenses excluding 
+share-based compensation expense 51,917 63% 83,520 12,147 71% 8% 
+ 
+Cost of revenue – Cost of revenue in the quarter ended December 31, 2018 was RMB60,813 million 
+(US$8,845 million), or 52% of revenue, compared to RMB35,078 million, or 42% of revenue, in the same 
+quarter of 2017. Without the effect of share-based compensation expense, cost of revenue as a percentage of 
+revenue would have increased from 40% in the quarter ended December 31, 2017 to 50% in the quarter 
+ended December 31, 2018. The increase was primarily due to (i) our consolidation of Ele.me, (ii) an increase 
+of the cost of inventory and logistics from our New Retail and direct import businesses, as well as (iii) an 
+increase in content spending by Youku on original content and impairment charges on licensed copyrights of 
+RMB2.8 billion (US$407 million). 
+Product development expenses – Product development expenses in the quarter ended December 31, 2018 
+were RMB8,901 million (US$1,295 million), or 8% of revenue, compared to RMB6,289 million, or 7% of 
+revenue, in the same quarter of 2017. Without the effect of share-based compensation expense, product 
+development expenses as a percentage of revenue would have remained stable at 5% in the quarter ended 
+December 31, 2018 and the same quarter last year. 
+Sales and marketing expenses – Sales and marketing expenses in the quarter ended December 31, 2018 
+were RMB12,104 million (US$1,760 million), or 10% of revenue, compared to RMB8,542 million, or 10% 
+of revenue, in the same quarter of 2017. Without the effect of share-based compensation expense, sales and 
+marketing expenses as a percentage of revenue would have remained stable at 10% in the quarter ended 
+December 31, 2018 and the same quarter last year. 
+General and administrative expenses – General and administrative expenses in the quarter ended 
+December 31, 2018 were RMB5,853 million (US$851 million), or 5% of revenue, compared to RMB4,572 
+million, or 6% of revenue, in the same quarter of 2017. Without the effect of share-based compensation 
+expense, general and administrative expenses as a percentage of revenue would have remained stable at 4% 
+in the quarter ended December 31, 2018 and the same quarter last year.  
+Share-based compensation expense – Total share-based compensation expense included in the cost and 
+expense items above in the quarter ended December 31, 2018 was RMB6,960 million (US$1,012 million), an 
+increase of 36% compared to RMB5,115 million in the same quarter of 2017. Share-based compensation 
+expense as a percentage of revenue remained stable at 6% in the quarter ended December 31, 2018 and the 
+same quarter last year. The following table sets forth our analysis of share-based compensation expense for 
+the quarters indicated by type of share-based awards: 
+ 
+ 
+ 
+11 
+ 
+  
+ Three months ended   
+ 
+December 31,  
+2017 
+September 30, 
+2018 
+December 31,  
+2018 
+% Change 
+ RMB 
+% of 
+Revenue RMB 
+% of 
+Revenue RMB US$ 
+% of 
+Revenue YoY QoQ 
+ (in millions, except percentages) 
+By type of awards:  
+Alibaba Group share-
+based awards 
+granted to:           
+- Our employees 4,371 5% 6,060 7% 5,853 851 5% 34% (3)% 
+- Ant Financial 
+employees and 
+other 
+consultants(1) 293 1% 105 
+ 
+ 
+0% 26 4 
+ 
+ 
+0% 
+ 
+ 
+(91)% (75)% 
+Ant Financial share-
+based awards 
+granted to our 
+employees(1) 232 0% 438 
+ 
+ 
+0% 505 73 
+ 
+ 
+0% 
+ 
+118% 15% 
+Others 219  0% 440 1% 576 84 1% 163% 31% 
+Total share-based 
+compensation 
+expense 5,115 6% 7,043 8% 6,960 1,012 6% 
+ 
+ 
+36% 
+ 
+ 
+(1)% 
+  
+(1) Awards subject to mark-to-market accounting treatment. 
+ 
+Share-based compensation expense related to Alibaba Group share-based awards granted to our employees 
+remained stable in this quarter compared to the previous quarter. We expect that our share-based 
+compensation expense will continue to be affected by changes in the fair value of our shares, our 
+subsidiaries’ share-based awards and the quantity of awards we grant to our employees and consultants in the 
+future.  Furthermore, we expect that our share-based compensation expense will continue to be affected by 
+future changes in the valuation of Ant Financial, although any such changes will be non-cash and will not 
+result in any economic cost or equity dilution to our shareholders. 
+Amortization of intangible assets – Amortization of intangible assets in the quarter ended December 31, 
+2018 was RMB2,809 million (US$408 million), an increase of 37% from RMB2,057 million in the same 
+quarter of 2017, primarily due to an increase in amortization of intangible assets acquired from business 
+combinations of Ele.me and Koubei. 
+Income from operations and operating margin 
+Income from operations in the quarter ended December 31, 2018 was RMB26,798 million (US$3,898 
+million), or 23% of revenue, an increase of 3% compared to RMB25,996 million, or 31% of revenue, in the 
+same quarter of 2017. 
+Adjusted EBITDA and Adjusted EBITA 
+Adjusted EBITDA increased 13% year-over-year to RMB40,708 million (US$5,921 million) in the quarter 
+ended December 31, 2018, compared to RMB36,183 million in the same quarter of 2017.  Adjusted EBITA 
+increased 9% year-over-year to RMB36,567 million (US$5,318 million) in the quarter ended December 31, 
+ 
+ 
+12 
+ 
+  
+2018, compared to RMB33,662 million in the same quarter of 2017.  Reconciliations of net income to 
+adjusted EBITDA and adjusted EBITA are included at the end of this results announcement.   
+Adjusted EBITA and adjusted EBITA margin by segments 
+Adjusted EBITA and adjusted EBITA margin by segments are set forth in the table below. See the section 
+entitled “Information about Segments” above for a reconciliation of income from operations to adjusted 
+EBITA. 
+ Three months ended December 31, 
+ 2017 2018 
+ RMB 
+% of 
+Revenue RMB US$ 
+% of 
+Revenue 
+ (in millions, except percentages) 
+      
+Core commerce 38,530 53% 46,079 6,702  45% 
+Cloud computing (181) (5)% (274) (40) (4)% 
+Digital media and entertainment (2,213) (41)% (6,034) (878) (93)% 
+Innovation initiatives and others (1,006)  (130)% (1,596) (232) (120)% 
+ 
+Core commerce segment – Adjusted EBITA increased by 20% to RMB46,079 million (US$6,702 million) 
+in the quarter ended December 31, 2018, compared to RMB38,530 million in the same quarter of 2017. 
+Marketplace-based core commerce adjusted EBITA increased 31% year-over-year to RMB54,303 million 
+(US$7,898 million).  Adjusted EBITA margin decreased from 53% in the quarter ended December 31, 2017 
+to 45% in the quarter ended December 31, 2018 due to strategic investments, primarily including aggressive 
+investment in local consumer services and gradual revenue mix shift towards self-operated New Retail and 
+direct import businesses where revenue is recorded on a gross basis including the cost of inventory. A 
+reconciliation of adjusted EBITA for core commerce to marketplace-based core commerce adjusted EBITA 
+is included at the end of this results announcement. 
+We expect that our core commerce adjusted EBITA margin will continue to be affected by the pace of our 
+investments in new businesses and revenue mix shift to self-operated New Retail and direct import 
+businesses. 
+Cloud computing segment – Adjusted EBITA in the quarter ended December 31, 2018 was a loss of 
+RMB274 million (US$40 million), compared to a loss of RMB181 million in the same quarter of 2017. 
+Adjusted EBITA margin improved to negative 4% in the quarter ended December 31, 2018 from negative 
+5% in the quarter ended December 31, 2017. 
+Digital media and entertainment segment – Adjusted EBITA in the quarter ended December 31, 2018 was 
+a loss of RMB6,034 million (US$878 million), compared to a loss of RMB2,213 million in the same quarter 
+of 2017. Adjusted EBITA margin decreased to negative 93% in the quarter ended December 31, 2018 from 
+negative 41% in the quarter ended December 31, 2017, primarily due to our investments in the production of 
+original content and licensing rights and impairment charges on licensed copyrights of RMB2.8 billion 
+(US$407 million), following a regular evaluation of programming that did not generate expected returns. 
+Innovation initiatives and others segment – Adjusted EBITA in the quarter ended December 31, 2018 was 
+a loss of RMB1,596 million (US$232 million), compared to a loss of RMB1,006 million in the same quarter 
+of 2017. The increase in adjusted EBITA loss was primarily due to investments in new business initiatives, 
+including Tmall Genie. 
+ 
+ 
+13 
+ 
+  
+Interest and investment income, net 
+Interest and investment income, net in the quarter ended December 31, 2018 was RMB11,560 million 
+(US$1,681 million), which mainly included a non-cash gain of RMB21,990 million (US$3,198 million) 
+arising from the revaluation of our previously held equity interest in Koubei when we obtained control in 
+December 2018. The gain was partly offset by impairment charges of RMB7,059 million (US$1,026 million) 
+on certain investments, as well as net loss arising from the change in fair value of certain equity investments. 
+Other income (loss), net 
+Other income, net in the quarter ended December 31, 2018 was RMB387 million (US$56 million), compared 
+to other loss, net of RMB348 million in the same quarter of 2017. The increase in other income was 
+primarily due to a decrease in exchange loss from a loss of RMB907 million in the quarter ended December 
+31, 2017 to a loss of RMB101 million (US$15 million) in the quarter ended December 31, 2018.  During the 
+quarter, we did not recognize any royalty fees and software technology service fees under our profit sharing 
+arrangement with Ant Financial.  In the current quarter, Ant Financial continued its strategic investments to 
+acquire new users and capture growth opportunities in the offline payment market.  Currently, Alipay and its 
+affiliates have over 1 billion annual active users globally.  In the coming quarters, Ant Financial expects to 
+continue investments aimed at capturing the strategic opportunities amid the digital transformation of 
+China’s real economy. 
+Income tax expenses 
+Income tax expenses in the quarter ended December 31, 2018 were RMB5,586 million (US$812 million), 
+compared to RMB6,663 million in the same quarter of 2017.  
+Our effective tax rate was 15% in the quarter ended December 31, 2018, compared to 14% in the same 
+quarter of 2017. Excluding share-based compensation expense, investment gain/loss and impairment of 
+investments, our effective tax rate would have been 21% in the quarter ended December 31, 2018. 
+Share of results of equity investees 
+Share of results of equity investees in the quarter ended December 31, 2018 was a loss of RMB861 million 
+(US$125 million), compared to a loss of RMB18,452 million in the same quarter of 2017.  We record our 
+share of results of equity investees one quarter in arrears. Share of results of equity investees in the quarter 
+ended December 31, 2018 and the comparative periods consisted of the following: 
+ Three months ended 
+ December 31, 2017 September 30, 2018 December 31, 2018 
+ RMB RMB RMB US$ 
+ (in millions) 
+Share of (loss) profit of equity 
+investees:     
+- Koubei(1) (580) — — — 
+- Other equity investees 681 1,735 22 3 
+Impairment loss (18,153)(3) — (493) (72) 
+Dilution (loss) gain (10) (41) 26 4 
+Others(2) (390) (440) (416) (60) 
+Total (18,452) 1,254 (861) (125) 
+  
+(1)  We started to consolidate Koubei in December 2018 after we obtained control. 
+ 
+ 
+14 
+ 
+  
+(2) Others mainly include amortization of intangible assets of equity investees and share-based compensation expense. 
+(3) As previously disclosed, in the quarter ended December 31, 2017, we took an impairment loss of RMB18,116 million with 
+respect to Alibaba Pictures, one of our affiliated movie production businesses.   
+ 
+Net income and Non-GAAP net income 
+Our net income in the quarter ended December 31, 2018 was RMB30,964 million (US$4,504 million), an 
+increase of 33% compared to RMB23,332 million in the same quarter of 2017.  
+Excluding share-based compensation expense, non-recurring disposal gains and certain other items, non-
+GAAP net income in the quarter ended December 31, 2018 was RMB29,797 million (US$4,334 million), an 
+increase of 10% compared to RMB27,007 million in the same quarter of 2017. A reconciliation of net 
+income to non-GAAP net income is included at the end of this results announcement.  
+Net income attributable to ordinary shareholders 
+Net income attributable to ordinary shareholders in the quarter ended December 31, 2018 was RMB33,052 
+million (US$4,807 million), an increase of 37% compared to RMB24,073 million in the same quarter of 
+2017. 
+Diluted EPS and non-GAAP diluted EPS  
+Diluted EPS in the quarter ended December 31, 2018 was RMB12.64 (US$1.84) on a weighted average of 
+2,614 million diluted shares outstanding during the quarter, an increase of 37% compared to RMB9.20 on a 
+weighted average of 2,615 million diluted shares outstanding during the same quarter of 2017. Excluding 
+share-based compensation expense, non-recurring disposal gains and certain other items, non-GAAP diluted 
+EPS in the quarter ended December 31, 2018 was RMB12.19 (US$1.77), an increase of 15% compared to 
+RMB10.61 in the same quarter of 2017. A reconciliation of diluted EPS to non-GAAP diluted EPS is 
+included at the end of this results announcement.  
+Cash, cash equivalents and short-term investments  
+As of December 31, 2018, cash, cash equivalents and short-term investments were RMB192,317 million 
+(US$27,972 million), compared to RMB171,875 million as of September 30, 2018. The increase in cash, 
+cash equivalents and short-term investments during the quarter ended December 31, 2018 was primarily due 
+to free cash flow generated from operations of RMB51,373 million (US$7,472 million), partly offset by cash 
+used in investment and acquisition activities of RMB22,888 million (US$3,329 million) and share repurchase 
+of RMB8,989 million (US$1,307 million).  Since announcing the ADS repurchase plan in September 2018, 
+we have repurchased approximately 10.86 million of our ADSs for a total of approximately US$1.57 billion 
+as of January 29, 2019. 
+Cash flow from operating activities and free cash flow 
+Net cash provided by operating activities in the quarter ended December 31, 2018 was RMB64,898 million 
+(US$9,439 million), an increase of 17% compared to RMB55,428 million in the same quarter of 2017. Free 
+cash flow, a non-GAAP measurement of liquidity, in the quarter ended December 31, 2018 was RMB51,373 
+million (US$7,472 million), compared to RMB46,399 million in the same quarter of 2017. A reconciliation 
+of net cash provided by operating activities to free cash flow is included at the end of this results 
+announcement. 
+ 
+ 
+15 
+ 
+  
+Net cash used in investing activities 
+During the quarter ended December 31, 2018, net cash used in investing activities of RMB31,055 million 
+(US$4,517 million) primarily reflected (i) cash outflow of RMB22,888 million (US$3,329 million) for 
+investment and acquisition activities, including investments in Focus Media and Tokopedia, (ii) capital 
+expenditures of RMB10,100 million (US$1,469 million), which included cash outflow for acquisition of land 
+use rights and construction in progress relating to office campus of RMB89 million (US$13 million), as well 
+as (iii) acquisition of licensed copyrights and other intangible assets of RMB3,514 million (US$511 million). 
+Employees  
+As of December 31, 2018, we had a total of 101,550 employees, compared to 93,397 as of September 30, 
+2018.  The number of employees as of December 31, 2018 increased by 8,153 from September 30, 2018, 
+primarily due to our consolidation of newly acquired businesses and our expansion in local consumer 
+services. 
+ 
+ 
+WEBCAST AND CONFERENCE CALL INFORMATION 
+Alibaba Group’s management will hold a conference call to discuss the financial result at 7:30 a.m. U.S. 
+Eastern Time (8:30 p.m. Hong Kong Time) on January 30, 2019.  
+Details of the conference call are as follows: 
+International: +65 6713 5090 
+U.S.: +1 845 675 0437 
+U.K.: +44 203 621 4779 
+Hong Kong: +852 3018 6771 
+Conference ID: 6099834 
+A live webcast of the earnings conference call can be accessed at 
+http://www.alibabagroup.com/en/ir/earnings. An archived webcast will be available through the same link 
+following the call. A replay of the conference call will be available for one week (dial-in number: +61 2 8199 
+0299; conference ID: 6099834). 
+Our results announcement and accompanying slides are available at Alibaba Group’s Investor Relations 
+website at http://www.alibabagroup.com/en/ir/home on January 30, 2019.  
+ABOUT ALIBABA GROUP 
+Alibaba Group’s mission is to make it easy to do business anywhere and the company aims to achieve 
+sustainable growth for 102 years. For fiscal year ended March 2018, the company reported revenue of 
+US$39.9 billion. 
+CONTACTS  
+Investor Relations Contact  
+Rob Lin 
+investor@alibabagroup.com 
+ 
+ 
+ 
+ 
+16 
+ 
+  
+Media Contacts 
+Brion Tingler 
+brion.tingler@alibaba-inc.com 
+Katie Lee  
+k.lee@alibaba-inc.com 
+SAFE HARBOR STATEMENTS  
+This announcement contains forward-looking statements.  These statements are made under the “safe harbor” 
+provisions of the U.S. Private Securities Litigation Reform Act of 1995.  These forward-looking statements 
+can be identified by terminology such as “will,” “expects,” “anticipates,” “future,” “intends,” “plans,” 
+“believes,” “estimates,” “potential,” “continue,” “ongoing,” “targets,” “guidance” and similar statements.  In 
+addition, statements that are not historical facts, including statements about Alibaba’s strategies and business 
+plans, Alibaba’s beliefs, expectations and guidance regarding the growth of its business and its revenue, the 
+business outlook and quotations from management in this announcement, as well as Alibaba’s strategic and 
+operational plans, are or contain forward-looking statements.  Alibaba may also make forward-looking 
+statements in its periodic reports to the U.S. Securities and Exchange Commission (the “SEC”), in press 
+releases and other written materials and in oral statements made by its officers, directors or employees to 
+third parties.  Forward-looking statements involve inherent risks and uncertainties.  A number of factors 
+could cause actual results to differ materially from those contained in any forward-looking statement, 
+including but not limited to the following: Alibaba’s expected revenue growth; Alibaba’s goals and 
+strategies; Alibaba’s future business development; Alibaba’s ability to maintain the trusted status of its 
+ecosystem, reputation and brand; risks associated with increased investments in Alibaba’s business and new 
+business initiatives; risks associated with strategic acquisitions and investments; Alibaba’s ability to retain or 
+increase engagement of consumers, merchants and other participants in its ecosystem and enable new 
+offerings; Alibaba’s ability to maintain or grow its revenue or business; risks associated with limitation or 
+restriction of services provided by Alipay; changes in laws, regulations and regulatory environment that 
+affect Alibaba’s business operations; privacy and regulatory concerns; competition; security breaches; the 
+continued growth of the e-commerce market in China and globally; risks associated with the performance of 
+our business partners, including but not limited to Ant Financial; and fluctuations in general economic and 
+business conditions in China and globally and assumptions underlying or related to any of the foregoing.  
+Further information regarding these and other risks is included in Alibaba’s filings with the SEC. All 
+information provided in this results announcement is as of the date of this results announcement and are 
+based on assumptions that we believe to be reasonable as of this date, and Alibaba does not undertake any 
+obligation to update any forward-looking statement, except as required under applicable law. 
+NON-GAAP FINANCIAL MEASURES  
+To supplement our consolidated financial statements, which are prepared and presented in accordance with 
+GAAP, we use the following non-GAAP financial measures: for our consolidated results, adjusted EBITDA 
+(including adjusted EBITDA margin), adjusted EBITA (including adjusted EBITA margin), marketplace-
+based core commerce adjusted EBITA, non-GAAP net income, non-GAAP diluted EPS and free cash flow.  
+For more information on these non-GAAP financial measures, please refer to the section entitled 
+“Information about Segments” and the table captioned “Reconciliations of Non-GAAP Measures to the 
+Nearest Comparable GAAP Measures” in this results announcement. 
+We believe that adjusted EBITDA, adjusted EBITA, non-GAAP net income and non-GAAP diluted EPS 
+help investors identify and understand underlying trends in our business without the effect of certain income 
+or expenses that are reflected in income from operations, net income and diluted EPS.  We believe that 
+ 
+ 
+17 
+ 
+  
+marketplace-based core commerce adjusted EBITA is a measure that can help investors better understand the 
+performance of our marketplace commerce business, which is the contributor of the large majority of our 
+revenue.  We believe that adjusted EBITDA, adjusted EBITA, non-GAAP net income, non-GAAP diluted 
+EPS and marketplace-based core commerce adjusted EBITA provide useful information about our core 
+operating results, enhance the overall understanding of our past performance and future prospects and allow 
+for greater visibility with respect to key metrics used by our management in our financial and operational 
+decision-making.  We consider free cash flow to be a liquidity measure that provides useful information to 
+management and investors about the amount of cash generated by our business that can be used for strategic 
+corporate transactions, including investing in our new business initiatives, making strategic investments and 
+acquisitions and strengthening our balance sheet.  These non-GAAP measures should not be considered in 
+isolation or construed as an alternative to income from operations, net income, diluted EPS, cash flows or 
+any other measure of performance or as an indicator of our operating performance.  These non-GAAP 
+financial measures presented here may not be comparable to similarly titled measures presented by other 
+companies.  Other companies may calculate similarly titled measures differently, limiting their usefulness as 
+comparative measures to our data. 
+Adjusted EBITDA represents net income before (i) interest and investment income, net, interest expense, 
+other income (loss), net, income tax expenses and share of results of equity investees, and (ii) certain non-
+cash expenses, consisting of share-based compensation expense, amortization, depreciation and impairment 
+of goodwill, which we do not believe are reflective of our core operating performance during the periods 
+presented. 
+Adjusted EBITA represents net income before (i) interest and investment income, net, interest expense, 
+other income (loss), net, income tax expenses and share of results of equity investees, and (ii) certain non-
+cash expenses, consisting of share-based compensation expense, amortization and impairment of goodwill, 
+which we do not believe are reflective of our core operating performance during the periods presented. 
+Marketplace-based core commerce adjusted EBITA represents adjusted EBITA for core commerce 
+excluding the effects of (i) local consumer services, (ii) Lazada, (iii) New Retail and direct import and (iv) 
+Cainiao Network.   
+Non-GAAP net income represents net income before share-based compensation expense, amortization, 
+impairment of goodwill and investments, gain or loss on deemed disposals/disposals/revaluation of 
+investments, amortization of excess value receivable arising from the restructuring of commercial 
+arrangements with Ant Financial, immediate recognition of unamortized professional fees and upfront fees 
+upon termination of bank borrowings and others, as adjusted for the tax effects on non-GAAP adjustments. 
+Non-GAAP diluted EPS represents non-GAAP net income attributable to ordinary shareholders divided by 
+the weighted average number of shares outstanding during the periods on a diluted basis, including 
+accounting for the effects of the assumed conversion of convertible preference shares. 
+Free cash flow represents net cash provided by operating activities as presented in our consolidated cash 
+flow statement less purchases of property and equipment, licensed copyrights and other intangible assets 
+(excluding acquisition of land use rights and construction in progress relating to office campus).   
+The section entitled “Information about Segments” and the table captioned “Reconciliations of Non-GAAP 
+Measures to the Nearest Comparable GAAP Measures” in this results announcement have more details on 
+the non-GAAP financial measures that are most directly comparable to GAAP financial measures and the 
+related reconciliations between these financial measures. 
+ 
+ 
+18 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+UNAUDITED CONSOLIDATED INCOME STATEMENTS  
+ 
+ 
+  Three months ended December 31, Nine months ended December 31, 
+     2017 2018 2017 2018 
+  RMB RMB US$ RMB RMB US$ 
+   (in millions, except per share data) (in millions, except per share data) 
+Revenue 83,028 117,278 17,057 188,334 283,346 41,211 
+Cost of revenue (35,078) (60,813) (8,845) (74,540) (151,319) (22,009) 
+Product development expenses (6,289) (8,901) (1,295) (16,068) (28,776) (4,185) 
+Sales and marketing expenses (8,542) (12,104) (1,760) (19,658) (30,131) (4,382) 
+General and administrative expenses (4,572) (5,853) (851) (11,690) (17,277) (2,513) 
+Amortization of intangible assets (2,057) (2,809) (408) (5,791) (7,524) (1,094) 
+Impairment of goodwill (494) — — (494) — —   
+      
+Income from operations 25,996 26,798 3,898 60,093 48,319 7,028 
+Interest and investment income, net 23,643 11,560 1,681 28,550 25,441 3,700 
+Interest expense (844) (1,334) (194) (2,391) (3,887) (565) 
+Other (loss) income, net (348) 387 56 3,276 (1,228) (179) 
+        
+Income before income tax and share of 
+results of equity investees 48,447 37,411 5,441 89,528 68,645 9,984 
+Income tax expenses (6,663) (5,586) (812) (14,035) (11,528) (1,677) 
+Share of results of equity investees (18,452) (861) (125) (20,722) (262) (38) 
+        
+Net income 23,332 30,964 4,504 54,771 56,855 8,269 
+Net loss attributable to noncontrolling 
+interests 741 2,156 313 1,653 5,118 745 
+        
+Net income attributable to Alibaba Group 
+Holding Limited 24,073 33,120 4,817 56,424 61,973 9,014 
+       
+Accretion of mezzanine equity — (68) (10) — (203) (30) 
+Net income attributable to ordinary 
+shareholders 24,073 33,052 4,807 56,424 61,770 8,984 
+        
+Earnings per share attributable to 
+ordinary shareholders       
+Basic 9.41 12.83  1.87 22.12 23.94  3.48 
+Diluted 9.20 12.64 1.84 21.64 23.54 3.42 
+       
+Weighted average number of share used 
+in calculating earnings per ordinary 
+share       
+Basic  2,557 2,576  2,551 2,580   
+Diluted 2,615 2,614   2,607 2,623  
+ 
+ 
+ 
+ 
+19 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+REVENUE 
+ 
+The following table sets forth our revenue by segments for the periods indicated: 
+ 
+  Three months ended December 31, Nine months ended December 31, 
+  2017 2018 2017 2018 
+  RMB RMB US$ RMB  RMB  US$  
+  (in millions) (in millions) 
+Core commerce(1) 73,244 102,843 14,958 162,733 244,506 35,562 
+Cloud computing(2) 3,599 6,611 962 9,005 16,976 2,469 
+Digital media and entertainment(3) 5,413 6,491 944 14,292 18,406 2,677 
+Innovation initiatives and others(4) 772 1,333 193 2,304 3,458 503 
+        
+Total 83,028 117,278 17,057 188,334 283,346 41,211 
+     
+(1) Revenue from core commerce is primarily generated from our China retail marketplaces, 1688.com, AliExpress, Alibaba.com, 
+Lazada.com, Cainiao logistics services and local consumer services. 
+(2) Revenue from cloud computing is primarily generated from the provision of services, such as elastic computing, database, 
+storage, network virtualization services, large scale computing, security, management and application services, big data 
+analytics, a machine learning platform and IoT services. 
+(3) Revenue from digital media and entertainment is primarily generated from Youku and UCWeb. 
+(4) Revenue from innovation initiatives and others is primarily generated from businesses such as Amap, Tmall Genie and other 
+innovation initiatives.  Other revenue also includes SME annual fee received from Ant Financial and its affiliates. 
+ 
+ 
+20 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+INFORMATION ABOUT SEGMENTS 
+ 
+The following table sets forth our income (loss) from operations by segments for the periods indicated: 
+ 
+   Three months ended December 31, Nine months ended December 31, 
+  2017 2018 2017 2018 
+  RMB RMB US$ RMB RMB US$ 
+  (in millions) (in millions) 
+Core commerce 35,439 40,368 5,871 84,083 87,680  12,752 
+Cloud computing (793) (1,233) (179) (2,022) (4,472) (650) 
+Digital media and entertainment (3,828) (7,097) (1,032) (10,599) (16,192) (2,355) 
+Innovation initiatives and others (1,814) (2,549) (371) (4,882) (8,525) (1,240) 
+Unallocated (3,008) (2,691) (391) (6,487) (10,172) (1,479) 
+        
+Total 25,996 26,798 3,898 60,093 48,319 7,028 
+            
+ 
+The following table sets forth our adjusted EBITA by segments for the periods indicated: 
+ 
+  Three months ended December 31, Nine months ended December 31, 
+  2017 2018 2017   2018    
+  RMB RMB US$ RMB  RMB  US$  
+  (in millions) (in millions) 
+Core commerce 38,530 46,079 6,702 91,914 108,683 15,807 
+Cloud computing (181) (274) (40) (446) (994) (145) 
+Digital media and entertainment (2,213) (6,034) (878) (5,710) (12,968) (1,886) 
+Innovation initiatives and others (1,006) (1,596) (232) (2,136) (4,039) (587) 
+Unallocated (1,468) (1,608) (234) (3,424) (4,458) (648) 
+        
+Total 33,662 36,567 5,318 80,198 86,224 12,541 
+            
+  
+ 
+ 
+21 
+ 
+  
+The table below sets forth selected financial information of our operating segments for nine months ended 
+December 31, 2018:  
+ Nine months ended December 31, 2018 
+  
+Core 
+commerce 
+ 
+Cloud 
+computing 
+Digital media 
+and 
+entertainment 
+Innovation 
+initiatives 
+and others 
+ 
+ 
+Unallocated(1) 
+ 
+ 
+Consolidated 
+ RMB RMB RMB RMB RMB RMB  US$ 
+ (in millions, except percentages) 
+Revenue 244,506 16,976 18,406 3,458 — 283,346 41,211 
+        
+Income (loss) from 
+operations 87,680 (4,472) (16,192) (8,525) (10,172) 48,319 7,028 
+Add: Share-based 
+compensation 
+expense 14,640 3,463 2,297 4,456 5,525 30,381 4,419 
+Add: Amortization 
+of intangible 
+assets 6,363 15 927 30 189 7,524 1,094 
+         
+Adjusted EBITA 108,683(2) (994) (12,968) (3) (4,039) (4,458) 86,224 12,541 
+Adjusted EBITA 
+margin 44%  (6)%  (70)% (117)% 
+ 
+ 30%  
+        
+       
+ Nine months ended December 31, 2017 
+  
+Core 
+commerce 
+ 
+Cloud 
+computing 
+Digital media 
+and 
+entertainment 
+Innovation 
+initiatives 
+and others 
+ 
+ 
+Unallocated(1) 
+ 
+ 
+Consolidated 
+ RMB RMB RMB RMB RMB RMB  
+ (in millions, except percentages) 
+Revenue 162,733 9,005 14,292 2,304 — 188,334 
+       
+Income (loss) from 
+operations 84,083 (2,022) (10,599) (4,882) (6,487) 60,093 
+Add: Share-based 
+compensation 
+expense 5,773 
+ 
+ 
+1,567 
+ 
+ 
+1,606 2,554 
+ 
+ 
+2,320 13,820 
+Add: Amortization 
+of intangible 
+assets 2,058 9 3,283 192 249 5,791 
+Add: Impairment of 
+goodwill — — — — 494 494 
+        
+Adjusted EBITA 91,914 (446) (5,710) (2,136) (3,424) 80,198 
+Adjusted EBITA 
+margin 56% (5)% (40)% (93)%  43% 
+  
+(1) Unallocated expenses are primarily related to corporate administrative costs and other miscellaneous items that are not 
+allocated to individual segments. 
+(2) Marketplace-based core commerce adjusted EBITA increased 30% year-over-year to RMB126,901 million (US$18,457 
+million). 
+(3) Adjusted EBITA loss included impairment charges on licensed copyrights of RMB2.8 billion (US$407 million). 
+  
+ 
+ 
+22 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+UNAUDITED CONSOLIDATED BALANCE SHEETS  
+ 
+    As of March 31, As of December 31, 
+    2018 2018 
+    RMB RMB US$  
+     
+    (in millions) 
+Assets         
+Current assets:         
+Cash and cash equivalents   199,309 189,204 27,519 
+Short-term investments   6,086 3,113 453 
+Restricted cash and escrow receivables   3,417 7,911 1,150 
+Investment securities  4,815 8,274 1,203 
+Prepayments, receivables and other assets  43,228 53,178 7,735 
+Total current assets  256,855 261,680 38,060 
+ 
+Investment securities (1)  38,192 137,000 19,926 
+Prepayments, receivables and other assets  26,274 25,363 3,689 
+Investment in equity investees (1)  139,700 90,831 13,211 
+Property and equipment, net   66,489 90,814 13,208 
+Intangible assets, net  27,465 67,994 9,889 
+Goodwill  162,149 244,261 35,526 
+Total assets   717,124 917,943 133,509 
+       
+Liabilities, Mezzanine Equity and Shareholders’ 
+Equity      
+Current liabilities:      
+Current bank borrowings  6,028 7,361 1,071 
+Current unsecured senior notes  — 15,451 2,247 
+Income tax payable   13,689 17,348 2,523 
+Escrow money payable  3,053 6,790 988 
+Accrued expenses, accounts payable and other 
+liabilities  81,165 114,477 16,650 
+Merchant deposits   9,578 18,401 2,676 
+Deferred revenue and customer advances  22,297 28,944 4,210 
+Total current liabilities   135,810 208,772 30,365 
+ 
+ 
+  
+ 
+ 
+23 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+UNAUDITED CONSOLIDATED BALANCE SHEETS (CONTINUED) 
+ 
+   As of March 31, As of December 31, 
+   2018 2018
+ 
+   RMB  RMB  US$  
+   (in millions) 
+     
+Deferred revenue  993 1,301 189 
+Deferred tax liabilities  19,312 21,006 3,055 
+Non-current bank borrowings  34,153 35,085 5,103 
+Non-current unsecured senior notes  85,372 78,156 11,367 
+Other liabilities  2,045 5,536 805 
+Total liabilities  277,685 349,856 50,884 
+      
+Commitments and contingencies  — — — 
+ 
+Mezzanine equity  3,001 7,165 1,042 
+ 
+Shareholders’ equity:     
+Ordinary shares  1 1 — 
+Additional paid-in capital  186,764 225,328 32,773 
+Treasury shares at cost  (2,233) (386) (56) 
+Restructuring reserve  (361) (163) (24) 
+Subscription receivables  (163) (179) (26) 
+Statutory reserves  4,378 4,561 664 
+Accumulated other comprehensive income (loss) (1)  5,083 (1,119) (163) 
+Retained earnings (1)  172,353 232,850 33,866 
+      
+Total shareholders’ equity  365,822 460,893 67,034 
+Noncontrolling interests  70,616 100,029 14,549 
+      
+Total equity  436,438 560,922 81,583 
+    
+Total liabilities, mezzanine equity and equity  717,124 917,943 133,509 
+         
+     
+(1) We adopted ASU 2016-01, “Financial Instruments — Overall (Subtopic 825-10): Recognition and Measurement of Financial 
+Assets and Financial Liabilities” beginning in the first quarter of fiscal year 2019. After our adoption of this new accounting 
+update, equity investments other than those accounted for under the equity method or those that result in the consolidation of 
+the investee are required to be measured at fair value, with subsequent changes in fair value recognized in the income 
+statement. We have adopted this new accounting update using the modified retrospective method. For available-for-sale 
+securities, RMB8,196 million in unrealized gains, net of tax recorded in accumulated other comprehensive income as of 
+March 31, 2018 was reclassified into retained earnings upon the initial adoption as of April 1, 2018.  Investments measured 
+under the cost method of RMB59,942 million as of March 31, 2018 was reclassified into investment securities as of April 1, 
+2018.  The consolidated balance sheets as of March 31, 2018 was not retrospectively adjusted. 
+ 
+ 
+24 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+UNAUDITED CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS  
+ 
+  Three months ended December 31, Nine months ended December 31, 
+  2017 2018 2017    2018 
+  RMB RMB US$ RMB  RMB  US$  
+  (in millions) (in millions) 
+       
+Net cash provided by operating 
+activities(1) 55,428 64,898 9,439 111,422 132,422 19,260 
+Net cash used in investing activities(1) (24,304) (31,055) (4,517) (63,788) (134,309) (19,534) 
+Net cash provided by (used in) 
+financing activities 34,274 (8,915) (1,297) 24,964 (8,111) (1,180) 
+Effect of exchange rate changes on cash 
+and cash equivalents, restricted cash 
+and escrow receivables (1) (1,508) (66) (9) (3,412) 4,387 638 
+        
+Increase (decrease) in cash and cash 
+equivalents, restricted cash and 
+escrow receivables 63,890 24,862 3,616 69,186 (5,611) (816) 
+Cash and cash equivalents, restricted 
+cash and escrow receivables at 
+beginning of period 151,687 172,253 25,053 146,391 202,726 29,485 
+        
+Cash and cash equivalents, restricted 
+cash and escrow receivables at end 
+of period 215,577 197,115 28,669 215,577 197,115 28,669 
+           
+     
+(1) We adopted ASU 2016-18, “Statement of Cash Flows (Topic 230): Restricted Cash,” beginning in the first quarter of fiscal 
+year 2019. As a result of adopting this new accounting update, we retrospectively adjusted the consolidated statements of 
+cash flows to include restricted cash and escrow receivables in cash and cash equivalents when reconciling the beginning-
+of-period and end-of-period total amounts shown on the consolidated statements of cash flows. The impact of the 
+retrospective reclassification on cash flows from operating activities, investing activities and effect of exchange rate changes 
+for the nine months ended December 31, 2017 was an increase of RMB431 million, an increase of RMB286 million and an 
+increase of RMB9 million, respectively. 
+ 
+ 
+25 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+RECONCILIATIONS OF NON-GAAP MEASURES TO THE NEAREST COMPARABLE GAAP 
+MEASURES 
+  
+The table below sets forth a reconciliation of our net income to adjusted EBITA and adjusted EBITDA 
+for the periods indicated: 
+   
+ Three months ended December 31, Nine months ended December 31, 
+ 2017 2018 2017  2018  
+ RMB RMB US$ RMB RMB US$ 
+ (in millions) (in millions) 
+Net income 23,332 30,964 4,504 54,771 56,855 8,269 
+Less: Interest and investment 
+income, net (23,643)  (11,560) (1,681) (28,550) (25,441) (3,700) 
+Add: Interest expense 844 1,334 194 2,391 3,887 565 
+Less: Other (loss) income, net 348 (387) (56) (3,276) 1,228 179 
+Add: Income tax expenses 6,663 5,586 812 14,035 11,528 1,677 
+Add: Share of results of equity 
+investees 18,452 861 125 20,722 262 38 
+Income from operations 25,996 26,798 3,898 60,093 48,319 7,028 
+Add: Share-based compensation 
+expense 5,115 6,960 1,012 13,820 30,381 4,419 
+Add: Amortization of intangible 
+assets 2,057 2,809 408 5,791 7,524 1,094 
+Add: Impairment of goodwill   494 — — 494 — — 
+Adjusted EBITA 33,662 36,567 5,318 80,198 86,224 12,541 
+Add: Depreciation and 
+amortization of property and 
+equipment and land use rights  
+ 
+ 
+2,521 
+ 
+ 
+4,141 
+ 
+ 
+603 
+ 
+ 
+6,140 
+ 
+ 
+10,553 
+ 
+ 
+1,535 
+Adjusted EBITDA 36,183 40,708 5,921 86,338 96,777 14,076 
+ 
+ 
+ 
+ 
+26 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+RECONCILIATIONS OF NON-GAAP MEASURES TO THE NEAREST COMPARABLE GAAP 
+MEASURES (CONTINUED) 
+ 
+The table below sets forth a reconciliation of adjusted EBITA for core commerce to marketplace-based core 
+commerce adjusted EBITA for the periods indicated: 
+   
+ Three months ended December 31, Nine months ended December 31, 
+ 2017 2018 2017 2018 
+ RMB RMB US$ RMB RMB US$  
+ (in millions) (in millions) 
+Adjusted EBITA for core 
+commerce 38,530 46,079 6,702 91,914 108,683 15,807 
+Less: Effects of local consumer 
+services, Lazada, New Retail 
+and direct import and Cainiao 
+Network  2,905 8,224 1,196 5,869 18,218 2,650 
+Marketplace-based core 
+commerce adjusted EBITA 41,435 54,303 7,898 97,783 126,901 18,457 
+         
+ 
+ 
+ 
+27 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+RECONCILIATIONS OF NON-GAAP MEASURES TO THE NEAREST COMPARABLE GAAP 
+MEASURES (CONTINUED) 
+ 
+The table below sets forth a reconciliation of our net income to non-GAAP net income for the periods 
+indicated: 
+ 
+  Three months ended December 31, Nine months ended December 31, 
+     2017 2018 2017  2018  
+  RMB RMB US$ RMB RMB US$ 
+  (in millions) (in millions) 
+        
+Net income  23,332 30,964 4,504 54,771 56,855 8,269 
+Add: Share-based compensation 
+expense 5,115 6,960 1,012 13,820 30,381 4,419 
+Add: Amortization of intangible 
+assets 2,057 2,809 408 5,791 7,524 1,094 
+Add: Impairment of goodwill and 
+investments 19,033 7,552 1,098 20,374 7,910 1,150 
+Less: Gain on deemed 
+disposals/disposals/revaluation 
+of investments and others (22,406) (16,859) (2,452) (25,792) (27,564) (4,009) 
+Add: Amortization of excess value 
+receivable arising from the 
+restructuring of commercial 
+arrangements with Ant 
+Financial 66 66 10 199 198 29 
+Add: Immediate recognition of 
+unamortized professional fees 
+and upfront fees upon 
+termination of bank 
+borrowings — — — 92 — — 
+Adjusted for tax effects on non-
+GAAP adjustments(1) 
+ 
+(190) 
+ 
+(1,695) 
+ 
+(246) 
+ 
+(140) 
+ 
+(1,953) 
+ 
+(284) 
+        
+Non-GAAP net income 27,007 29,797 4,334 69,115 73,351 10,668 
+ 
+(1) Tax effects on non-GAAP adjustments are comprised of tax provisions on the amortization of intangible assets and certain 
+investment gains. 
+ 
+ 
+28 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+RECONCILIATIONS OF NON-GAAP MEASURES TO THE NEAREST COMPARABLE GAAP 
+MEASURES (CONTINUED) 
+ 
+The table below sets forth a reconciliation of our diluted EPS to non-GAAP diluted EPS for the periods 
+indicated: 
+ 
+  Three months ended December 31, Nine months ended December 31, 
+     2017 2018 2017  2018  
+  RMB RMB US$ RMB  RMB US$ 
+  (in millions, except per share data) (in millions, except per share data)  
+       
+Net income attributable to 
+ordinary shareholders – 
+basic 24,073 33,052 4,807 56,424 61,770 8,984 
+Dilution effect on earnings arising 
+from option plans operated by 
+equity investees (4) (16) (2) (10) (31) (5) 
+Net income attributable to 
+ordinary shareholders – diluted 24,069 33,036 4,805 56,414 61,739 8,979 
+Add: Non-GAAP adjustments to 
+net income(1)  
+ 
+3,675 
+ 
+(1,167) 
+ 
+(170) 
+ 
+14,344 
+ 
+16,496 
+ 
+2,399 
+        
+Non-GAAP net income 
+attributable to ordinary 
+shareholders for computing 
+non-GAAP diluted EPS 27,744 31,869 4,635 70,758 78,235 11,378 
+        
+Weighted average number of 
+shares on a diluted basis  2,615 2,614  2,607 2,623  
+Diluted EPS(2) 9.20 12.64 1.84 21.64 23.54 3.42 
+Add: Non-GAAP adjustments to 
+net income per share(3) 1.41 (0.45) (0.07) 5.50 6.29 0.92 
+        
+Non-GAAP diluted EPS(4) 10.61 12.19 1.77 27.14 29.83 4.34 
+        
+(1) See the table above for the reconciliation of net income to non-GAAP net income for more information of these non-
+GAAP adjustments. 
+(2) Diluted EPS is derived from net income attributable to ordinary shareholders for computing diluted EPS divided by 
+weighted average number of shares on a diluted basis. 
+(3) Non-GAAP adjustments to net income per share is derived from non-GAAP adjustments to net income divided by 
+weighted average number of shares on a diluted basis. 
+(4) Non-GAAP diluted EPS is derived from non-GAAP net income attributable to ordinary shareholders for computing non-
+GAAP diluted EPS divided by weighted average number of shares on a diluted basis. 
+ 
+  
+ 
+ 
+29 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+RECONCILIATIONS OF NON-GAAP MEASURES TO THE NEAREST COMPARABLE GAAP 
+MEASURES (CONTINUED) 
+ 
+The table below sets forth a reconciliation of net cash provided by operating activities to free cash flow 
+for the periods indicated: 
+       
+ Three months ended December 31, Nine months ended December 31, 
+ 2017 2018 2017 2018 
+ RMB RMB US$ RMB RMB US$  
+ (in millions) (in millions) 
+Net cash provided by operating 
+activities(1) 55,428 64,898 9,439 111,422 132,422 19,260 
+Less: Purchase of property and 
+equipment (excluding land use 
+rights and construction in 
+progress relating to office 
+campus) (6,463) (10,011) (1,456) (12,998) (26,648) (3,876) 
+Less: Acquisition of licensed 
+copyrights and other 
+intangible assets 
+ 
+ 
+(2,566) 
+ 
+ 
+(3,514) 
+ 
+ 
+(511) 
+ 
+ 
+(7,195) 
+ 
+ 
+(12,010) 
+ 
+ 
+(1,747) 
+        
+Free cash flow 46,399 51,373 7,472 91,229 93,764 13,637 
+          
+(1) We adopted ASU 2016-18, “Statement of Cash Flows (Topic 230): Restricted Cash,” beginning in the first quarter of fiscal 
+year 2019.  As a result of adopting this new accounting update, we retrospectively adjusted the consolidated statements of 
+cash flows to include restricted cash and escrow receivables in cash and cash equivalents when reconciling the beginning-
+of-period and end-of-period total amounts shown on the consolidated statements of cash flows.  The impact of our 
+retrospective reclassification on cash flows from operating activities for the nine months ended December 31, 2017 was an 
+increase of RMB431 million. 
+ 
+ 
+30 
+ 
+  
+ALIBABA GROUP HOLDING LIMITED  
+SELECTED OPERATING DATA 
+ 
+Annual active consumers 
+ 
+The table below sets forth the number of active consumers on our China retail marketplaces for the periods 
+indicated: 
+  
+ Twelve months ended  
+ Mar 31, 
+2017 
+Jun 30, 
+2017 
+Sep 30, 
+2017 
+Dec 31, 
+2017 
+Mar 31, 
+2018 
+Jun 30, 
+2018 
+Sep 30, 
+2018 
+Dec 31, 
+2018 
+ (in millions) 
+Annual active consumers 454 466 488 515 552 576 601 636 
+ 
+Mobile 
+ 
+The table below sets forth the mobile MAUs on our China retail marketplaces for the periods indicated: 
+ 
+ The month ended  
+ Mar 31, 
+2017 
+Jun 30, 
+2017 
+Sep 30, 
+2017 
+Dec 31, 
+2017 
+Mar 31, 
+2018 
+Jun 30, 
+2018 
+Sep 30, 
+2018 
+Dec 31, 
+2018 
+ (in millions) 
+Mobile MAUs 507 529 549 580 617 634 666 699 
+ 
+ 
+ 
+ 
