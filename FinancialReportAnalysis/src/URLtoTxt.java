@@ -2,7 +2,7 @@
  * This class allows the user to access a PDF from a URL and access a .txt file
  * with the contents of the PDF.
  * 
- * author: @angelapwen
+ * @author: angelapwen
  * Credit to Naveen AutomationLabs
  */
 
@@ -17,9 +17,15 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 
 public class URLtoTxt {
+	
+	String urlToOpen;
+	
+	public URLtoTxt(String url) {
+		this.urlToOpen = url;
+	}
 
 	public String readPDF() throws IOException {
-		URL url = new URL("https://www.alibabagroup.com/en/news/press_pdf/p190130.pdf");
+		URL url = new URL(urlToOpen);
 
 		InputStream is = url.openStream();
 		BufferedInputStream fileParse = new BufferedInputStream(is);
@@ -27,11 +33,12 @@ public class URLtoTxt {
 
 		document = PDDocument.load(fileParse);
 		String pdfContent = new PDFTextStripper().getText(document);
+		document.close();
 		return pdfContent;
 	}
 
 	public static void main(String[] args) {
-		URLtoTxt reader = new URLtoTxt();
+		URLtoTxt reader = new URLtoTxt("https://www.alibabagroup.com/en/news/press_pdf/p190130.pdf");
 
 		// Print to file
 		File out = new File("alibaba-statement.txt");

@@ -5,32 +5,42 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * author: @angelapwen
- * Credit to RadixCode at https://radixcode.com/pdfbox-example-code-how-to-extract-text-from-pdf-file-with-java
+ * PDFBoxReadFromFile collaborates with PDFManager to read a PDF file and 
+ * outputs the contents to a .txt file.
+ * @author: angelapwen Credit to RadixCode at
+ *          https://radixcode.com/pdfbox-example-code-how-to-extract-text-from-pdf-file-with-java
  */
 public class PDFBoxReadFromFile {
-    
-    public static void main(String[] args) {
-        PDFManager pdfManager = new PDFManager();
-        pdfManager.setFilePath("201409.pdf");
-        try {
-            String text = pdfManager.toText();
-            // System.out.println(text);
-            // Print to file
-            File out = new File("201409-text.txt");
-            
-            try (PrintWriter pw = new PrintWriter(out)) {
-            	pw.print(text);
-            	pw.flush();
-            }
-            catch (IOException e) {
-            	e.printStackTrace();
-            	System.out.println("Could not write out file.");
-            }
-            
-        } catch (IOException ex) {
-            Logger.getLogger(PDFBoxReadFromFile.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
+	PDFManager pdfManager = new PDFManager();
+
+	public PDFBoxReadFromFile(String fileName) throws IOException {
+		pdfManager.setFilePath(fileName); // Constructs PDF Manager with correct file name.
+	}
+	
+	public String getString() throws IOException {
+		return pdfManager.toText();
+	}
+
+	public void printToTxt() throws IOException {
+		String text = pdfManager.toText();// Retrieves String from PDF Manager
+
+		// Print to file
+		File out = new File("201409-text.txt");
+
+		PrintWriter pw = new PrintWriter(out);
+		pw.print(text);
+		pw.flush();
+		pw.close();
+	}
+
+	public static void main(String[] args) {
+		try {
+    		PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile("201409.pdf");
+    		PDFReader.printToTxt();
+		}
+		catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 }
