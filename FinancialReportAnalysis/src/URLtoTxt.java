@@ -64,6 +64,9 @@ public class URLtoTxt {
 		// Append _converted.txt
 		outputFileName += "_converted.txt";
 		
+		// Remove all slashes from name
+		outputFileName = outputFileName.replaceAll("/","");
+		
 		return outputFileName;
 	}
 
@@ -76,8 +79,8 @@ public class URLtoTxt {
 		String text = readPDF();// Retrieves String from PDF Manager
 
 		// Print to file
-		// File out = new File(createTxtName()); 
-		File out = new File("alibaba_test.txt");
+		 File out = new File(createTxtName()); 
+//		File out = new File("alibaba_test.txt");
 
 		PrintWriter pw = new PrintWriter(out);
 		pw.print(text);
