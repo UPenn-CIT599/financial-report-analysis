@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+#path for jar (eg. PDFBox)
+*.classpath
+
 # Log file
 *.log
 
