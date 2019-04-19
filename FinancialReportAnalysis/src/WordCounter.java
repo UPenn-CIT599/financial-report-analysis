@@ -12,19 +12,20 @@ import java.util.*;
 public class WordCounter {
 
 	HashMap<String, Integer> wordCount = new HashMap<>();
-	ArrayList<String> incoming = new ArrayList<>();
-	Scanner input = new Scanner(incoming); // ERROR: The constructor Scanner(ArrayList<String>) is undefined
+	String incoming;
+	Scanner input = new Scanner(incoming); 
 	String currentWord;
 
 	/**
 	 * 
-	 * @param listToCount the incoming ArrayList we want to analyze
+	 * @param filename the incoming file we want to analyze
 	 * @return HashMap of each word and how many times it occurs
 	 * 
-	 */
+	 */	
+	
 
-	public HashMap<String, Integer> countOfWords(ArrayList<String> listToCount) {
-		incoming = listToCount;
+	public HashMap<String, Integer> countOfWords(String filename) {
+		incoming = filename;
 
 		while (input.hasNext()) {
 			String currentWord = input.next();
