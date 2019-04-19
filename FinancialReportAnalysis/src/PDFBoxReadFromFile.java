@@ -70,6 +70,9 @@ public class PDFBoxReadFromFile {
 		try {
     		PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile("201409.pdf");
     		PDFReader.printToTxt();
+    		
+    		//
+    		
 		}
 		catch (IOException e) {
 			e.printStackTrace();

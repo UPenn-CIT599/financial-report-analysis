@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -6,8 +7,26 @@ import java.util.*;
  * 
  * @author Tim Culpan
  * 
- *         work in progress
  */
+
+
+ 
+//
+
+public static void main(String[] args) {
+	try {
+		PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile("201409.pdf");
+		PDFReader.printToTxt();
+	//
+		
+	}//end try
+	catch (IOException e) {
+		e.printStackTrace();
+	}//end catch
+}//end main	
+
+//
+
 
 public class WordCounter {
 
@@ -21,8 +40,7 @@ public class WordCounter {
 	 * @param filename the incoming file we want to analyze
 	 * @return HashMap of each word and how many times it occurs
 	 * 
-	 */	
-	
+	 */		
 
 	public HashMap<String, Integer> countOfWords(String filename) {
 		incoming = filename;
@@ -40,8 +58,9 @@ public class WordCounter {
 
 		} // END WHILE
 
-		return wordCount;
-
+		return wordCount;		
+		
 	}// END countOfWords method
+	
 
 }// END WordCounter Class
