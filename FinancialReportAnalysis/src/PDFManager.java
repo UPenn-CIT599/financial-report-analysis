@@ -43,6 +43,7 @@ public class PDFManager {
 		pdfStripper.setStartPage(0);
 		pdfStripper.setEndPage(pdDoc.getNumberOfPages());
 		Text = pdfStripper.getText(pdDoc);
+		pdDoc.close();
 		return Text;
 	}
 
