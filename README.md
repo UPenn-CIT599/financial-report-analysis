@@ -1,15 +1,46 @@
 # Hope v. Reality in Financial Reporting
 A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 
-## Setup - Before Running the Code
+## Setup - Java project FinancialReportAnalysis
+On the Eclipse IDE, Click Files>Open Projects from File System>Directory
+Point to the "FinancialReportAnalysis" Folder
+Select "FinancialReportAnalysis" in the Folder list
+Click FINISH
+The Java project FinancialReportAnalysis should appear in the Package Explorer window
+
+
+## Setup - PDFBox 
 Download the PDFBox .jar file here: https://pdfbox.apache.org/download.cgi It is the file labeled "pdfbox-app-2.0.15.jar"
 
-Open the 'FinancialReportAnalysis' folder in your IDE of choice. 
+Save it under the the Folder "FinancialReportAnalysis"
 
-On the Eclipse IDE:
-- Right click the package name, "FinancialReportAnalysis" 
-- Go to "Build Path" -> "Configure Build Path"
-- Click the "Libraries" tab
-- Click "Add External JARs..."
-- Navigate to the "pdfbox-app-2.0.15.jar" file you downloaded and select it. 
-- Click "Apply and Close." 
+On the Eclipse IDE, right click on the Java Project "FinancialReportAnalysis"
+Click REFRESH.
+The library "pdfbox-app-2.0.15.jar" should appear under "Referenced Libraries"
+
+## Setup - Sentiment Analysis 
+Download the Sentiment Analysis project developed by Ruthwik from https://github.com/Ruthwik/Sentiment-Analysis
+
+On the Eclipse IDE, Click Files>Open Projects from File System>Directory
+Point to the "SentimentAnalysis" Folder
+Select "SentimentAnalysis" in the Folder list
+Click FINISH
+The Java project SentimentAnalysis should appear in the Package Explorer window
+
+
+### Setup - Stanford NLP for Sentiment Analysis
+Download the Stanford CoreNLP v3.9.2 from https://stanfordnlp.github.io/CoreNLP/
+
+Save stanford-corenlp-3.9.2.jar and stanford-corenlp-3.9.2-models.jar under the the Folder "SentimentAnalysis"
+
+On the Eclipse IDE, right click on the Java Project "SentimentAnalysis"
+Click BuildPath>Libraries
+Delete the .jar of stanford-corenlp-3.8.0.jar and stanford-corenlp-3.8.0-models.jar
+Click Add JAR, added in the downloaded stanford-corenlp-3.9.2.jar and stanford-corenlp-3.9.2-models.jar
+
+
+## Setup - Import Java Project SentimentAnalysis into FinancialReportAnalysis
+Right click on Java Project FinancialReportAnalysis
+Click Buildpath>Projects>Add
+Select Java Project SentimentAnalysis
+Click Apply and Close

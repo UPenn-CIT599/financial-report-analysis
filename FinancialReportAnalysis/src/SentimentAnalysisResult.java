@@ -37,12 +37,23 @@ public class SentimentAnalysisResult {
 		sentimentScore = sentimentResult.getSentimentScore();
 		sentimentType = sentimentResult.getSentimentType();
 		percentVeryPositive = sentimentResult.getSentimentClass().getVeryPositive();
-		percentPositive = sentimentResult.getSentimentClass().getPositive() 
+		percentPositive = sentimentResult.getSentimentClass().getPositive() ;
 		percentNeutral = sentimentResult.getSentimentClass().getNeutral();
 		percentNegative = sentimentResult.getSentimentClass().getNegative();
 		percentVeryNegative = sentimentResult.getSentimentClass().getVeryNegative();
 	}
+	
+	public void showSentimentScore() {
+		System.out.println("Sentiment Score: " + sentimentScore);
+		System.out.println("Sentiment Type: " + sentimentType);
+		System.out.println("Very positive: " + percentVeryPositive+"%");
+		System.out.println("Positive: " + percentPositive+"%");
+		System.out.println("Neutral: " + percentNeutral+"%");
+		System.out.println("Negative: " + percentNegative+"%");
+		System.out.println("Very negative: " + percentVeryNegative+"%");
 
+	}
+	
 
 	public double getSentimentScore() {
 		return sentimentScore;
