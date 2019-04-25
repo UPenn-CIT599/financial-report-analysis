@@ -1,12 +1,14 @@
 # Proposed Design and CRCs
 
-## DataReader Class
+## PDFBoxReaderFromFile Class
 This class takes in a PDF file, ideally from a URL, and outputs a string or .txt file using Apache PDF Box library.
 
 ### Responsibilities
 - Has "urlName" String of URL to open or "fileName" of a PDF file to open
 - URLReader method: Opens a URL and reads contents into an ArrayList
 - PDFReader method: Opens a PDF from the URL (how to connect these?) and outputs a string or .txt file with Apacha PDF Box
+- has fileName which point to a pdf.
+- printToTxt() method: scan the pdf from filename and export as a txt file with file name fileName_converted.txt
 
 ### Collaborators
 - DataParser 
@@ -22,6 +24,7 @@ This class takes the string or .txt file from DataReader and parses the appropri
 - parseFinancialYear()
 - parseFinancialQuarter
 - parseCompanyName() - this may not be necessary if there are subclasses for each company
+- parseCompStatement()
 - createWordCount method: reads the file and creates a hashmap of words to count, excluding common words such as "a" and "the" for the FinancialData class. This will also help populate the FinancialData object.
 - outputFullStatementText() 
 
@@ -54,7 +57,8 @@ This Class stores the financial data read from the pdf or url. Each object repre
 This class conduct sentiment analysis on a company statement. Ideally we would find an existing java library that perform the anlysis on the HashMap "Words Count" or the txt in "compStatement" in Financial Data Class. A candidate library we found is https://github.com/Ruthwik/Sentiment-Analysis which is using Stanford CoreNLP and gives sentiment score of 5 classes very negative, negative, neutral, positive, and very positive.
 
 ### Responsibilities
-- calcSentiment() method: use the Ruthwik Sentiment Analysis tool to calculate sentiment score on txt in "compStatement" from FinancialData
+- the Constructor: use the Ruthwik Sentiment Analysis tool to calculate sentiment score on txt in "compStatement" from FinancialData. 
+- showSentimentScore() method: print out the sentiment score
 
 ### Collaborators
 - FinancialData
