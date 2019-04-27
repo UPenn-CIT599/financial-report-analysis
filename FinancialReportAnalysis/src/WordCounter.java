@@ -1,3 +1,4 @@
+//Apple
 import java.io.*;
 import java.util.*;
 
@@ -40,7 +41,7 @@ public class WordCounter {
 		FileReader countThis = new FileReader(filename);
 		ArrayList<String> fileAsArray = countThis.getfileReadIn();
 				
-		Scanner inbound = new Scanner(countThis); 
+		Scanner inbound = new Scanner(countThis.getfileName()); 
 
 		while (inbound.hasNext()) {
 			String currentWord = inbound.next(); 
@@ -63,26 +64,26 @@ public class WordCounter {
 	
 	//This main method is just to implement the WordCounter.
 	// can be removed and folded into our Runner class
-	public static void main (String[] args) {
-		
-			try {
-				HashMap<String, Integer> count = new HashMap<>();
-				
-				// Actually, I think we don't need this
-				WordCounter counter = new WordCounter("201409_converted.txt");
-				
-				count = counter.countOfWords("201409_converted.txt");
-					    		
-	    		System.out.println(count);
-	    		
-	    		//
-	    	
-			}
-			catch (IOException e) {
-				e.printStackTrace();
-			}
-			 
-	 }
+//	public static void main (String[] args) {
+//		
+//			try {
+//				HashMap<String, Integer> count = new HashMap<>();
+//				
+//				// Actually, I think we don't need this
+//				WordCounter counter = new WordCounter("201409_converted.txt");
+//				
+//				count = counter.countOfWords("201409_converted.txt");
+//					    		
+//	    		System.out.println(count);
+//	    		
+//	    		//
+//	    	
+//			}
+//			catch (IOException e) {
+//				e.printStackTrace();
+//			}
+//			 
+//	 }
 
 
 }// END WordCounter Class
