@@ -3,15 +3,17 @@ import java.util.*;
 /**
  * This class takes a string or .txt file 
  * and parses the required data 
- * for subsquent use in FinancialData and SentimentAnalysis
- *  * 
+ * for subsequent use in FinancialData and SentimentAnalysis
+ *  
  * @author Tim Culpan
  *
  */
 
 public class DataParser {
 	
-	
+	public DataParser() {
+		
+	}
 	
 	
 	public double parseRevenue(){	
