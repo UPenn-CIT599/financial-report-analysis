@@ -21,35 +21,32 @@ public class ParserBaba extends DataParser {
 	}
 
 	/**
+	 * this method goes through the file, 
+	 * finds where it says "Revenue" AND is followed by digits
+	 * then pulls the second set of digits, which is our target current Revenue for the period
 	 * @return revenue for that period
 	 */
-	double prevRev;
 	double currRev;
-	double yoyDiff;
-	double percentDiff;
 	
 	public double parseRevenue(){
-		String filename;
-		File babaQuarter = new File(filename);
 		
-		
+		File babaQuarter = new File("201409_converted.txt");
 		//our regex: 
 		//start of a line, starts with "Revenue", followed by a space, followed by 1 or more digits
 		//thus: ^Revenue\s\d{1,}
 		
 		Pattern revenue = Pattern.compile("^Revenue\\s\\d{1,}");
-		String targetLine;
+		String targetLine = null;
 		
 		try {
 			Scanner scanner = new Scanner(babaQuarter);
 			int counter = 0;
-			//two conditions, to ensure we just stop after grabbing revenue the first time
+			//two conditions, to ensure we stop after grabbing revenue the first time
 			
 			while(scanner.hasNext() && (counter==0) ) {
 				String word = scanner.next();
 				String line = scanner.nextLine();
 
-				
 				//check whether the next word matches our revenue regex
 				Matcher m = revenue.matcher(word);
 				///if it does, then copy the whole line for later parsing
@@ -66,32 +63,29 @@ public class ParserBaba extends DataParser {
 
 			targetLine = targetLine.replaceAll(",", "");
 			
-			////targetLine should be: Revenue 10950 16829 2742 53.7% 
+			//targetLine should be: Revenue 10950 16829 2742 53.7% 
 
-			Pattern revPatt = Pattern.compile("\\d+");
+			//create regex for pulling the digits separately
+			//there may be a better regex, but this works!
+			Pattern revPatt = Pattern.compile("[^\\d]*[\\d]+[^\\d]+([\\d]+)");
 			Matcher revMatch = revPatt.matcher(targetLine);
 			 
-			//each group is pulled out separately and assigned to relevant data field
-			while(revMatch.find()) {
-				prevRev = Double.parseDouble(revMatch.group(0));
-				currRev = Double.parseDouble(revMatch.group(1));
-				yoyDiff = Double.parseDouble(revMatch.group(2));
-				percentDiff = Double.parseDouble(revMatch.group(3));
 				
-				//currRev should be 16829
-			} //end While
+				//use "if" because it'll stop at first time regex is matched
+				//if we use 'while', it'll keep running and capture later data 
+				if(revMatch.find()) {
+					currRev = Double.parseDouble(revMatch.group(1));
+					
+					//currRev should be 16829
+				}//end if	
 			
-			
+			scanner.close();
 		} //end try
 
 		catch (FileNotFoundException e){
 			e.printStackTrace();
 		} //end catch
 		return currRev;
-		
-		
-		
 	} //END parseRevenue method
-	
 	
 } //END ParserBaba Class
