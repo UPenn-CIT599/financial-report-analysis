@@ -23,7 +23,13 @@ public class ParserBaba extends DataParser {
 	/**
 	 * @return revenue for that period
 	 */
+	double prevRev;
+	double currRev;
+	double yoyDiff;
+	double percentDiff;
+	
 	public double parseRevenue(){
+		String filename;
 		File babaQuarter = new File(filename);
 		
 		
@@ -31,14 +37,14 @@ public class ParserBaba extends DataParser {
 		//start of a line, starts with "Revenue", followed by a space, followed by 1 or more digits
 		//thus: ^Revenue\s\d{1,}
 		
-		Pattern revenue = Pattern.compile(^Revenue\s\d{1,});
-	
+		Pattern revenue = Pattern.compile("^Revenue\\s\\d{1,}");
+		String targetLine;
 		
 		try {
 			Scanner scanner = new Scanner(babaQuarter);
 			int counter = 0;
 			//two conditions, to ensure we just stop after grabbing revenue the first time
-			String targetLine;
+			
 			while(scanner.hasNext() && (counter==0) ) {
 				String word = scanner.next();
 				String line = scanner.nextLine();
@@ -59,46 +65,31 @@ public class ParserBaba extends DataParser {
 			}//end while
 
 			targetLine = targetLine.replaceAll(",", "");
+			
 			////targetLine should be: Revenue 10950 16829 2742 53.7% 
 
-
-			int x;
-			int space;
-			String revString;
+			Pattern revPatt = Pattern.compile("\\d+");
+			Matcher revMatch = revPatt.matcher(targetLine);
+			 
+			//each group is pulled out separately and assigned to relevant data field
+			while(revMatch.find()) {
+				prevRev = Double.parseDouble(revMatch.group(0));
+				currRev = Double.parseDouble(revMatch.group(1));
+				yoyDiff = Double.parseDouble(revMatch.group(2));
+				percentDiff = Double.parseDouble(revMatch.group(3));
+				
+				//currRev should be 16829
+			} //end While
 			
-
-			for (x=0; x<lineToParse.size(); x++) {
-				if ((lineToParse.get(x)) == (" ") ){
-					space++;
-				} 
-				if (space==2) {
-					revString = revString + (lineToParse.get(x));
-				}
-
-			} //end for
-
-			int z = 0;
-			for (Integer z: lineToParse){
-				double revenue = revArray.toDouble();
-			}
-
-			//we know that CURRENT revenue is the SECOND block of digits
-
-			double babaRev;
-
-
-
-
 			
 		} //end try
 
 		catch (FileNotFoundException e){
 			e.printStackTrace();
 		} //end catch
-
-
-	  	
-		return 0;
+		return currRev;
+		
+		
 		
 	} //END parseRevenue method
 	
