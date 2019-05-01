@@ -11,7 +11,10 @@ import java.util.*;
 
 public class DataParser {
 	
-	public DataParser() {
+	
+	
+	//constructor -  
+	public DataParser(String companyDataFile) {
 		
 	}
 	
