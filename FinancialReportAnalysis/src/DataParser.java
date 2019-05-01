@@ -45,7 +45,16 @@ public class DataParser {
 	}
 	
 	public String parseCompStatement() {
+		
 		return null;
+	}
+	
+	//added per CRC, but wonder if it should be in a separate class, 
+	//or in a Utility Class
+	public void createWordCount() {		
+	}
+	
+	public void outPutFullStatementText() {
 		
 	}
 	
