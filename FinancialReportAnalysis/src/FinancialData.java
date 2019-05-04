@@ -11,8 +11,8 @@ public class FinancialData {
 	
 	
 	//Constructor
-	public FinancialData(revenue netIncome, adjustedNetIncome, finYear, finQuarter) {
-		
+	public FinancialData(double revenue, double netIncome, double adjustedNetIncome,
+			int finYear, int finQuarter) {		
 	}
 	
 	
