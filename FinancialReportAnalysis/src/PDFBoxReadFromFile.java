@@ -38,7 +38,7 @@ public class PDFBoxReadFromFile {
 	 * returns the .txt name of the file to write to
 	 * @return the .txt name of the file to write to
 	 */
-	private String createTxtName() {
+	public String createTxtName() {
 		// Assume input file ends in .pdf
 		
 		// Get substring of PDF file without .pdf
