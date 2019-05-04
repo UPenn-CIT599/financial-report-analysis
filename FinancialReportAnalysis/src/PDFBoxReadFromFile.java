@@ -68,7 +68,7 @@ public class PDFBoxReadFromFile {
 
 	public static void main(String[] args) {
 		try {
-    		PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile("BABA201412.pdf");
+    		PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile("BIDU201503.pdf");
     		PDFReader.printToTxt();
     		
     		//read out tells us it's done.
