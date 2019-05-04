@@ -348,8 +348,44 @@ public int parseFinancialYear(){
 	
 	return year;
 } //END parseFinancialYear method
+
+/**
+ * Method grabs all the information in the initial statement
+ * up to and including the words "Webcast" 
+ * which is the keyword signaling the end of the prose part prior to data tables
+ * 
+ * @return String of the statement 
+ */
+public String parseStatement(){
 	
+	//code "babaQuarter"  
+	//and scanner as needed
+	File babaQuarter = new File("201409_converted.txt");
 	
+	boolean keepGoing = false;
+	ArrayList<String> statement = new ArrayList<>();
+	try {
+		Scanner scanner = new Scanner(babaQuarter);
+			while(scanner.hasNext() && (keepGoing) ) {
+			String word = scanner.next();
+			statement.add(word);
+			//stop when we come across the word "Webcast"
+			if (word.contentEquals("Webcast")) {
+				keepGoing = false;
+			}
+			
+		}
+			
+	scanner.close();
+	} //end try
+
+	catch (FileNotFoundException e){
+		e.printStackTrace();
+	} //end catch
+		
+	String statementAsString = String.join(" ", statement);
 	
+	return statementAsString;
+	} //END parseStatement Method
 	
 } //END ParserBaba Class
