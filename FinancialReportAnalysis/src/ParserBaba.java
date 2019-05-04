@@ -232,10 +232,7 @@ public double parseNonGAAPNetIncome(){
 	        //regex pulls each group of digits, minimum of three
 	        Pattern nonGaapPatt = Pattern.compile("\\d{3,}");
 	        Matcher nonGaapMatch = nonGaapPatt.matcher(targetLine);
-	       
-				 
-			
-			
+	       			
 			//by using this approach, we can actually pull multiple fields, if need be
 				int count = 0;
 				while(nonGaapMatch.find()) {
@@ -265,7 +262,92 @@ public double parseNonGAAPNetIncome(){
 	return currNonGAAPNetIncome;
 } //END parseNonGAAPNetIncome method
 
+////\\\\FINANCIAL YEAR \\\\
+public int parseFinancialYear(){
+	
+	File babaQuarter = new File("201409_converted.txt");
 
+	String targetLine = null;
+	String sentence[] = null;
+	int indexOfCompanyName =0;
+    int indexOfWordResults = 0;
+    int indexOfWordQuarter =0;
+    int indexOfYear =0;
+    int indexOfQuarter = 0;
+    
+    int quarter =0;
+    String companyName;
+	
+	try {
+		Scanner scanner = new Scanner(babaQuarter);
+		;
+		//two conditions, to ensure we stop after grabbing revenue the first time
+		boolean found = false;
+		while(scanner.hasNext() && found == false ) {
+			String line = scanner.nextLine();
+		
+			if (line.contains("Mar") || (line.contains("Jun") ) || (line.contains("Sept") ) || (line.contains("Dec")) ) {
+				targetLine = line;
+				found = true;
+				
+			}//end if
+						 
+		}//end while
+		
+		sentence = targetLine.split(" ");
+			//populate the Array sentence with each word in that line
+	        for (int i=0; i<sentence.length; i++) {
+	        System.out.println(sentence[i]);
+	        }
+	        
+	        //loop through that sentence and pull each word according to its place in the Array
+	        for (int x=0; x<sentence.length; x++) {
+	            if ( (sentence[x]).equals("Alibaba") ) {
+	            	indexOfCompanyName = x;
+	            }
+	            if ( (sentence[x]).equals("Results") ) {
+	                indexOfWordResults = x;
+	            }
+	            if ( (sentence[x]).equals("Quarter") ){
+	                indexOfWordQuarter = x;
+	            }
+	            
+	        }//end of for
+	        //search backward to pull year and quarter
+	        indexOfYear = indexOfWordResults - 1;
+	        indexOfQuarter = indexOfWordQuarter - 1;
+		scanner.close();
+		
+			
+		
+	} //end try
+		
+
+	catch (FileNotFoundException e){
+		e.printStackTrace();
+	} //end catch
+	
+	//pulls year
+			int year = Integer.parseInt(sentence[indexOfYear]);
+			
+	//pulls int for month number of quarter end
+			if (sentence[indexOfQuarter].contains("Mar") ) {
+				quarter = 03;
+			}
+			if (sentence[indexOfQuarter].contains("Jun") ) {
+				quarter = 06;
+			}	
+			if (sentence[indexOfQuarter].contains("Sep") ) {
+				quarter = 9;				
+			}		
+			if (sentence[indexOfQuarter].contains("Dec") ) {
+				quarter = 12;
+			}	
+			//pulls company name
+			companyName = (sentence[indexOfCompanyName]); 	
+	
+		return year;
+} //END parseFinancialYear method
 	
 	
 	
