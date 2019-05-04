@@ -317,8 +317,26 @@ public int parseFinancialYear(){
 	        indexOfYear = indexOfWordResults - 1;
 	        indexOfQuarter = indexOfWordQuarter - 1;
 		scanner.close();
+	
+		//pulls year
 		
-			
+		
+//pulls int for month number of quarter end
+		if (sentence[indexOfQuarter].contains("Mar") ) {
+			quarter = 03;
+		}
+		if (sentence[indexOfQuarter].contains("Jun") ) {
+			quarter = 06;
+		}	
+		if (sentence[indexOfQuarter].contains("Sep") ) {
+			quarter = 9;				
+		}		
+		if (sentence[indexOfQuarter].contains("Dec") ) {
+			quarter = 12;
+		}	
+//pulls company name
+		companyName = (sentence[indexOfCompanyName]); 			
+		
 		
 	} //end try
 		
@@ -327,26 +345,9 @@ public int parseFinancialYear(){
 		e.printStackTrace();
 	} //end catch
 	
-	//pulls year
-			int year = Integer.parseInt(sentence[indexOfYear]);
-			
-	//pulls int for month number of quarter end
-			if (sentence[indexOfQuarter].contains("Mar") ) {
-				quarter = 03;
-			}
-			if (sentence[indexOfQuarter].contains("Jun") ) {
-				quarter = 06;
-			}	
-			if (sentence[indexOfQuarter].contains("Sep") ) {
-				quarter = 9;				
-			}		
-			if (sentence[indexOfQuarter].contains("Dec") ) {
-				quarter = 12;
-			}	
-			//pulls company name
-			companyName = (sentence[indexOfCompanyName]); 	
-	
-		return year;
+	int year = Integer.parseInt(sentence[indexOfYear]);
+		
+	return year;
 } //END parseFinancialYear method
 	
 	
