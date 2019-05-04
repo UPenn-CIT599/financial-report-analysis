@@ -314,10 +314,9 @@ public int parseFinancialYear(){
 	        //search backward to pull year and quarter
 	        indexOfYear = indexOfWordResults - 1;
 	        indexOfQuarter = indexOfWordQuarter - 1;
-		scanner.close();
+	        scanner.close();
 	
-		//pulls year
-		
+			
 		
 //pulls int for month number of quarter end
 		if (sentence[indexOfQuarter].contains("Mar") ) {
