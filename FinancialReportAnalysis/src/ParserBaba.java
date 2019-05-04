@@ -294,11 +294,9 @@ public int parseFinancialYear(){
 						 
 		}//end while
 		
+		//populate the Array sentence with each word in that line
 		sentence = targetLine.split(" ");
-			//populate the Array sentence with each word in that line
-	        for (int i=0; i<sentence.length; i++) {
-	       
-	        }
+		
 	        
 	        //loop through that sentence and pull each word according to its place in the Array
 	        for (int x=0; x<sentence.length; x++) {
@@ -346,7 +344,8 @@ public int parseFinancialYear(){
 	} //end catch
 	
 	int year = Integer.parseInt(sentence[indexOfYear]);
-		
+	
+	
 	return year;
 } //END parseFinancialYear method
 	
