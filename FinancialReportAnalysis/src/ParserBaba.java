@@ -297,7 +297,7 @@ public int parseFinancialYear(){
 		sentence = targetLine.split(" ");
 			//populate the Array sentence with each word in that line
 	        for (int i=0; i<sentence.length; i++) {
-	        System.out.println(sentence[i]);
+	       
 	        }
 	        
 	        //loop through that sentence and pull each word according to its place in the Array
