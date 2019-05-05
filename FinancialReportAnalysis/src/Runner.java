@@ -1,6 +1,7 @@
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 /** The program utilize two external libraries PDF Box and SentimentAnalysis to read from PDFs 
  * and conduct sentiment analysis on financial statements
@@ -24,7 +25,7 @@ public class Runner {
 		HashMap<String, FinancialData> finDataHM = new HashMap<String, FinancialData>();
 		HashMap<String, SentimentAnalysisResult> senResultHM = new HashMap<String, SentimentAnalysisResult>();
 		
-		//Loop 1, loop through all pdfs in a folder
+		//Loop 1, loop through all pdfs in a folder and export to txt files in folder "txt"
 		File pdfFolder = new File("pdf");
 		for (File file : pdfFolder.listFiles(new PDFFileFilter())) {
 			
@@ -32,7 +33,7 @@ public class Runner {
 			PDFReader.printToTxt();  //Generate a txt file "filename_converted.txt" for use of DataParser
 		}
 		
-		//TBC Loop2, for the same company, use the same parser to loop through all quarters
+		//Loop2, for the same company, use the same parser to loop through all quarters
 		File txtFolder = new File("txt");
 		for (File file : txtFolder.listFiles(new TxtFileFilter())) {
 			
@@ -46,8 +47,6 @@ public class Runner {
 			financialData.setFinYear(parser.parseFinancialYear());
 			financialData.setNetIncome(parser.parseNetIncome());
 			financialData.setRevenue(parser.parseRevenue());
-			
-			//TBC Loop2 Close
 		
 			String hmKey = financialData.getCompanyName()+financialData.getFinYear()+financialData.getFinQuarter();
 
@@ -55,11 +54,29 @@ public class Runner {
 			
 			//Run the sentiment Analysis
 			SentimentAnalysisResult sentimentAnalysis = new SentimentAnalysisResult(financialData.getCompStatement());
+			sentimentAnalysis.showSentimentScore();
 			senResultHM.put(hmKey, sentimentAnalysis);
 		
 		// End of the For Loop
 		}
 		
-		
+		//Loop3 outputing the two HashMaps
+		for (String key : finDataHM.keySet()) {
+			//create folder dataset
+			File folder = new File("dataset");
+			folder.mkdir();
+					
+			// Print to file
+			File out = new File(folder, key + ".txt");
+
+			PrintWriter pw = new PrintWriter(out);
+			
+			String text = finDataHM.get(key).getCompStatement();
+			pw.print(text);
+			pw.flush();
+			pw.close();
+
 		}
+	
+	}
 }
