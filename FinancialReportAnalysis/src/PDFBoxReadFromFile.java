@@ -11,8 +11,9 @@ import java.util.logging.Logger;
  *          https://radixcode.com/pdfbox-example-code-how-to-extract-text-from-pdf-file-with-java
  */
 public class PDFBoxReadFromFile {
-	PDFManager pdfManager = new PDFManager();
-	String fileName;
+	private PDFManager pdfManager = new PDFManager();
+	private String fileName;
+	public static final String outputFolder = "txt";
 
 	/**
 	 * PDFBoxReadFromFile constructor sets the fileName input.
@@ -42,7 +43,7 @@ public class PDFBoxReadFromFile {
 		// Assume input file ends in .pdf
 		
 		// Get substring of PDF file without .pdf
-		String outputFileName = fileName.substring(0, fileName.lastIndexOf("."));
+		String outputFileName = fileName.substring(fileName.lastIndexOf("/")+1, fileName.lastIndexOf("."));
 		
 		// Append _converted.txt
 		outputFileName += "_converted.txt";
@@ -57,8 +58,12 @@ public class PDFBoxReadFromFile {
 	public void printToTxt() throws IOException {
 		String text = pdfManager.toText();// Retrieves String from PDF Manager
 
+		//create a directory called txt
+		File folder = new File(outputFolder);
+		folder.mkdir();
+				
 		// Print to file
-		File out = new File(createTxtName());
+		File out = new File(folder, createTxtName());
 
 		PrintWriter pw = new PrintWriter(out);
 		pw.print(text);

@@ -28,13 +28,13 @@ public class Runner {
 		File folder = new File("pdf");
 		for (File file : folder.listFiles(new PDFFileFilter())) {
 			
-			PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile(file.getName());
+			PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile(file.getPath());
 			PDFReader.printToTxt();  //Generate a txt file "filename_converted.txt" for use of DataParser
 			FinancialData financialData = new FinancialData();
 
 			//TBC Loop2, for the same company, use the same parser to loop through all quarters
 
-				ParserBaba parser = new ParserBaba(PDFReader.createTxtName());
+				ParserBaba parser = new ParserBaba(PDFBoxReadFromFile.outputFolder + PDFReader.createTxtName());
 				financialData.setAdjustedNetIncome(parser.parseAdjustedNetIncome());
 				financialData.setCompanyName(parser.parseCompanyName());
 				financialData.setCompStatement(parser.parseCompStatement());
