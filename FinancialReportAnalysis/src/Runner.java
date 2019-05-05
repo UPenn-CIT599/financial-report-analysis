@@ -1,5 +1,6 @@
 
 import java.io.IOException;
+import java.util.HashMap;
 /** The program utilize two external libraries PDF Box and SentimentAnalysis to read from PDFs 
  * and conduct sentiment analysis on financial statements
  * 
@@ -10,19 +11,45 @@ import java.io.IOException;
  * 
  * Credit to RadixCode at
  * https://radixcode.com/pdfbox-example-code-how-to-extract-text-from-pdf-file-with-java
+ * 
+ * The idea is to loop through all the pdf files.
+ * 1) 
+ * 
  */
 public class Runner {
 
 	public static void main(String[] args) throws IOException {
+		
+		HashMap<String, FinancialData> finDataHM = new HashMap<String, FinancialData>();
+		HashMap<String, SentimentAnalysisResult> senResultHM = new HashMap<String, SentimentAnalysisResult>();
+		
+		//TBC Loop 1, loop through all pdfs in a folder
+		
+		//TBC Loop2, for the same company, use the same parser to loop through all quarters
+		
 		PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile("201409.pdf");
-		PDFReader.printToTxt();
+		PDFReader.printToTxt();  //Generate a txt file "filename_converted.txt" for use of DataParser
 		
-		//Temporary, suppose to take in a section of the PDF only
-		//Need to build the DataParser and FinancialData class
-		String text = PDFReader.pdfManager.toText();
+		ParserBaba parser = new ParserBaba(PDFReader.createTxtName());
 		
-		SentimentAnalysisResult SentimentAnalyzer = new SentimentAnalysisResult(text);
-		SentimentAnalyzer.showSentimentScore();
+		FinancialData financialData = new FinancialData();
 		
+		financialData.setAdjustedNetIncome(parser.parseAdjustedNetIncome());
+		financialData.setCompanyName(parser.parseCompanyName());
+		financialData.setCompStatement(parser.parseCompStatement());
+		financialData.setFinQuarter(parser.parseFinQuarter());
+		financialData.setFinYear(parser.parseFinancialYear());
+		financialData.setNetIncome(parser.parseNetIncome());
+		financialData.setRevenue(parser.parseRevenue());
+		
+		String hmKey = financialData.getCompanyName()+financialData.getFinYear()+financialData.getFinQuarter();
+
+		finDataHM.put(hmKey, financialData);
+		
+		//Run the sentiment Analysis
+		SentimentAnalysisResult sentimentAnalysis = new SentimentAnalysisResult(financialData.getCompStatement());
+		
+		senResultHM.put(hmKey, sentimentAnalysis);
+	
 		}
 }
