@@ -34,11 +34,12 @@ public class ParserBaba extends DataParser {
 	//if delete, then need to adjust code below
 	double prevNetIncome;
 	double numNetIncomeChange;
-		
 	
 	//created, by not all are needed
 	double prevNonGAAPNetIncome;
 	double numNonGAAPNetIncomeChange;
+	
+	String longWord;
 	
 	
 	
@@ -359,7 +360,7 @@ public int parseFinancialYear(){
  * 
  * @return String of the statement 
  */
-public String parseStatement(){
+public String parseCompStatement(){
 	
 	//code "babaQuarter"  
 	//and scanner as needed
@@ -368,12 +369,13 @@ public String parseStatement(){
 	boolean keepGoing = true;
 	//redundant after using String concatenation
 	//ArrayList<String> statement = new ArrayList<>();
-	String longWord = null;
+	//String longWord = null;
+	String word = null;
 	try {
 		Scanner scanner = new Scanner(babaQuarter);
 		//while (keepGoing) {
-			while(scanner.hasNext()) {
-			String word = scanner.next();
+			while(scanner.hasNext() && keepGoing) {
+			word = scanner.next();
 			longWord = longWord + " " + word;
 			//stop when we come across the word "Webcast"
 				if (word.contentEquals("Webcast")) {
