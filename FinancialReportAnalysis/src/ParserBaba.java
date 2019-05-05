@@ -13,8 +13,12 @@ public class ParserBaba extends DataParser {
 	/** 
 	 * @param companyDataFile
 	 */
+	
+	String filePath = null;
+	
 	public ParserBaba(String companyDataFile) {
 		super(companyDataFile);
+		filePath = companyDataFile;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -41,7 +45,9 @@ public class ParserBaba extends DataParser {
 	
 	public double parseRevenue(){
 		
-		File babaQuarter = new File("201409_converted.txt");
+		File babaQuarter = new File(filePath);
+		
+		//File babaQuarter = new File("201409_converted.txt");
 		//our regex: 
 		//start of a line, starts with "Revenue", followed by a space, followed by 1 or more digits
 		//thus: ^Revenue\s\d{1,}
@@ -111,7 +117,9 @@ public class ParserBaba extends DataParser {
 	 */
 public double parseNetIncome(){
 		
-		File babaQuarter = new File("201409_converted.txt");
+		File babaQuarter = new File(filePath);
+	
+		//File babaQuarter = new File("201409_converted.txt");
 		//our regex: 
 		//start of a line, starts with "Net Income", followed by a space, followed by 1 or more digits
 		//thus: ^Net Income\s\d{1,}
@@ -191,7 +199,9 @@ public double parseNetIncome(){
 
 public double parseNonGAAPNetIncome(){
 	
-	File babaQuarter = new File("201409_converted.txt");
+	File babaQuarter = new File(filePath);
+	
+	//File babaQuarter = new File("201409_converted.txt");
 	//our regex: 
 	//we merely search for ^Non-GAAP Net Income and a space
 	//we pull the numbers from the subsequent line
@@ -269,7 +279,9 @@ public double parseNonGAAPNetIncome(){
 ////\\\\FINANCIAL YEAR \\\\
 public int parseFinancialYear(){
 	
-	File babaQuarter = new File("201409_converted.txt");
+	File babaQuarter = new File(filePath);
+	
+	//File babaQuarter = new File("201409_converted.txt");
 
 	String targetLine = null;
 	String sentence[] = null;
@@ -363,7 +375,7 @@ public String parseCompStatement(){
 	
 	//code "babaQuarter"  
 	//and scanner as needed
-	File babaQuarter = new File("201409_converted.txt");
+	File babaQuarter = new File(filePath);
 	
 	boolean keepGoing = true;
 	//redundant after using String concatenation
