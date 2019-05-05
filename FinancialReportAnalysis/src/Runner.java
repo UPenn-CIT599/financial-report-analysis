@@ -24,38 +24,39 @@ public class Runner {
 		HashMap<String, FinancialData> finDataHM = new HashMap<String, FinancialData>();
 		HashMap<String, SentimentAnalysisResult> senResultHM = new HashMap<String, SentimentAnalysisResult>();
 		
-		//TBC Loop 1, loop through all pdfs in a folder
-		File folder = new File("/Users/Cryrus/OneDrive - PennO365/GitHub/final-project-financial-reporting-analysis/FinancialReportAnalysis/");
+		//Loop 1, loop through all pdfs in a folder
+		File folder = new File("pdf");
 		for (File file : folder.listFiles(new PDFFileFilter())) {
-			System.out.println("file: " + file.getName());
 			
+			PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile(file.getName());
+			PDFReader.printToTxt();  //Generate a txt file "filename_converted.txt" for use of DataParser
+			FinancialData financialData = new FinancialData();
+
+			//TBC Loop2, for the same company, use the same parser to loop through all quarters
+
+				ParserBaba parser = new ParserBaba(PDFReader.createTxtName());
+				financialData.setAdjustedNetIncome(parser.parseAdjustedNetIncome());
+				financialData.setCompanyName(parser.parseCompanyName());
+				financialData.setCompStatement(parser.parseCompStatement());
+				System.out.println(parser.parseCompStatement());
+				financialData.setFinQuarter(parser.parseFinQuarter());
+				financialData.setFinYear(parser.parseFinancialYear());
+				financialData.setNetIncome(parser.parseNetIncome());
+				financialData.setRevenue(parser.parseRevenue());
+			
+			//TBC Loop2 Close
+		
+			String hmKey = financialData.getCompanyName()+financialData.getFinYear()+financialData.getFinQuarter();
+
+			finDataHM.put(hmKey, financialData);
+			
+			//Run the sentiment Analysis
+			SentimentAnalysisResult sentimentAnalysis = new SentimentAnalysisResult(financialData.getCompStatement());
+			senResultHM.put(hmKey, sentimentAnalysis);
+		
+		// End of the For Loop
 		}
 		
-		//TBC Loop2, for the same company, use the same parser to loop through all quarters
 		
-		PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile("201409.pdf");
-		PDFReader.printToTxt();  //Generate a txt file "filename_converted.txt" for use of DataParser
-		
-		ParserBaba parser = new ParserBaba(PDFReader.createTxtName());
-		
-		FinancialData financialData = new FinancialData();
-		
-		financialData.setAdjustedNetIncome(parser.parseAdjustedNetIncome());
-		financialData.setCompanyName(parser.parseCompanyName());
-		financialData.setCompStatement(parser.parseCompStatement());
-		financialData.setFinQuarter(parser.parseFinQuarter());
-		financialData.setFinYear(parser.parseFinancialYear());
-		financialData.setNetIncome(parser.parseNetIncome());
-		financialData.setRevenue(parser.parseRevenue());
-		
-		String hmKey = financialData.getCompanyName()+financialData.getFinYear()+financialData.getFinQuarter();
-
-		finDataHM.put(hmKey, financialData);
-		
-		//Run the sentiment Analysis
-		SentimentAnalysisResult sentimentAnalysis = new SentimentAnalysisResult(financialData.getCompStatement());
-		
-		senResultHM.put(hmKey, sentimentAnalysis);
-	
 		}
 }
