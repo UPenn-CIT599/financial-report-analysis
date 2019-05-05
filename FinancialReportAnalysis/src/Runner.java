@@ -34,7 +34,7 @@ public class Runner {
 
 			//TBC Loop2, for the same company, use the same parser to loop through all quarters
 
-				ParserBaba parser = new ParserBaba(PDFBoxReadFromFile.outputFolder + PDFReader.createTxtName());
+				ParserBaba parser = new ParserBaba(PDFBoxReadFromFile.outputFolder + "/" + PDFReader.createTxtName());
 				financialData.setAdjustedNetIncome(parser.parseAdjustedNetIncome());
 				financialData.setCompanyName(parser.parseCompanyName());
 				financialData.setCompStatement(parser.parseCompStatement());
