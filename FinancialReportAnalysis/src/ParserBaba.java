@@ -49,34 +49,32 @@ public class ParserBaba extends DataParser {
 		//start of a line, starts with "Revenue", followed by a space, followed by 1 or more digits
 		//thus: ^Revenue\s\d{1,}
 		
-		Pattern revenue = Pattern.compile("^Revenue\\s\\d{1,}");
+		Pattern revenue = Pattern.compile("Revenue\\s");
 		String targetLine = null;
 		String line = null;
+		boolean keepLooking = true;
 		
 		try {
 			Scanner scanner = new Scanner(babaQuarter);
-			int counter = 0;
 			//two conditions, to ensure we stop after grabbing revenue the first time
 			
-			while(scanner.hasNext() && (counter==0) ) {
+			while(scanner.hasNext() && (keepLooking) ) {
 				String word = scanner.next();
-				line = scanner.nextLine();
+				targetLine = scanner.nextLine();
 
-				//check whether the next word matches our revenue regex
-				Matcher m = revenue.matcher(word);
+				//check whether the next LINE matches our revenue regex
+				Matcher m = revenue.matcher(line);
 				///if it does, then copy the whole line for later parsing
 				if (m.find()) {
-					targetLine = line;
-					//advance the counter so that our while loop stops
-					//maybe there's a more elegant way, such as a boolean.
-					counter++;
+					//targetLine = line;
+					keepLooking = false;
 
 				}//end if
 
 				//targetLine should be: Revenue 10,950 16,829 2,742 53.7% 
 			}//end while
 
-			targetLine = line.replaceAll(",", "");
+			//targetLine = line.replaceAll(",", "");
 			
 			//targetLine should be: Revenue 10950 16829 2742 53.7% 
 
@@ -367,19 +365,22 @@ public String parseStatement(){
 	//and scanner as needed
 	File babaQuarter = new File("201409_converted.txt");
 	
-	boolean keepGoing = false;
-	ArrayList<String> statement = new ArrayList<>();
+	boolean keepGoing = true;
+	//redundant after using String concatenation
+	//ArrayList<String> statement = new ArrayList<>();
+	String longWord = null;
 	try {
 		Scanner scanner = new Scanner(babaQuarter);
-			while(scanner.hasNext() && (keepGoing) ) {
+		//while (keepGoing) {
+			while(scanner.hasNext()) {
 			String word = scanner.next();
-			statement.add(word);
+			longWord = longWord + " " + word;
 			//stop when we come across the word "Webcast"
-			if (word.contentEquals("Webcast")) {
+				if (word.contentEquals("Webcast")) {
 				keepGoing = false;
-			}
-			
-		}
+				}
+			}//end hasNext() loop
+		//}//end keepGoing loop	
 			
 	scanner.close();
 	} //end try
@@ -388,9 +389,10 @@ public String parseStatement(){
 		e.printStackTrace();
 	} //end catch
 		
-	String statementAsString = String.join(" ", statement);
+	// now redundant after using String concatenation
+	//String statementAsString = String.join(" ", statement);
 	
-	return statementAsString;
+	return longWord;
 	} //END parseStatement Method
 	
 } //END ParserBaba Class
