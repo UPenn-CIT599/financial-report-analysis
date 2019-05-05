@@ -52,24 +52,22 @@ public class ParserBaba extends DataParser {
 		Pattern revenue = Pattern.compile("^Revenue\\s\\d{1,}");
 		String targetLine = null;
 		String line = null;
+		boolean keepLooking = true;
 		
 		try {
 			Scanner scanner = new Scanner(babaQuarter);
-			int counter = 0;
 			//two conditions, to ensure we stop after grabbing revenue the first time
 			
-			while(scanner.hasNext() && (counter==0) ) {
+			while(scanner.hasNextLine() && (keepLooking) ) {
 				String word = scanner.next();
 				line = scanner.nextLine();
 
-				//check whether the next word matches our revenue regex
-				Matcher m = revenue.matcher(word);
+				//check whether the next LINE matches our revenue regex
+				Matcher m = revenue.matcher(line);
 				///if it does, then copy the whole line for later parsing
 				if (m.find()) {
-					targetLine = line;
-					//advance the counter so that our while loop stops
-					//maybe there's a more elegant way, such as a boolean.
-					counter++;
+					//targetLine = line;
+					keepLooking = false;
 
 				}//end if
 
