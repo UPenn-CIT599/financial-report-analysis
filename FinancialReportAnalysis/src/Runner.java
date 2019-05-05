@@ -28,7 +28,7 @@ public class Runner {
 		File folder = new File("pdf");
 		for (File file : folder.listFiles(new PDFFileFilter())) {
 			
-			PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile(file.getPath());
+			PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile(file);
 			PDFReader.printToTxt();  //Generate a txt file "filename_converted.txt" for use of DataParser
 			FinancialData financialData = new FinancialData();
 

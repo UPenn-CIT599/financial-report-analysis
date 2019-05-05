@@ -20,9 +20,9 @@ public class PDFBoxReadFromFile {
 	 * @param fileName
 	 * @throws IOException
 	 */
-	public PDFBoxReadFromFile(String fileName) throws IOException {
-		this.fileName = fileName;
-		pdfManager.setFilePath(fileName); // Constructs PDF Manager with correct file name.
+	public PDFBoxReadFromFile(File f) throws IOException {
+		this.fileName = f.getName();
+		pdfManager.setFilePath(f.getPath()); // Constructs PDF Manager with correct file name.
 	}
 	
 	/**
@@ -43,7 +43,7 @@ public class PDFBoxReadFromFile {
 		// Assume input file ends in .pdf
 		
 		// Get substring of PDF file without .pdf
-		String outputFileName = fileName.substring(fileName.lastIndexOf("/")+1, fileName.lastIndexOf("."));
+		String outputFileName = fileName.substring(0, fileName.lastIndexOf("."));
 		
 		// Append _converted.txt
 		outputFileName += "_converted.txt";
