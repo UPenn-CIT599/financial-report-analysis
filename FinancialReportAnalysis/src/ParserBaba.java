@@ -43,6 +43,7 @@ public class ParserBaba extends DataParser {
 	double numNonGAAPNetIncomeChange;
 	
 	String longWord;
+	String grabLine;
 	
 	public double parseRevenue(){
 		
@@ -69,11 +70,19 @@ public class ParserBaba extends DataParser {
 			
 			while(scanner.hasNext() && keepLooking) {
 				line = scanner.nextLine();
-				if (line.startsWith("Revenue")) {
+				if (line.contains("Revenue")) {
+					
 					keepLooking = false;
+					targetLine = line;
+					System.out.println("line: " + line);
+					System.out.println("grabLine: " + grabLine);
+					System.out.println("targetLine inside if: " + targetLine);
+					System.out.println("keepLooking : " + keepLooking);
+					
 				}
 				//line should be: Revenue 10,950 16,829 2,742 53.7% 
 				targetLine = line.replaceAll(",", "");
+				System.out.println("targetLine outside if " + targetLine);
 				
 				//targetLine should be Revenue 10950 16829 2742 53.7% 
 				
@@ -82,6 +91,8 @@ public class ParserBaba extends DataParser {
 				//0 index is "Revenue"
 				//1 index is "10950" - previous revenue
 				//2 index is "16829" - current revenue
+				
+				System.out.println("Sentence : " + Arrays.toString(sentence));
 	
 		        for (int x=0; x<sentence.length; x++) {
 		            if ( (sentence[x]).equals("Revenue") ) {
@@ -92,8 +103,17 @@ public class ParserBaba extends DataParser {
 		            int indexOfPrevRevenue = indexOfWordRevenue + 1;
 		            int indexOfCurrRevenue = indexOfWordRevenue + 2;
 		            
+		            System.out.println("indexOfWordRevenue" + indexOfWordRevenue);
+		            System.out.println("indexOfPrevRevenue: " + indexOfPrevRevenue);
+		            System.out.println("indexOfCurrRevenue: " + indexOfCurrRevenue);
+		            
+		            String wordRevenue = (sentence[indexOfWordRevenue]);
 		            prevRevenue = Double.parseDouble(sentence[indexOfPrevRevenue]);
 		            currRevenue = Double.parseDouble(sentence[indexOfCurrRevenue]);
+		            
+		            System.out.println("indexOfWordRevenue : " + wordRevenue);
+		            System.out.println("prevRevenue: " + prevRevenue);
+		            System.out.println("currRevenue: " + currRevenue);
 		       
 			}//end while
 			scanner.close();
