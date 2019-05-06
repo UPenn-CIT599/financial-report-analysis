@@ -2,12 +2,10 @@
 A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 
 ## Setup - Java project FinancialReportAnalysis
-On the Eclipse IDE, Click Files>Open Projects from File System>Directory
-Point to the "FinancialReportAnalysis" Folder
-Select "FinancialReportAnalysis" in the Folder list
-Click FINISH
-The Java project FinancialReportAnalysis should appear in the Package Explorer window
-
+- Open an IDE (Instructions below for Eclipse)
+- Select the final-project-financial-reporting-analysis folder as the workspace 
+- Click Launch
+- You will have the FinancialReportAnalysis project available in the Package Explorer.
 
 ## Setup - PDFBox 
 Download the PDFBox .jar file here: https://pdfbox.apache.org/download.cgi It is the file labeled "pdfbox-app-2.0.15.jar"
