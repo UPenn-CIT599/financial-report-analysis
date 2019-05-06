@@ -24,12 +24,13 @@ public class ParserBaba extends DataParser {
 	 * then pulls the second set of digits, which is our target current Revenue for the period
 	 * @return revenue for that period
 	 */
-	double currRev;
+	double currRevenue;
 	double currNetIncome;
 	double currNonGAAPNetIncome;
 	
 	//following are created, but we don't have to use them
 	//if delete, then need to adjust code below
+	double prevRevenue;
 	double prevNetIncome;
 	double numNetIncomeChange;
 	
@@ -46,60 +47,110 @@ public class ParserBaba extends DataParser {
 		//start of a line, starts with "Revenue", followed by a space, followed by 1 or more digits
 		//thus: ^Revenue\s\d{1,}
 		
-		Pattern revenuePattern = Pattern.compile("Revenue\\s\\d{1,}");
-		String targetLine = null;
+//		Pattern revenuePattern = Pattern.compile("Revenue\\s\\d{1,}");
+//		String targetLine = null;
 		String line = null;
 		boolean keepLooking = true;
+		String targetLine = null;
+		String sentence[];
 		
+		int indexOfWordRevenue = 0;
+		
+		//parseRevenue version ONE
 		try {
+			
 			Scanner scanner = new Scanner(babaQuarter);
-			//two conditions, to ensure we stop after grabbing revenue the first time
 			
-			while(scanner.hasNext() && (keepLooking) ) {
-				String word = scanner.next();
+			while(scanner.hasNext() && keepLooking) {
 				line = scanner.nextLine();
-
-				//check whether the next LINE matches our revenue regex
-				Matcher m = revenuePattern.matcher(line);
-				///if it does, then copy the whole line for later parsing
-				if (m.find()) {
-					targetLine = line;
+				if (line.startsWith("Revenue")) {
 					keepLooking = false;
-
-				}//end if
-
-				// for BABA201409, targetLine should be: Revenue 10,950 16,829 2,742 53.7% 
-			}//end while
-			
+				}
+				//line should be: Revenue 10,950 16,829 2,742 53.7% 
+				targetLine = line.replaceAll(",", "");
+				
+				//targetLine should be Revenue 10950 16829 2742 53.7% 
+				
+				//create the Array of elements from the targetLine
+				sentence = targetLine.split(" ");
+				//0 index is "Revenue"
+				//1 index is "10950" - previous revenue
+				//2 index is "16829" - current revenue
 	
-			// Either of these options should work
-			// but NEITHER works
-			targetLine = targetLine.replaceAll(",", "");
-			//targetLine = line.replaceAll(",", "");
-			
-			//targetLine should now be: Revenue 10950 16829 2742 53.7% 
-
-			//create regex for pulling the digits separately
-			//there may be a better regex, but this SHOULD WORK!
-			Pattern revPatt = Pattern.compile("[^\\d]*[\\d]+[^\\d]+([\\d]+)");
-			Matcher revMatch = revPatt.matcher(targetLine);
-			 				
-				//use "if" because it'll stop at first time regex is matched
-				//if we use 'while', it'll keep running and capture later data 
-				if(revMatch.find()) {
-					currRev = Double.parseDouble(revMatch.group(1));
-					
-					//currRev should be 16829
-				}//end if	
-			
+		        for (int x=0; x<sentence.length; x++) {
+		            if ( (sentence[x]).equals("Revenue") ) {
+		            	indexOfWordRevenue = x;
+		            }
+		            
+		         }//end for
+		            int indexOfPrevRevenue = indexOfWordRevenue + 1;
+		            int indexOfCurrRevenue = indexOfWordRevenue + 2;
+		            
+		            prevRevenue = Double.parseDouble(sentence[indexOfPrevRevenue]);
+		            currRevenue = Double.parseDouble(sentence[indexOfCurrRevenue]);
+		       
+			}//end while
 			scanner.close();
-		} //end try
-
+		}//end try
+		
 		catch (FileNotFoundException e){
 			e.printStackTrace();
 		} //end catch
-		return currRev;
-	} //END parseRevenue method
+		return currRevenue;
+	} //END parseRevenue version TWO
+		
+	
+	//parseRevenue version ONE
+		
+//		try {
+//			Scanner scanner = new Scanner(babaQuarter);
+//			//two conditions, to ensure we stop after grabbing revenue the first time
+//			
+//			while(scanner.hasNext() && (keepLooking) ) {
+//				String word = scanner.next();
+//				line = scanner.nextLine();
+//
+//				//check whether the next LINE matches our revenue regex
+//				Matcher m = revenuePattern.matcher(line);
+//				///if it does, then copy the whole line for later parsing
+//				if (m.find()) {
+//					targetLine = line;
+//					keepLooking = false;
+//
+//				}//end if
+//
+//				// for BABA201409, targetLine should be: Revenue 10,950 16,829 2,742 53.7% 
+//			}//end while
+//			
+//	
+//			// Either of these options should work
+//			// but NEITHER works
+//			targetLine = targetLine.replaceAll(",", "");
+//			//targetLine = line.replaceAll(",", "");
+//			
+//			//targetLine should now be: Revenue 10950 16829 2742 53.7% 
+//
+//			//create regex for pulling the digits separately
+//			//there may be a better regex, but this SHOULD WORK!
+//			Pattern revPatt = Pattern.compile("[^\\d]*[\\d]+[^\\d]+([\\d]+)");
+//			Matcher revMatch = revPatt.matcher(targetLine);
+//			 				
+//				//use "if" because it'll stop at first time regex is matched
+//				//if we use 'while', it'll keep running and capture later data 
+//				if(revMatch.find()) {
+//					currRev = Double.parseDouble(revMatch.group(1));
+//					
+//					//currRev should be 16829
+//				}//end if	
+//			
+//			scanner.close();
+//		} //end try
+//
+//		catch (FileNotFoundException e){
+//			e.printStackTrace();
+//		} //end catch
+//		return currRev;
+//	} //END parseRevenue method
 	
 	
 	/**
