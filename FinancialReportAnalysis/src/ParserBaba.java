@@ -68,62 +68,49 @@ public class ParserBaba extends DataParser {
 			
 			Scanner scanner = new Scanner(babaQuarter);
 			
-			while(scanner.hasNext() && keepLooking) {
+			while (scanner.hasNext() && keepLooking) {
 				line = scanner.nextLine();
-				if (line.contains("Revenue")) {
+				
+				if (line.startsWith("Revenue")) {
 					
 					keepLooking = false;
 					targetLine = line;
-					System.out.println("line: " + line);
-					System.out.println("grabLine: " + grabLine);
-					System.out.println("targetLine inside if: " + targetLine);
-					System.out.println("keepLooking : " + keepLooking);
 					
-				}
-				//line should be: Revenue 10,950 16,829 2,742 53.7% 
-				targetLine = line.replaceAll(",", "");
-				System.out.println("targetLine outside if " + targetLine);
+				}//end if
 				
-				//targetLine should be Revenue 10950 16829 2742 53.7% 
+			}//end while
 				
-				//create the Array of elements from the targetLine
-				sentence = targetLine.split(" ");
+			//remove the commas
+			targetLine = line.replaceAll(",", "");
+			
+			//populate Array "sentence" with each word in the sentence
+			//	using a space as the delimiter
+			sentence = targetLine.split(" ");
 				//0 index is "Revenue"
 				//1 index is "10950" - previous revenue
 				//2 index is "16829" - current revenue
-				
-				System.out.println("Sentence : " + Arrays.toString(sentence));
-	
-		        for (int x=0; x<sentence.length; x++) {
-		            if ( (sentence[x]).equals("Revenue") ) {
-		            	indexOfWordRevenue = x;
-		            }
-		            
-		         }//end for
-		            int indexOfPrevRevenue = indexOfWordRevenue + 1;
-		            int indexOfCurrRevenue = indexOfWordRevenue + 2;
-		            
-		            System.out.println("indexOfWordRevenue" + indexOfWordRevenue);
-		            System.out.println("indexOfPrevRevenue: " + indexOfPrevRevenue);
-		            System.out.println("indexOfCurrRevenue: " + indexOfCurrRevenue);
-		            
-		            String wordRevenue = (sentence[indexOfWordRevenue]);
-		            prevRevenue = Double.parseDouble(sentence[indexOfPrevRevenue]);
-		            currRevenue = Double.parseDouble(sentence[indexOfCurrRevenue]);
-		            
-		            System.out.println("indexOfWordRevenue : " + wordRevenue);
-		            System.out.println("prevRevenue: " + prevRevenue);
-		            System.out.println("currRevenue: " + currRevenue);
-		       
-			}//end while
-			scanner.close();
+			for (int x=0; x<sentence.length; x++) {
+				if ( (sentence[x]).equals("Revenue") ) {
+            	indexOfWordRevenue = x;
+				}
+			}	
+			
+			int indexOfPrevRevenue = indexOfWordRevenue + 1;
+            int indexOfCurrRevenue = indexOfWordRevenue + 2;
+                
+             prevRevenue = Double.parseDouble(sentence[indexOfPrevRevenue]);
+            currRevenue = Double.parseDouble(sentence[indexOfCurrRevenue]);
+            			
 		}//end try
-		
+	
 		catch (FileNotFoundException e){
 			e.printStackTrace();
 		} //end catch
+		
+		System.out.println("Revenue is : " + currRevenue + " should equal 16829.0");
 		return currRevenue;
-	} //END parseRevenue version TWO
+	}
+	 //END parseRevenue version TWO
 		
 	
 	//parseRevenue version ONE
