@@ -112,58 +112,58 @@ public class ParserBaba extends DataParser {
 	}
 	 //END parseRevenue version TWO
 		
-	
-	//parseRevenue version ONE
-		
-		try {
-			Scanner scanner = new Scanner(babaQuarter);
-			//two conditions, to ensure we stop after grabbing revenue the first time
-			
-			while(scanner.hasNext() && (keepLooking) ) {
-				String word = scanner.next();
-				line = scanner.nextLine();
-
-				//check whether the next LINE matches our revenue regex
-				Matcher m = revenuePattern.matcher(line);
-				///if it does, then copy the whole line for later parsing
-				if (m.find()) {
-					targetLine = line;
-					keepLooking = false;
-
-				}//end if
-
-				// for BABA201409, targetLine should be: Revenue 10,950 16,829 2,742 53.7% 
-			}//end while
-			
-	
-			// Either of these options should work
-			// but NEITHER works
-			targetLine = targetLine.replaceAll(",", "");
-			//targetLine = line.replaceAll(",", "");
-			
-			//targetLine should now be: Revenue 10950 16829 2742 53.7% 
-
-			//create regex for pulling the digits separately
-			//there may be a better regex, but this SHOULD WORK!
-			Pattern revPatt = Pattern.compile("[^\\d]*[\\d]+[^\\d]+([\\d]+)");
-			Matcher revMatch = revPatt.matcher(targetLine);
-			 				
-				//use "if" because it'll stop at first time regex is matched
-				//if we use 'while', it'll keep running and capture later data 
-				if(revMatch.find()) {
-					currRev = Double.parseDouble(revMatch.group(1));
-					
-					//currRev should be 16829
-				}//end if	
-			
-			scanner.close();
-		} //end try
-
-		catch (FileNotFoundException e){
-			e.printStackTrace();
-		} //end catch
-		return currRev;
-	} //END parseRevenue method
+//	
+//	//parseRevenue version ONE
+//		
+//		try {
+//			Scanner scanner = new Scanner(babaQuarter);
+//			//two conditions, to ensure we stop after grabbing revenue the first time
+//			
+//			while(scanner.hasNext() && (keepLooking) ) {
+//				String word = scanner.next();
+//				line = scanner.nextLine();
+//
+//				//check whether the next LINE matches our revenue regex
+//				Matcher m = revenuePattern.matcher(line);
+//				///if it does, then copy the whole line for later parsing
+//				if (m.find()) {
+//					targetLine = line;
+//					keepLooking = false;
+//
+//				}//end if
+//
+//				// for BABA201409, targetLine should be: Revenue 10,950 16,829 2,742 53.7% 
+//			}//end while
+//			
+//	
+//			// Either of these options should work
+//			// but NEITHER works
+//			targetLine = targetLine.replaceAll(",", "");
+//			//targetLine = line.replaceAll(",", "");
+//			
+//			//targetLine should now be: Revenue 10950 16829 2742 53.7% 
+//
+//			//create regex for pulling the digits separately
+//			//there may be a better regex, but this SHOULD WORK!
+//			Pattern revPatt = Pattern.compile("[^\\d]*[\\d]+[^\\d]+([\\d]+)");
+//			Matcher revMatch = revPatt.matcher(targetLine);
+//			 				
+//				//use "if" because it'll stop at first time regex is matched
+//				//if we use 'while', it'll keep running and capture later data 
+//				if(revMatch.find()) {
+//					currRev = Double.parseDouble(revMatch.group(1));
+//					
+//					//currRev should be 16829
+//				}//end if	
+//			
+//			scanner.close();
+//		} //end try
+//
+//		catch (FileNotFoundException e){
+//			e.printStackTrace();
+//		} //end catch
+//		return currRev;
+//	} //END parseRevenue method
 	
 	
 	/**
@@ -488,43 +488,3 @@ public String parseCompStatement(){
 
 
 
-//check whether the next LINE matches our revenue regex
-Matcher m = revenuePattern.matcher(line);
-///if it does, then copy the whole line for later parsing
-if (m.find()) {
-	targetLine = line;
-	keepLooking = false;
-
-}//end if
-
-// for BABA201409, targetLine should be: Revenue 10,950 16,829 2,742 53.7% 
-}//end while
-
-
-// Either of these options should work
-// but NEITHER works
-targetLine = targetLine.replaceAll(",", "");
-//targetLine = line.replaceAll(",", "");
-
-//targetLine should now be: Revenue 10950 16829 2742 53.7% 
-
-//create regex for pulling the digits separately
-//there may be a better regex, but this SHOULD WORK!
-Pattern revPatt = Pattern.compile("[^\\d]*[\\d]+[^\\d]+([\\d]+)");
-Matcher revMatch = revPatt.matcher(targetLine);
-				
-//use "if" because it'll stop at first time regex is matched
-//if we use 'while', it'll keep running and capture later data 
-if(revMatch.find()) {
-	currRev = Double.parseDouble(revMatch.group(1));
-	
-	//currRev should be 16829
-}//end if	
-
-scanner.close();
-} //end try
-
-catch (FileNotFoundException e){
-e.printStackTrace();
-} //end catch
-return currRev;
