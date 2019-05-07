@@ -13,6 +13,12 @@ public class FinancialData {
 	private String companyName;
 	private String compStatement;
 	
+	// Default constructor
+	public FinancialData() {
+		
+	}
+	
+	//TODO Change Runner so it uses this constructor; pending ParserBaba
 	//Constructor
 	public FinancialData(double revenue, double netIncome, double adjustedNetIncome, int finYear, 
 			int finQuarter, String companyName, String compStatement) {
