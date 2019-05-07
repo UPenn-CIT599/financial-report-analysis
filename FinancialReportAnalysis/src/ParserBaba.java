@@ -16,6 +16,7 @@ public class ParserBaba extends DataParser {
 	
 	String filePath = null;
 	
+	
 	public ParserBaba(String companyDataFile) {
 		super(companyDataFile);
 		filePath = companyDataFile;
@@ -182,8 +183,9 @@ public double parseNetIncome(){
 		//start of a line, starts with "Net Income", followed by a space, followed by 1 or more digits
 		//thus: ^Net Income\s\d{1,}
 		
-		Pattern netIncome = Pattern.compile("^Net Income\\s\\d{1,}");
+		Pattern netIncome = Pattern.compile("Net Income\\s");
 		String targetLine = null;
+		String sentence[] = null;
 		
 		try {
 			Scanner scanner = new Scanner(babaQuarter);
@@ -193,57 +195,40 @@ public double parseNetIncome(){
 			String line = null;
 			boolean keepLooping = true;
 			while(scanner.hasNext() && (keepLooping) ) {
-				String word = scanner.next();
+				//String word = scanner.next();
 				line = scanner.nextLine();
 
 				//check whether the next word matches our netIncome regex
-				Matcher m = netIncome.matcher(word);
+				//Matcher m = netIncome.matcher(line);
 				///if it does, then copy the whole line for later parsing
-				if (m.find()) {
+				if (line.startsWith("Net Income")) {
 					targetLine = line;
 					//advance the counter so that our while loop stops
 					//maybe there's a more elegant way, such as a boolean.
 					keepLooping=false;
+					System.out.println("targetLine inside loop:" + targetLine);
+					
 				}//end if
-				else {
-					xcounter++;
-				}
+				
 
 				//targetLine should be: Net Income 4,937 3,030 494 (38.6%)* 
 			}//end while
 			
-				
 				targetLine = line.replaceAll(",", "");
-				
+				System.out.println("targetLine outside loop:" + targetLine);
+		
+				sentence = targetLine.split(" ");
+				prevNetIncome = Double.parseDouble(sentence[2]);
+				currNetIncome = Double.parseDouble(sentence[3]);
 			
-			 	Pattern netIncomePatt = Pattern.compile("[^Net Income][0-9]\\d+");
-		        Matcher netIncomeMatch = netIncomePatt.matcher(targetLine);
-			
-					//by using this approach, we can actually pull multiple fields, if need be
-		        	//note that it require a "while" loop and a counter
-					int count = 0;
-					
-					while(netIncomeMatch.find()) {
-					    
-					    if (count == 0) {
-					        prevNetIncome = Double.parseDouble(netIncomeMatch.group());
-					        }
-					    if (count==1) {
-					        currNetIncome = Double.parseDouble(netIncomeMatch.group());
-					        }
-					    if (count == 2) {
-					        numNetIncomeChange = Double.parseDouble(netIncomeMatch.group());
-					        }
-					   count++;
-					    
-					   //currNetIncome should be 3030
-					    }//END WHILE 
-						scanner.close();
+					scanner.close();
 		} //end try
 
 		catch (FileNotFoundException e){
 			e.printStackTrace();
 		} //end catch
+		System.out.println("Net Income is: " + currNetIncome + "should be: 3030.0");
+		
 		return currNetIncome;
 	} //END parseNetIncome method
 	
@@ -255,7 +240,7 @@ public double parseNetIncome(){
  * @return nonGAAPNetIncome
  */
 
-public double parseNonGAAPNetIncome(){
+public double parseAdjustedNetIncome(){
 	
 	File babaQuarter = new File(filePath);
 	
@@ -264,8 +249,9 @@ public double parseNonGAAPNetIncome(){
 	//we merely search for ^Non-GAAP Net Income and a space
 	//we pull the numbers from the subsequent line
 	
-	Pattern nonGAAPNetIncome = Pattern.compile("^Non-GAAP Net Income\\s");
+	//Pattern nonGAAPNetIncome = Pattern.compile("^Non-GAAP Net Income\\s");
 	String targetLine = null;
+	String sentence[] = null;
 	
 	try {
 		Scanner scanner = new Scanner(babaQuarter);
@@ -277,53 +263,60 @@ public double parseNonGAAPNetIncome(){
 		
 		
 		while(scanner.hasNext() && (counter<2) ) {
-			String word = scanner.next();
+			//String word = scanner.next();
 			String line = scanner.nextLine();
 
 			//check whether the next word matches our netIncome regex
-			Matcher m = nonGAAPNetIncome.matcher(word);
+			//Matcher m = nonGAAPNetIncome.matcher(word);
 			///if it does, then copy the whole line for later parsing
-			if (m.find()) {
-				//advance the counter				
-				counter++;
-
-			}//end if
-			//now with counter at 1, we can grab the NEXT line
 			if(counter==1) {
 				targetLine = line;
 				//advance the counter ONCE MORE so that we don't keep reading (ie, stop here)
 				counter++;
+				System.out.println("targetLine in while counter =1 : " + targetLine );
 			}
-
+			if (line.startsWith("Non-GAAP Net Income")) {
+				//advance the counter				
+				counter++;
+				System.out.println("targetLine in while found targetWord : " + targetLine );
+			}//end if
+			//System.out.println("targetLine in while: " + targetLine );
 			//targetLine should be: (5) 5,893 6,808 1,109 15.5% 
 		}//end while
 		
 			//remove the commas
+			System.out.println("targetLine outside while: " + targetLine );
 			targetLine = targetLine.replaceAll(",", "");
+			sentence = targetLine.split(" ");
+			for (int i = sentence.length-1; i>0; i-- ) {
+				System.out.print(sentence[i] + " ");
+			}
+			System.out.println("sentence : " + sentence);
+			//curr revenue = 6808
 			
 	        //regex pulls each group of digits, minimum of three
-	        Pattern nonGaapPatt = Pattern.compile("\\d{3,}");
-	        Matcher nonGaapMatch = nonGaapPatt.matcher(targetLine);
+	       // Pattern nonGaapPatt = Pattern.compile("\\d{3,}");
+	       // Matcher nonGaapMatch = nonGaapPatt.matcher(targetLine);
 	       			
 			//by using this approach, we can actually pull multiple fields, if need be
-				int count = 0;
-				while(nonGaapMatch.find()) {
-				    
-	 			    if (count == 0) {
-	 			        prevNonGAAPNetIncome = Double.parseDouble(nonGaapMatch.group());
-	 			        }
-	 			    if (count==1) {
-				        currNonGAAPNetIncome = Double.parseDouble(nonGaapMatch.group());
-				        }
-				    if (count == 2) {
-				    	numNonGAAPNetIncomeChange = Double.parseDouble(nonGaapMatch.group());
-				        }
-				   
-				     count++;
+//				int count = 0;
+//				while(nonGaapMatch.find()) {
+//				    
+//	 			    if (count == 0) {
+//	 			        prevNonGAAPNetIncome = Double.parseDouble(nonGaapMatch.group());
+//	 			        }
+//	 			    if (count==1) {
+//				        currNonGAAPNetIncome = Double.parseDouble(nonGaapMatch.group());
+//				        }
+//				    if (count == 2) {
+//				    	numNonGAAPNetIncomeChange = Double.parseDouble(nonGaapMatch.group());
+//				        }
+//				   
+//				     count++;
 				     
 				     //currNonGAAPNetIncome should be 6808
 				    
-				    }//END WHILE 
+//				    }//END WHILE 
 				   
 					scanner.close();
 	} //end try
@@ -332,7 +325,7 @@ public double parseNonGAAPNetIncome(){
 		e.printStackTrace();
 	} //end catch
 	return currNonGAAPNetIncome;
-} //END parseNonGAAPNetIncome method
+} //END parseAdjustedNetIncome method
 
 ////\\\\FINANCIAL YEAR \\\\
 public int parseFinancialYear(){
