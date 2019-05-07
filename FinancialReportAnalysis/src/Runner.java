@@ -20,9 +20,9 @@ import java.util.Map;
  */
 public class Runner {
 
-	Map<String, FinancialData> finDataHM = new HashMap<String, FinancialData>();
-	Map<String, SentimentAnalysisResult> senResultHM = new HashMap<String, SentimentAnalysisResult>(); // object
-	Map<String, Integer> wordCountHM = new HashMap<String, Integer>(); // Maps word:occurrence
+	private Map<String, FinancialData> finDataHM = new HashMap<String, FinancialData>();
+	private Map<String, SentimentAnalysisResult> senResultHM = new HashMap<String, SentimentAnalysisResult>(); // object
+	private Map<String, Integer> wordCountHM = new HashMap<String, Integer>(); // Maps word:occurrence
 
 	/**
 	 * The Runner constructor loops through all PDFs in a folder and exports them to
@@ -117,5 +117,17 @@ public class Runner {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public Map<String, FinancialData> getFinDataHM() {
+		return finDataHM;
+	}
+
+	public Map<String, SentimentAnalysisResult> getSenResultHM() {
+		return senResultHM;
+	}
+
+	public Map<String, Integer> getWordCountHM() {
+		return wordCountHM;
 	}
 }
