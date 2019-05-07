@@ -50,7 +50,7 @@ public class ParserBaba extends DataParser {
 			while (scanner.hasNext() && keepLooking) {
 				line = scanner.nextLine();
 
-				if (line.startsWith("Revenue")) {
+				if (line.startsWith("Revenue") && !(line.contains("year"))) {
 
 					keepLooking = false;
 					targetLine = line;
@@ -74,7 +74,7 @@ public class ParserBaba extends DataParser {
 					indexOfWordRevenue = x;
 				}
 			}
-
+			System.out.println();
 			int indexOfPrevRevenue = indexOfWordRevenue + 1;
 			int indexOfCurrRevenue = indexOfWordRevenue + 2;
 			int indexOfyoyChangeRevenue = indexOfWordRevenue + 3;
@@ -169,21 +169,25 @@ public class ParserBaba extends DataParser {
 
 			String grabLine1 = null;
 			String grabLine2 = "notYetFound";
+			String grabLine3 = "grabLine3";
 			while (scanner.hasNext() && (counter < 2)) {
 				// String word = scanner.next();
 				String line = scanner.nextLine();
 				//String word = scanner.next();
 
 				// this loop only triggers if keyword already found in earlier pass of loop
-				if (counter == 1) {
+				if ((counter==1) && (line.length()>3) ) {
 					grabLine2 = line;
 					System.out.println("grabLine2 in first loop : " + grabLine2);
 					// advance the counter ONCE so that we don't keep reading (ie, stop here)
 					counter++;
+					
+					
 					int x = grabLine2.length();
 					System.out.println("length of grabLine2 :" + x);
+					targetLine = grabLine2;
 												
-					if ((grabLine2.length()>10)) { // this is a defacto empty test
+					if ((grabLine2.length()>5) || ( grabLine2.length()>3 && (grabLine2.contains("(")) ) ) { // this is a defacto empty test
 						targetLine = grabLine2;
 							System.out.println("grabLine2 in second loop: " + grabLine2);
 					
@@ -191,16 +195,35 @@ public class ParserBaba extends DataParser {
 					
 					else {
 						targetLine = grabLine1;	//if the 2nd GrabLine is empty, means everything is Grabline1
+						counter++;
 					}
 					
+					
 				} //end if "Counter == 1" loop
+				
+//				if (counter==2) {
+//					grabLine3 = line;
+//					counter++;
+//					System.out.println("grabLine3 :" + grabLine3);
+//				}
+				
+				
 				
 				// below is loop is our FIRST trigger
 				if (line.startsWith("Non-GAAP Net Income") || line.startsWith("Non-GAAP net income") ) {
 					grabLine1 = line;
+					counter++;
+					
+					System.out.println("grabLine1: " + grabLine1);
+					System.out.println("grabLine1 length: " + grabLine1.length());
+		//			if (grabLine1.length()> 19) {
+		//				targetLine = grabLine1;
+		//				counter = counter + 2; //exit the while loop entirely
+						
+		//			}
 					System.out.println("grabLine1 in loop: " + grabLine1);
 					// advance the counter again to stop the WHILE loop
-					counter++;
+					
 				
 				} // end if startsWith 
 				
@@ -255,7 +278,7 @@ public class ParserBaba extends DataParser {
 		int indexOfQuarter = 0;
 
 		int quarter = 0;
-		String companyName;
+		//String companyName;
 
 		try {
 			Scanner scanner = new Scanner(babaQuarter);
