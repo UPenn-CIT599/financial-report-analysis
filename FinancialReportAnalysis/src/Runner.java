@@ -44,10 +44,7 @@ public class Runner {
 			financialData.setCompanyName(parser.parseCompanyName());	
 			financialData.setAdjustedNetIncome(parser.parseAdjustedNetIncome());
 			financialData.setFinQuarter(parser.parseFinQuarter());
-			parser.parseYearQuarterCompany();
-			financialData.setFinYear(parser.getYear());
-			financialData.setFinQuarter(parser.getQuarter());
-			financialData.setCompanyName(parser.getCompanyName());
+			financialData.setFinYear(parser.parseFinancialYear());
 			financialData.setNetIncome(parser.parseNetIncome());
 			financialData.setRevenue(parser.parseRevenue());
 		
@@ -75,7 +72,6 @@ public class Runner {
 			PrintWriter pw = new PrintWriter(out);
 			
 			String text = finDataHM.get(key).getCompStatement();
-
 			pw.print(text);
 			pw.flush();
 			pw.close();
