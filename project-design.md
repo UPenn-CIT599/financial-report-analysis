@@ -74,6 +74,7 @@ This class extends DataParser and implements the methods required to parse data 
 ### Responsibilities
 - Has wordCount HashMap
 - countOfWords() method builds and returns wordCount HashMap
+- Has additional method that builds another HashMap of most frequently occurring words, excluding words such as "the" and "and"
 
 ### Collaborators
 - Runner Class to store HashMap within FinancialData object
@@ -123,7 +124,7 @@ Runs everything and calls the Visualizer class
 - FinancialData
 - ParserBaba (and DataParser)
 - SentimentAnalysis
-- Visualizer
+- ReportGenerator
 - WordCounter
 
 ## PDFFileFilter Class
@@ -144,7 +145,7 @@ This class implements the FileFilter interface to determine if a selected file i
 ### Collaborators
 - Runner Class
 
-## Visualizer Class
+## ReportGenerator Class
 This class presents the results of the financial data parsing and sentiment analysis. It could output a cleanly formatted .txt file report with the name, year, quarter, adjusted net income, net income, and revenue. It could also output a .csv file with these fields on Excel.
 
 Additionally the .txt file report could include the results of the compStatement (that the sentiment analysis is run on) as well as the sentiment analysis results.
@@ -154,9 +155,8 @@ It could also create a list of most-commonly used words from the HashMap of word
 ### Responsibilities
 - Has finDataHM, a HashMap mapping a FinancialData object to the key (name, year, quarter)
 - Has senResultHM, a HashMap mapping a SentimentAnalysis object to the key (name, year, quarter)
-- Has wordCountHM, a HashMap mapping words to occurrences
-- createCSV() method: output a cleanly formatted .csv file report with the name, year, quarter, adjusted net income, net income, and revenue.
-- createTxts() method: output cleanly formatted txt reports for each PDF including name, year, quarter, adjusted net income, net income, and revenue; compStatement; sentiment analysis results; and most-commonly used words.
+- generateCSV() method: output a cleanly formatted .csv file report with the name, year, quarter, adjusted net income, net income, revenue, sentiment analysis results.
+- createTxts() method: output cleanly formatted txt reports for each PDF including the compStatement and most-commonly used words.
 
 ### Collaborators
 - Runner
