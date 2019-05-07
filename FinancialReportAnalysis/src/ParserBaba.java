@@ -178,35 +178,22 @@ public double parseNetIncome(){
 		
 		File babaQuarter = new File(filePath);
 	
-		//File babaQuarter = new File("201409_converted.txt");
-		//our regex: 
-		//start of a line, starts with "Net Income", followed by a space, followed by 1 or more digits
-		//thus: ^Net Income\s\d{1,}
-		
-		Pattern netIncome = Pattern.compile("Net Income\\s");
 		String targetLine = null;
 		String sentence[] = null;
 		
 		try {
 			Scanner scanner = new Scanner(babaQuarter);
-			int counter = 0;
-			int xcounter= 0; //throwing this in to count loops. remove before shipping
-			//two conditions, to ensure we stop after grabbing revenue the first time
+			
 			String line = null;
 			boolean keepLooping = true;
 			while(scanner.hasNext() && (keepLooping) ) {
-				//String word = scanner.next();
+			
 				line = scanner.nextLine();
 
-				//check whether the next word matches our netIncome regex
-				//Matcher m = netIncome.matcher(line);
-				///if it does, then copy the whole line for later parsing
 				if (line.startsWith("Net Income")) {
 					targetLine = line;
-					//advance the counter so that our while loop stops
-					//maybe there's a more elegant way, such as a boolean.
 					keepLooping=false;
-					System.out.println("targetLine inside loop:" + targetLine);
+					
 					
 				}//end if
 				
@@ -215,8 +202,7 @@ public double parseNetIncome(){
 			}//end while
 			
 				targetLine = line.replaceAll(",", "");
-				System.out.println("targetLine outside loop:" + targetLine);
-		
+					
 				sentence = targetLine.split(" ");
 				prevNetIncome = Double.parseDouble(sentence[2]);
 				currNetIncome = Double.parseDouble(sentence[3]);
