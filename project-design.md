@@ -76,7 +76,7 @@ This class extends DataParser and implements the methods required to parse data 
 - countOfWords() method builds and returns wordCount HashMap
 
 ### Collaborators
-- Runner Class to store HashMap
+- Runner Class to store HashMap within FinancialData object
 
 ## FinancialData Class
 This Class stores the financial data read from the pdf or url. Each object represent 1 quarter result of 1 company. 
@@ -87,6 +87,7 @@ This Class stores the financial data read from the pdf or url. Each object repre
 - Have "Adjused Net Income"
 - Have "Financial Year", "Financial Quarter", "Company Name"
 - Have a String "compStatement"
+- Have a HashMap "WordCount"
 
 ### Collaborators
 - Runner, which helps populate these fields
@@ -105,14 +106,14 @@ This class conducts sentiment analysis on a company statement. Ideally we would 
 - Runner, which calls the sentiment analysis on the results in FinancialData
 
 ## Runner Class
+Runs everything and calls the Visualizer class
 
 ### Responsibilities
 - Has finDataHM, a HashMap mapping a FinancialData object to the key (name, year, quarter)
 - Has senResultHM, a HashMap mapping a SentimentAnalysis object to the key (name, year, quarter)
-- Has wordCountHM, a HashMap mapping words to occurrences
-- Exports PDF files to .txt files
-- Loop through all .txt files to populate above hashmaps for each file
-- Output sentiment analysis and compensation statement to .txt file (can be moved to Visualizer class)
+- PDFtoTxt method: Exports PDF files to .txt files
+- readTxt method: Loop through all .txt files to populate above hashmaps for each file
+- print method: Output sentiment analysis and compensation statement to .txt file (can be moved to Visualizer class)
 - Construct Visualizer object with hashmaps
 
 ### Collaborators
