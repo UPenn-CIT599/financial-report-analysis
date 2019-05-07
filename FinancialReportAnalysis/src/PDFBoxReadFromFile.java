@@ -71,21 +71,4 @@ public class PDFBoxReadFromFile {
 		pw.close();
 	}
 
-//	public static void main(String[] args) {
-//		try {
-//    		PDFBoxReadFromFile PDFReader = new PDFBoxReadFromFile("BIDU201503.pdf");
-//    		PDFReader.printToTxt();
-//    		
-//    		//read out tells us it's done.
-//    		
-//    		System.out.println("PDF Read complete.");
-//    		System.out.println("Please REFRESH Eclipse and look for the file: " + PDFReader.createTxtName() );
-//    		
-//    		
-//		}
-//		catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//	}
-
 }
