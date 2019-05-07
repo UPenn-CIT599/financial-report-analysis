@@ -64,13 +64,13 @@ public class Runner {
 			FinancialData financialData = new FinancialData();
 			ParserBaba parser = new ParserBaba(file.getPath());
 
-			financialData.setCompStatement(parser.parseCompStatement());
+			financialData.setCompStatement(parser.getCompStatement());
 			financialData.setCompanyName(parser.getCompanyName());
-			financialData.setAdjustedNetIncome(parser.parseAdjustedNetIncome());
+			financialData.setAdjustedNetIncome(parser.getCurrAdjustedNetIncome());
 			financialData.setFinQuarter(parser.getFinQuarter());
-			financialData.setFinYear(parser.parseFinancialYear());
-			financialData.setNetIncome(parser.parseNetIncome());
-			financialData.setRevenue(parser.parseRevenue());
+			financialData.setFinYear(parser.getFinancialYear());
+			financialData.setNetIncome(parser.getCurrNetIncome());
+			financialData.setRevenue(parser.getCurrRevenue());
 			
 			// Use WordCounter class to get HashMap of wordcount and add to FinancialData object
 			WordCounter counter = new WordCounter(file);

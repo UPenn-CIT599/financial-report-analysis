@@ -2,19 +2,27 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Class contains methods required to parse data for Alibaba
+ * Class contains methods required to parse data for Alibaba. The data is 
+ * stored in instance variables within DataParser class.
  * 
  * @author Tim Culpan, Angela Wen currently testing on BABA201409.pdf
  * 
- *         includes parsers (aka getters) for companyName, finQuarter
  */
 public class ParserBaba extends DataParser {
 
 	/**
+	 * The constructor calls all the following parser methods in order to 
+	 * populate the instance variables.
+	 * 
 	 * @param companyDataFile
 	 */
 	public ParserBaba(String companyDataFile) {
 		super(companyDataFile);
+		parseRevenue();
+		parseNetIncome();
+		parseAdjustedNetIncome();
+		parseFinancialYearQuarterCompany();
+		parseCompStatement();
 	}
 
 	/**
@@ -22,10 +30,9 @@ public class ParserBaba extends DataParser {
 	 * followed by digits then pulls the second set of digits, which is our target
 	 * current Revenue for the period
 	 * 
-	 * @return revenue for that period
 	 */
 
-	public double parseRevenue() {
+	public void parseRevenue() {
 
 		File babaQuarter = new File(filePath);
 
@@ -84,7 +91,6 @@ public class ParserBaba extends DataParser {
 
 		// TEST>
 		System.out.println("currRevenue is : " + currRevenue + " should be: 16829.0");
-		return currRevenue;
 	} // END parseRevenue
 
 	/**
@@ -95,7 +101,7 @@ public class ParserBaba extends DataParser {
 	 * 
 	 * @return netIncome
 	 */
-	public double parseNetIncome() {
+	public void parseNetIncome() {
 		// note: using a slightly different parsing technique than for parseRevenue
 		File babaQuarter = new File(filePath);
 
@@ -133,7 +139,6 @@ public class ParserBaba extends DataParser {
 		// TEST>
 		System.out.println("currNetIncome is: " + currNetIncome + " should be: 3030.0");
 
-		return currNetIncome;
 	} // END parseNetIncome method
 
 	/**
@@ -145,7 +150,7 @@ public class ParserBaba extends DataParser {
 	 * @return AdjustedNetIncome
 	 */
 
-	public double parseAdjustedNetIncome() {
+	public void parseAdjustedNetIncome() {
 
 		File babaQuarter = new File(filePath);
 
@@ -204,7 +209,6 @@ public class ParserBaba extends DataParser {
 		// TEST>>
 		System.out.println("currAdjustedNetIncome is: " + currAdjustedNetIncome + " should be: 6808.0");
 
-		return currAdjustedNetIncome;
 	} // END parseAdjustedNetIncome method
 
 	/**
@@ -213,7 +217,7 @@ public class ParserBaba extends DataParser {
 	 * 
 	 * @return financialYear
 	 */
-	public int parseFinancialYear() {
+	public void parseFinancialYearQuarterCompany() {
 
 		File babaQuarter = new File(filePath);
 
@@ -299,26 +303,17 @@ public class ParserBaba extends DataParser {
 			e.printStackTrace();
 		} // end catch
 
-		return financialYear;
-
 	} // END parseFinancialYear method
 
-	public int getFinQuarter() {
-		return finQuarter;
-	}
 
-	public String getCompanyName() {
-		return companyName;
-	}
 
 	/**
 	 * Method grabs all the information in the initial statement up to and including
 	 * the words "Webcast" which is the keyword signaling the end of the prose part
 	 * prior to data tables
 	 * 
-	 * @return String of the statement
 	 */
-	public String parseCompStatement() {
+	public void parseCompStatement() {
 
 		File babaQuarter = new File(filePath);
 
@@ -345,7 +340,6 @@ public class ParserBaba extends DataParser {
 			e.printStackTrace();
 		} // end catch
 
-		return compStatement;
 	} // END parseStatement Method
 
 } // END ParserBaba Class
