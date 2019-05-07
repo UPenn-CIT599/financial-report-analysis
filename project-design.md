@@ -98,6 +98,38 @@ This class conducts sentiment analysis on a company statement. Ideally we would 
 
 ## Runner Class
 
+### Responsibilities
+
+### Collaborators
+
+## PDFFileFilter Class
+This class implements the FileFilter interface to determine if a selected file is a PDF or not.
+
+### Responsibilities
+- accept() method: returns true if file is PDF
+
+### Collaborators
+- Runner Class
+
+## TxtFileFilter Class
+This class implements the FileFilter interface to determine if a selected file is a .txt file or not.
+
+### Responsibilities
+- accept() method: returns true if file is .txt
+
+### Collaborators
+- Runner Class
+
+## WordCounter Class
+- Grab a .txt file, then count how many occurrences of each word, input to hashmap
+
+### Responsibilities
+- Has wordCount HashMap
+- countOfWords() method builds and returns wordCount HashMap
+
+### Collaborators
+- FinancialData class, where the HashMap can be stored
+
 ## Visualization Class
 This class presents the results of the cross-reference and sentiment analysis. First it would output a cleanly formatted .txt file report. To expand, it could output a .csv file which could be opened on Excel and include instructions for the viewers to generate graphs and visualizations on Excel themselves. Another expansion would be to create a word cloud or other graphics within the report itself and output a PDF report so the viewer would not need to generate their own visualization. 
 
