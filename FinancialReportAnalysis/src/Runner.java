@@ -21,8 +21,8 @@ import java.util.Map;
 public class Runner {
 
 	private Map<String, FinancialData> finDataHM = new HashMap<String, FinancialData>();
-	private Map<String, SentimentAnalysisResult> senResultHM = new HashMap<String, SentimentAnalysisResult>(); // object
-	
+	private Map<String, SentimentAnalysisResult> senResultHM = new HashMap<String, SentimentAnalysisResult>();
+
 	/**
 	 * The Runner constructor loops through all PDFs in a folder and exports them to
 	 * .txt
@@ -33,7 +33,7 @@ public class Runner {
 
 		// Loop through all txt files to fill hashmaps
 		readTxts();
-		
+
 	}
 
 	/**
@@ -55,24 +55,24 @@ public class Runner {
 	 * FinancialData and SentimentAnalysis objects after parsing with DataParser. It
 	 * then inputs the FinancialData and SentimentAnalysis objects into the
 	 * corresponding hashmap.
-	 * @throws IOException 
+	 * 
+	 * @throws IOException
 	 */
 	private void readTxts() throws IOException {
 		File txtFolder = new File("txt");
 		for (File file : txtFolder.listFiles(new TxtFileFilter())) {
 
 			ParserBaba parser = new ParserBaba(file.getPath());
-			// Use WordCounter class to get HashMap of wordcount and add to FinancialData object
 			WordCounter counter = new WordCounter(file);
-			
+
 			// Construct financial data object with data from parser and word counter
-			FinancialData financialData = new FinancialData(parser.getCurrRevenue(), 
-					parser.getCurrNetIncome(), parser.getCurrAdjustedNetIncome(),
-					parser.getFinancialYear(), parser.getFinQuarter(), 
+			FinancialData financialData = new FinancialData(parser.getCurrRevenue(), parser.getCurrNetIncome(),
+					parser.getCurrAdjustedNetIncome(), parser.getFinancialYear(), parser.getFinQuarter(),
 					parser.getCompanyName(), parser.getCompStatement(), counter.countOfWords());
 
 			// Create unique key with company name, year, quarter
-			String hmKey = financialData.getCompanyName() + "_" + financialData.getFinYear() + "_" + financialData.getFinQuarter();
+			String hmKey = financialData.getCompanyName() + "_" + financialData.getFinYear() + "_"
+					+ financialData.getFinQuarter();
 
 			// Add appropriate data to financial data hashmap
 			finDataHM.put(hmKey, financialData);
@@ -87,33 +87,22 @@ public class Runner {
 	}
 
 	/**
-	 * The print method prints the compensation statement to a new file named with
-	 * the key of the hashmap entry.
+	 * The generateReports method calls the ReportGenerator class to produce a
+	 * .csv and a .txt file summarizing the findings.
 	 * 
 	 * @throws FileNotFoundException
 	 */
-	public void print() throws FileNotFoundException {
-		for (String key : finDataHM.keySet()) {
-			// create folder dataset
-			File folder = new File("dataset");
-			folder.mkdir();
-
-			// Print to file
-			File out = new File(folder, key + ".txt");
-
-			PrintWriter pw = new PrintWriter(out);
-
-			String text = finDataHM.get(key).getCompStatement();
-			pw.print(text);
-			pw.flush();
-			pw.close();
-		}
+	public void generateReports() throws FileNotFoundException {
+		ReportGenerator generator = new ReportGenerator(finDataHM, senResultHM);
+		//TODO generator.generateCSV();
+		generator.generateTxtReports();
 	}
-	
+
 	/**
 	 * getFinDataHM returns the value of the Map with the String key representing
 	 * name, quarter, year and the FinancialData object representing the data
 	 * retrieved after parsing the PDF files
+	 * 
 	 * @return
 	 */
 	public Map<String, FinancialData> getFinDataHM() {
@@ -122,8 +111,9 @@ public class Runner {
 
 	/**
 	 * getFinDataHM returns the value of the Map with the String key representing
-	 * name, quarter, year and the SentimentAnalysis object representing the
-	 * data retrieved from sentiment analysis
+	 * name, quarter, year and the SentimentAnalysis object representing the data
+	 * retrieved from sentiment analysis
+	 * 
 	 * @return
 	 */
 	public Map<String, SentimentAnalysisResult> getSenResultHM() {
@@ -132,17 +122,16 @@ public class Runner {
 
 	/**
 	 * For testing
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		try {
 			Runner runner = new Runner();
-			runner.print();
+			runner.generateReports();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-
-
 
 }
