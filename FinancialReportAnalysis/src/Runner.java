@@ -65,9 +65,9 @@ public class Runner {
 			ParserBaba parser = new ParserBaba(file.getPath());
 
 			financialData.setCompStatement(parser.parseCompStatement());
-			financialData.setCompanyName(parser.parseCompanyName());
+			financialData.setCompanyName(parser.getCompanyName());
 			financialData.setAdjustedNetIncome(parser.parseAdjustedNetIncome());
-			financialData.setFinQuarter(parser.parseFinQuarter());
+			financialData.setFinQuarter(parser.getFinQuarter());
 			financialData.setFinYear(parser.parseFinancialYear());
 			financialData.setNetIncome(parser.parseNetIncome());
 			financialData.setRevenue(parser.parseRevenue());
@@ -114,7 +114,31 @@ public class Runner {
 			pw.close();
 		}
 	}
+	
+	/**
+	 * getFinDataHM returns the value of the Map with the String key representing
+	 * name, quarter, year and the FinancialData object representing the data
+	 * retrieved after parsing the PDF files
+	 * @return
+	 */
+	public Map<String, FinancialData> getFinDataHM() {
+		return finDataHM;
+	}
 
+	/**
+	 * getFinDataHM returns the value of the Map with the String key representing
+	 * name, quarter, year and the SentimentAnalysis object representing the
+	 * data retrieved from sentiment analysis
+	 * @return
+	 */
+	public Map<String, SentimentAnalysisResult> getSenResultHM() {
+		return senResultHM;
+	}
+
+	/**
+	 * For testing
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		try {
 			Runner runner = new Runner();
@@ -124,12 +148,6 @@ public class Runner {
 		}
 	}
 
-	public Map<String, FinancialData> getFinDataHM() {
-		return finDataHM;
-	}
 
-	public Map<String, SentimentAnalysisResult> getSenResultHM() {
-		return senResultHM;
-	}
 
 }

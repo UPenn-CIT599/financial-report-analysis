@@ -9,63 +9,37 @@ import java.util.*;
  *
  */
 
-public class DataParser {
+abstract class DataParser {
 	
+	protected String filePath;
+	protected double currRevenue;
+	protected double currNetIncome;
+	protected double currAdjustedNetIncome;
 	
+	protected int financialYear;
+	protected int finQuarter;
+	protected String companyName;
+	protected String compStatement;
+	
+	//following are created, but we don't have to use them
+	protected double prevRevenue;
+	protected double prevNetIncome;
+	protected double prevAdjustedNetIncome;
+		
+	protected double yoyChangeRevenue;
+	protected double yoyChangeNetIncomeChange;
+	protected double yoyChangeAdjustedNetIncome;
 	
 	//constructor -  
 	public DataParser(String companyDataFile) {
-		
+		filePath = companyDataFile;
 	}
 	
-	
-	public double parseRevenue(){	
-		
-		return 0;
-	}
-	
-	public double parseNetIncome() {
-		
-		return 0;
-	}
-	
-	//NOTE: CRC says "parseAdjustedNonGAAPNetIncome", written like this to be consistent 
-	// with FinancialData class. Can be amended
-	public double parseAdjustedNetIncome() {
-		
-		return 0;		
-	}
-	
-	public int parseFinYear() {
-		
-		return 0;		
-	}
-	
-	public int parseFinQuarter() {
-		
-		return 0;		
-	}
-	
-	public String parseCompanyName() {
-		
-		return null;
-		
-	}
-	
-	public String parseCompStatement() {
-		
-		return null;
-	}
-	
-	//added per CRC, but wonder if it should be in a separate class, 
-	//or in a Utility Class 
-	public void createWordCount() {		
-	}
-	
-	public void outPutFullStatementText() {
-		
-	}
-	
+	abstract double parseRevenue();
+	abstract double parseNetIncome();
+	abstract double parseAdjustedNetIncome();
+	abstract int parseFinancialYear();
+	abstract String parseCompStatement();
 	
 
 }//END DataParser Class
