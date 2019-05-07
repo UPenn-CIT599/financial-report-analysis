@@ -165,23 +165,47 @@ public class ParserBaba extends DataParser {
 			// for Non-GAAP, we are counting once again because we grab the subsequent line
 			// AFTER the String "Non-GAAP Net Income" to exit the loop
 
+			String grabLine1 = null;
+			String grabLine2 = "notYetFound";
 			while (scanner.hasNext() && (counter < 2)) {
 				// String word = scanner.next();
 				String line = scanner.nextLine();
+				//String word = scanner.next();
 
 				// this loop only triggers if keyword already found in earlier pass of loop
 				if (counter == 1) {
-					targetLine = line;
+					grabLine2 = line;
+					System.out.println("grabLine2 in first loop : " + grabLine2);
 					// advance the counter ONCE so that we don't keep reading (ie, stop here)
 					counter++;
+												
+					if (!(grabLine2.startsWith("\\s"))) {
+						
+						//if (!grabLine2.startsWith("")) {
+						
+						//if it contains something, then that line has what we want
+						targetLine = grabLine2;
+						System.out.println("grabLine2 in second loop: " + grabLine2);
+					
+					//	}
+					}
+					else {
+						targetLine = grabLine1;	//if the 2nd GrabLine is empty, means everything is Grabline1
+					}
+					
 
-				}
-				// this loop is our first trigger
+				} //end if "Counter == 1" loop
+				
+				// below is loop is our FIRST trigger
 				if (line.startsWith("Non-GAAP Net Income")) {
+					grabLine1 = line;
+					System.out.println("grabLine1 in loop: " + grabLine1);
 					// advance the counter again to stop the WHILE loop
 					counter++;
-
-				} // end if
+				
+				} // end if startsWith 
+				
+					
 
 			} // end while
 
@@ -189,10 +213,12 @@ public class ParserBaba extends DataParser {
 			targetLine = targetLine.replaceAll(",", "");
 			// turn it into an Array
 			sentence = targetLine.split(" ");
+			
+			System.out.println("targetLine :" + targetLine);
 			// work BACKWARD
 			// pull them as String first, parse to Doubles later
 
-			String yoyPercent = sentence[(sentence.length) - 1]; // not used
+			//String yoyPercent = sentence[(sentence.length) - 1]; // not used
 			String yoyChange = sentence[(sentence.length) - 2];
 			String currYear = sentence[(sentence.length) - 3];
 			String prevYear = sentence[(sentence.length) - 4];
