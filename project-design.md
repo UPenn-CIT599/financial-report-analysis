@@ -68,6 +68,16 @@ This class extends DataParser and implements the methods required to parse data 
 - FinancialData, which holds all the information parsed
 - (DataParser from which this class extends)
 
+## WordCounter Class
+- Grab a .txt file, then count how many occurrences of each word, input to hashmap
+
+### Responsibilities
+- Has wordCount HashMap
+- countOfWords() method builds and returns wordCount HashMap
+
+### Collaborators
+- FinancialData class, where the HashMap can be stored
+
 ## FinancialData Class
 This Class stores the financial data read from the pdf or url. Each object represent 1 quarter result of 1 company. It also include a hashmap to store word count read from a company statement / financial statements in order to feed into a Sentiment Analysis class
 
@@ -99,8 +109,21 @@ This class conducts sentiment analysis on a company statement. Ideally we would 
 ## Runner Class
 
 ### Responsibilities
+- Has finDataHM, a HashMap mapping a FinancialData object to the key (name, year, quarter)
+- Has senResultHM, a HashMap mapping a SentimentAnalysis object to the key (name, year, quarter)
+- Exports PDF files to .txt files
+- Loop through all .txt files to populate above hashmaps for each file
+- Output sentiment analysis and compensation statement to .txt file (can be moved to Visualizer class)
+- Construct Visualizer object with hashmaps
 
 ### Collaborators
+- PDFBoxReadFromFile
+- PDFFileFilter
+- TxtFileFilter
+- FinancialData
+- ParserBaba (and DataParser)
+- SentimentAnalysis
+- Visualizer
 
 ## PDFFileFilter Class
 This class implements the FileFilter interface to determine if a selected file is a PDF or not.
@@ -120,21 +143,18 @@ This class implements the FileFilter interface to determine if a selected file i
 ### Collaborators
 - Runner Class
 
-## WordCounter Class
-- Grab a .txt file, then count how many occurrences of each word, input to hashmap
+## Visualizer Class
+This class presents the results of the financial data parsing and sentiment analysis. It could output a cleanly formatted .txt file report with the name, year, quarter, adjusted net income, net income, and revenue. It could also output a .csv file with these fields on Excel.
+
+Additionally the .txt file report could include the results of the compStatement (that the sentiment analysis is run on) as well as the sentiment analysis results.
+
+It could also create a list of most-commonly used words from the HashMap of word count from the FinancialData object. 
 
 ### Responsibilities
-- Has wordCount HashMap
-- countOfWords() method builds and returns wordCount HashMap
+- Has finDataHM, a HashMap mapping a FinancialData object to the key (name, year, quarter)
+- Has senResultHM, a HashMap mapping a SentimentAnalysis object to the key (name, year, quarter)
+- createCSV() method: output a cleanly formatted .csv file report with the name, year, quarter, adjusted net income, net income, and revenue.
+- createTxts() method: output cleanly formatted txt reports for each PDF including name, year, quarter, adjusted net income, net income, and revenue; compStatement; sentiment analysis results; and most-commonly used words.
 
 ### Collaborators
-- FinancialData class, where the HashMap can be stored
-
-## Visualization Class
-This class presents the results of the cross-reference and sentiment analysis. First it would output a cleanly formatted .txt file report. To expand, it could output a .csv file which could be opened on Excel and include instructions for the viewers to generate graphs and visualizations on Excel themselves. Another expansion would be to create a word cloud or other graphics within the report itself and output a PDF report so the viewer would not need to generate their own visualization. 
-
-### Responsibilities
-
-### Collaborators
-- SentimentAnalysis
-- CrossReferece
+- Runner
