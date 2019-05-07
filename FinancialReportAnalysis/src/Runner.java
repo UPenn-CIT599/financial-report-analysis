@@ -61,20 +61,15 @@ public class Runner {
 		File txtFolder = new File("txt");
 		for (File file : txtFolder.listFiles(new TxtFileFilter())) {
 
-			FinancialData financialData = new FinancialData();
 			ParserBaba parser = new ParserBaba(file.getPath());
-
-			financialData.setCompStatement(parser.getCompStatement());
-			financialData.setCompanyName(parser.getCompanyName());
-			financialData.setAdjustedNetIncome(parser.getCurrAdjustedNetIncome());
-			financialData.setFinQuarter(parser.getFinQuarter());
-			financialData.setFinYear(parser.getFinancialYear());
-			financialData.setNetIncome(parser.getCurrNetIncome());
-			financialData.setRevenue(parser.getCurrRevenue());
-			
 			// Use WordCounter class to get HashMap of wordcount and add to FinancialData object
 			WordCounter counter = new WordCounter(file);
-			financialData.setWordCount(counter.countOfWords());
+			
+			// Construct financial data object with data from parser and word counter
+			FinancialData financialData = new FinancialData(parser.getCurrRevenue(), 
+					parser.getCurrNetIncome(), parser.getCurrAdjustedNetIncome(),
+					parser.getFinancialYear(), parser.getFinQuarter(), 
+					parser.getCompanyName(), parser.getCompStatement(), counter.countOfWords());
 
 			// Create unique key with company name, year, quarter
 			String hmKey = financialData.getCompanyName() + "_" + financialData.getFinYear() + "_" + financialData.getFinQuarter();
