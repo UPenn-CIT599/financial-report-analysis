@@ -55,23 +55,4 @@ public class WordCounter {
 
 	}// END countOfWords method
 
-	// This main method is just to implement the WordCounter.
-	// can be removed and folded into our Runner class
-	public static void main(String[] args) {
-
-		try {
-			HashMap<String, Integer> count = new HashMap<>();
-
-			File f = new File("txt/BABA201409_converted.txt");
-			WordCounter counter = new WordCounter(f);
-			count = counter.countOfWords();
-
-			System.out.println(count);
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-	}
-
 }// END WordCounter Class

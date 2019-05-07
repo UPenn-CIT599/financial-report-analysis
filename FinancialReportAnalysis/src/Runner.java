@@ -22,8 +22,7 @@ public class Runner {
 
 	private Map<String, FinancialData> finDataHM = new HashMap<String, FinancialData>();
 	private Map<String, SentimentAnalysisResult> senResultHM = new HashMap<String, SentimentAnalysisResult>(); // object
-	private Map<String, Integer> wordCountHM = new HashMap<String, Integer>(); // Maps word:occurrence
-
+	
 	/**
 	 * The Runner constructor loops through all PDFs in a folder and exports them to
 	 * .txt
@@ -34,6 +33,7 @@ public class Runner {
 
 		// Loop through all txt files to fill hashmaps
 		readTxts();
+		
 	}
 
 	/**
@@ -55,8 +55,9 @@ public class Runner {
 	 * FinancialData and SentimentAnalysis objects after parsing with DataParser. It
 	 * then inputs the FinancialData and SentimentAnalysis objects into the
 	 * corresponding hashmap.
+	 * @throws IOException 
 	 */
-	private void readTxts() {
+	private void readTxts() throws IOException {
 		File txtFolder = new File("txt");
 		for (File file : txtFolder.listFiles(new TxtFileFilter())) {
 
@@ -70,6 +71,10 @@ public class Runner {
 			financialData.setFinYear(parser.parseFinancialYear());
 			financialData.setNetIncome(parser.parseNetIncome());
 			financialData.setRevenue(parser.parseRevenue());
+			
+			// Use WordCounter class to get HashMap of wordcount and add to FinancialData object
+			WordCounter counter = new WordCounter(file);
+			financialData.setWordCount(counter.countOfWords());
 
 			// Create unique key with company name, year, quarter
 			String hmKey = financialData.getCompanyName() + "_" + financialData.getFinYear() + "_" + financialData.getFinQuarter();
@@ -127,7 +132,4 @@ public class Runner {
 		return senResultHM;
 	}
 
-	public Map<String, Integer> getWordCountHM() {
-		return wordCountHM;
-	}
 }

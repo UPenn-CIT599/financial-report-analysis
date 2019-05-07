@@ -1,11 +1,16 @@
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.junit.jupiter.api.Test;
 
 class FinancialDataTest {
 
+	Map<String, Integer> testMap = new HashMap<String, Integer>();	
+	
 	FinancialData data = new FinancialData(100, 200, 300, 2010, 3, 
-			"Google", "This is my Google company statement wowza!");
+			"Google", "This is my Google company statement wowza!", testMap);
 	
 	@Test
 	void revenueTest() {
@@ -43,5 +48,9 @@ class FinancialDataTest {
 		assertTrue(data.getCompStatement().contains("company statement wowza"));
 	}
 	
+	@Test
+	void wordCountTest() {
+		assertNotNull(data.getWordCount());
+	}
 
 }

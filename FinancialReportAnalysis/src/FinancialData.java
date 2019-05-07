@@ -1,3 +1,5 @@
+import java.util.Map;
+
 /**
  * The FinancialData class represents objects of a PDF file. It includes
  * methods to get and set each of its attributes.
@@ -12,6 +14,7 @@ public class FinancialData {
 	private int finQuarter;
 	private String companyName;
 	private String compStatement;
+	private Map<String, Integer> wordCount;
 	
 	// Default constructor
 	public FinancialData() {
@@ -21,7 +24,7 @@ public class FinancialData {
 	//TODO Change Runner so it uses this constructor; pending ParserBaba
 	//Constructor
 	public FinancialData(double revenue, double netIncome, double adjustedNetIncome, int finYear, 
-			int finQuarter, String companyName, String compStatement) {
+			int finQuarter, String companyName, String compStatement, Map<String, Integer> wordCount) {
 		this.revenue = revenue;
 		this.netIncome = netIncome;
 		this.adjustedNetIncome = adjustedNetIncome;
@@ -29,6 +32,7 @@ public class FinancialData {
 		this.finQuarter = finQuarter;
 		this.companyName = companyName;
 		this.compStatement = compStatement;
+		this.wordCount = wordCount;
 	}
 
 	public double getRevenue() {
@@ -92,9 +96,16 @@ public class FinancialData {
 		return compStatement;
 	}
 
-
 	public void setCompStatement(String compStatement) {
 		this.compStatement = compStatement;
+	}
+
+	public Map<String, Integer> getWordCount() {
+		return wordCount;
+	}
+
+	public void setWordCount(Map<String, Integer> wordCount) {
+		this.wordCount = wordCount;
 	}
 	
 	
