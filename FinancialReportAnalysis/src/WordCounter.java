@@ -54,5 +54,17 @@ public class WordCounter {
 		return wordCount;
 
 	}// END countOfWords method
+	
+	public static void main(String[] args) {
+		File f = new File("dataset/Alibaba_2014_9.txt");
+		WordCounter count;
+		try {
+			count = new WordCounter(f);
+			System.out.println(count.countOfWords());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
 
 }// END WordCounter Class
