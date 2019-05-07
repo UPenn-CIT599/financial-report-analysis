@@ -76,22 +76,20 @@ This class extends DataParser and implements the methods required to parse data 
 - countOfWords() method builds and returns wordCount HashMap
 
 ### Collaborators
-- FinancialData class, where the HashMap can be stored
+- Runner Class to store HashMap
 
 ## FinancialData Class
-This Class stores the financial data read from the pdf or url. Each object represent 1 quarter result of 1 company. It also include a hashmap to store word count read from a company statement / financial statements in order to feed into a Sentiment Analysis class
+This Class stores the financial data read from the pdf or url. Each object represent 1 quarter result of 1 company. 
 
 ### Responsibilities
 - Have "Revenue"
 - Have "Net Income"
 - Have "Adjused Net Income"
 - Have "Financial Year", "Financial Quarter", "Company Name"
-- Have a HashMap "Word Count"
 - Have a String "compStatement"
 
 ### Collaborators
 - Runner, which helps populate these fields
-- WordCounter, which helps populate the HashMap Word Count
 - SentimentAnalysis
 
 ## SentimentAnalysisResult Class
@@ -111,6 +109,7 @@ This class conducts sentiment analysis on a company statement. Ideally we would 
 ### Responsibilities
 - Has finDataHM, a HashMap mapping a FinancialData object to the key (name, year, quarter)
 - Has senResultHM, a HashMap mapping a SentimentAnalysis object to the key (name, year, quarter)
+- Has wordCountHM, a HashMap mapping words to occurrences
 - Exports PDF files to .txt files
 - Loop through all .txt files to populate above hashmaps for each file
 - Output sentiment analysis and compensation statement to .txt file (can be moved to Visualizer class)
@@ -124,6 +123,7 @@ This class conducts sentiment analysis on a company statement. Ideally we would 
 - ParserBaba (and DataParser)
 - SentimentAnalysis
 - Visualizer
+- WordCounter
 
 ## PDFFileFilter Class
 This class implements the FileFilter interface to determine if a selected file is a PDF or not.
@@ -153,6 +153,7 @@ It could also create a list of most-commonly used words from the HashMap of word
 ### Responsibilities
 - Has finDataHM, a HashMap mapping a FinancialData object to the key (name, year, quarter)
 - Has senResultHM, a HashMap mapping a SentimentAnalysis object to the key (name, year, quarter)
+- Has wordCountHM, a HashMap mapping words to occurrences
 - createCSV() method: output a cleanly formatted .csv file report with the name, year, quarter, adjusted net income, net income, and revenue.
 - createTxts() method: output cleanly formatted txt reports for each PDF including name, year, quarter, adjusted net income, net income, and revenue; compStatement; sentiment analysis results; and most-commonly used words.
 
