@@ -291,48 +291,36 @@ public double parseAdjustedNetIncome(){
 			for (int i = sentence.length-1; i>0; i-- ) {
 				System.out.print(sentence[i] + " ");
 			}
-			System.out.println("sentence : " + sentence);
-			//curr revenue = 6808
 			
-	        //regex pulls each group of digits, minimum of three
-	       // Pattern nonGaapPatt = Pattern.compile("\\d{3,}");
-	       // Matcher nonGaapMatch = nonGaapPatt.matcher(targetLine);
-	       			
-			//by using this approach, we can actually pull multiple fields, if need be
-//				int count = 0;
-//				while(nonGaapMatch.find()) {
-//				    
-//	 			    if (count == 0) {
-//	 			        prevNonGAAPNetIncome = Double.parseDouble(nonGaapMatch.group());
-//	 			        }
-//	 			    if (count==1) {
-//				        currNonGAAPNetIncome = Double.parseDouble(nonGaapMatch.group());
-//				        }
-//				    if (count == 2) {
-//				    	numNonGAAPNetIncomeChange = Double.parseDouble(nonGaapMatch.group());
-//				        }
-//				   
-//				     count++;
-				     
-				     //currNonGAAPNetIncome should be 6808
-				    
-//				    }//END WHILE 
-				   
-					scanner.close();
+			String yoyPercent = sentence[(sentence.length)-1];
+			String yoyChange = sentence[(sentence.length)-2];
+			String currYear = sentence[(sentence.length)-3];
+			String prevYear = sentence[(sentence.length)-4];
+			
+			
+			System.out.println("yoyPercent : " + yoyPercent);
+			System.out.println("yoyChange : " + yoyChange);
+			System.out.println("currYear : " + currYear);
+			System.out.println("prevYear : " + prevYear);
+			
+			
+			scanner.close();
+			
+			currNonGAAPNetIncome = Double.parseDouble(currYear);
 	} //end try
-
 	catch (FileNotFoundException e){
 		e.printStackTrace();
 	} //end catch
 	return currNonGAAPNetIncome;
 } //END parseAdjustedNetIncome method
 
+
+
 ////\\\\FINANCIAL YEAR \\\\
 public int parseFinancialYear(){
 	
 	File babaQuarter = new File(filePath);
 	
-	//File babaQuarter = new File("201409_converted.txt");
 
 	String targetLine = null;
 	String sentence[] = null;
