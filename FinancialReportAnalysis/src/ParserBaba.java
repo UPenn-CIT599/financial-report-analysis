@@ -117,11 +117,13 @@ public class ParserBaba extends DataParser {
 
 				line = scanner.nextLine();
 
-				if (line.startsWith("Net Income")) {
+				if (line.startsWith("Net Income") || line.startsWith("Net income")) {
 					targetLine = line;
 					keepLooping = false;
 				} // end if
 			} // end while
+			
+			System.out.println("targetLine :" + targetLine);
 
 			targetLine = line.replaceAll(",", "");
 			sentence = targetLine.split(" ");
@@ -194,7 +196,7 @@ public class ParserBaba extends DataParser {
 				} //end if "Counter == 1" loop
 				
 				// below is loop is our FIRST trigger
-				if (line.startsWith("Non-GAAP Net Income")) {
+				if (line.startsWith("Non-GAAP Net Income") || line.startsWith("Non-GAAP net income") ) {
 					grabLine1 = line;
 					System.out.println("grabLine1 in loop: " + grabLine1);
 					// advance the counter again to stop the WHILE loop
