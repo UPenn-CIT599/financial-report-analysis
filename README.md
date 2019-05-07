@@ -33,7 +33,7 @@ A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 - Click Add JAR, point to the downloaded stanford-corenlp-3.9.2.jar and stanford-corenlp-3.9.2-models.jar under Folder "SentimentAnalysis\lib\"
 
 ## Setup - Import Java Project SentimentAnalysis into FinancialReportAnalysis
-= Right click on Java Project FinancialReportAnalysis
-= Click Buildpath>Configure Buildpath>Projects>Add
-= Select Java Project SentimentAnalysis
-= Click Apply and Close
+- Right click on Java Project FinancialReportAnalysis
+- Click Buildpath>Configure Buildpath>Projects>Add
+- Select Java Project SentimentAnalysis
+- Click Apply and Close
