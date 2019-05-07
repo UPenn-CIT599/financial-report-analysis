@@ -178,22 +178,19 @@ public class ParserBaba extends DataParser {
 					System.out.println("grabLine2 in first loop : " + grabLine2);
 					// advance the counter ONCE so that we don't keep reading (ie, stop here)
 					counter++;
+					int x = grabLine2.length();
+					System.out.println("length of grabLine2 :" + x);
 												
-					if (!(grabLine2.startsWith("\\s"))) {
-						
-						//if (!grabLine2.startsWith("")) {
-						
-						//if it contains something, then that line has what we want
+					if ((grabLine2.length()>10)) { // this is a defacto empty test
 						targetLine = grabLine2;
-						System.out.println("grabLine2 in second loop: " + grabLine2);
+							System.out.println("grabLine2 in second loop: " + grabLine2);
 					
-					//	}
-					}
+					}//end grabLine2 length check
+					
 					else {
 						targetLine = grabLine1;	//if the 2nd GrabLine is empty, means everything is Grabline1
 					}
 					
-
 				} //end if "Counter == 1" loop
 				
 				// below is loop is our FIRST trigger
