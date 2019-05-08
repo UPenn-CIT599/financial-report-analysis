@@ -71,10 +71,17 @@ public class ReportGenerator {
 	/**
 	 * generateCSV prints all financial data and sentiment analysis data to one
 	 * CSV file. 
+	 * 
+	 * For now the lists are hard-coded because there must be a list name so
+	 * I am having trouble looping through the hashmaps to create lists when
+	 * I cannot create a new list name. Help appreciated!
+	 * 
+	 * Currently the file will only work if running both 201409 and 201412.
+	 * Comment one out to run faster
+	 * 
 	 * @throws IOException 
 	 */
 	
-	//TODO
 	public void generateCSV() throws IOException {
 		
 		// Construct headers list
@@ -91,6 +98,11 @@ public class ReportGenerator {
 			keys.add(key);
 		}
 
+		// TODO DRY up this part of the code below. As you can see I am going
+		// through hashmaps to pull the data and add to separate lists (one for
+		// each row) But I cannot loop through because each list needs a unique
+		// name that I can't set as the 'key' or any other variable
+		
 		// Construct Lists for each entry of finDataHM
 		List<Object> baba201409 = new ArrayList<Object>();
 		baba201409.add(finDataHM.get("Alibaba_2014_9").getCompanyName());
@@ -101,6 +113,16 @@ public class ReportGenerator {
 		baba201409.add(finDataHM.get("Alibaba_2014_9").getAdjustedNetIncome());
 		baba201409.add(finDataHM.get("Alibaba_2014_9").getNetIncome() - 
 				finDataHM.get("Alibaba_2014_9").getAdjustedNetIncome());
+		
+		List<Object> baba201412 = new ArrayList<Object>();
+		baba201412.add(finDataHM.get("Alibaba_2014_12").getCompanyName());
+		baba201412.add(finDataHM.get("Alibaba_2014_12").getFinYear());
+		baba201412.add(finDataHM.get("Alibaba_2014_12").getFinQuarter());
+		baba201412.add(finDataHM.get("Alibaba_2014_12").getRevenue());
+		baba201412.add(finDataHM.get("Alibaba_2014_12").getNetIncome());
+		baba201412.add(finDataHM.get("Alibaba_2014_12").getAdjustedNetIncome());
+		baba201412.add(finDataHM.get("Alibaba_2014_12").getNetIncome() - 
+				finDataHM.get("Alibaba_2014_12").getAdjustedNetIncome());
 				
 		// Add to Lists for each entry of senResultHM
 		baba201409.add(senResultHM.get("Alibaba_2014_9").getSentimentScore());
@@ -110,6 +132,14 @@ public class ReportGenerator {
 		baba201409.add(senResultHM.get("Alibaba_2014_9").getNeutral());
 		baba201409.add(senResultHM.get("Alibaba_2014_9").getNegative());
 		baba201409.add(senResultHM.get("Alibaba_2014_9").getVeryNegative());
+		
+		baba201412.add(senResultHM.get("Alibaba_2014_12").getSentimentScore());
+		baba201412.add(senResultHM.get("Alibaba_2014_12").getSentimentType());
+		baba201412.add(senResultHM.get("Alibaba_2014_12").getVeryPositive());
+		baba201412.add(senResultHM.get("Alibaba_2014_12").getPositive());
+		baba201412.add(senResultHM.get("Alibaba_2014_12").getNeutral());
+		baba201412.add(senResultHM.get("Alibaba_2014_12").getNegative());
+		baba201412.add(senResultHM.get("Alibaba_2014_12").getVeryNegative());
 
 		// Construct ListWriter
 		CsvListWriter listWriter = new CsvListWriter(new FileWriter("dataset/allData.csv"), 
@@ -123,7 +153,8 @@ public class ReportGenerator {
 		
 		// Write financial data lists
 		listWriter.write(baba201409, processors);
-		
+		listWriter.write(baba201412, processors);
+
 		listWriter.close();
 		
 	}

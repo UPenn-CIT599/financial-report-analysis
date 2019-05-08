@@ -173,6 +173,8 @@ public class WordCounter {
 		commonWord.add("us$");
 		commonWord.add("be");
 		commonWord.add("its");
+		commonWord.add("we");
+		commonWord.add("per");
 
 		//Regex check for number / symbols 
 		if (word.matches("\\d*.")) return true;
