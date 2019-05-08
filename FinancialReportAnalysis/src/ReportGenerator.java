@@ -54,7 +54,7 @@ public class ReportGenerator {
 			File folder = new File("dataset");
 			folder.mkdir();
 
-			// Print to file
+			// Print comp statement to file
 			File out = new File(folder, key + ".txt");
 
 			PrintWriter pw = new PrintWriter(out);
@@ -63,7 +63,19 @@ public class ReportGenerator {
 			pw.print(text);
 			pw.flush();
 			
-			//TODO Also print the top word count data from WordCounter here 
+			// Print the top word count data from WordCounter here
+			Map <String, Integer> topWords = finDataHM.get(key).getWordCount();
+			pw.println("\n\n================================================\n"
+					+ "Below is the count of top words, minus most common:\n\n");
+			pw.flush();
+			pw.printf("%-10s%10s", "Word", "Count\n");
+			pw.flush();			
+			for (String word : topWords.keySet()) {
+				pw.printf("%-10s%10d", word, topWords.get(word));
+				pw.flush();
+				pw.println();
+				pw.flush();
+			}
 			pw.close();
 		}
 	}

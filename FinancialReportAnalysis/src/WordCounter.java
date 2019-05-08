@@ -63,8 +63,8 @@ public class WordCounter {
 	 * @param topN
 	 * @return HashMap<String, Integer> topWordCount for the topN frequent word
 	 */
-	public HashMap<String, Integer> topWordCount(int topN) {
-		HashMap<String, Integer> topWordCount = new HashMap<String, Integer>();
+	public Map<String, Integer> topWordCount(int topN) {
+		Map<String, Integer> topWordCount = new HashMap<String, Integer>();
 		ArrayList<String> topWords = new ArrayList<String>();
 		int minWordCnt = 0;
 		
@@ -73,7 +73,7 @@ public class WordCounter {
 			if (!isCommonWord(candidateWord)){ 
 				//To initialize the topWord ArrayList
 				if (topWords.isEmpty()) {
-					topWords.add (candidateWord);
+					topWords.add(candidateWord);
 				} else {
 					boolean replaceCnt = false;
 					
@@ -170,6 +170,9 @@ public class WordCounter {
 		commonWord.add("twelve");
 		commonWord.add("respective");
 		commonWord.add("such");
+		commonWord.add("us$");
+		commonWord.add("be");
+		commonWord.add("its");
 
 		//Regex check for number / symbols 
 		if (word.matches("\\d*.")) return true;
