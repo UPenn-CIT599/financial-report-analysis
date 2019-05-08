@@ -14,6 +14,8 @@ A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 - On the Eclipse IDE, right click on the Java Project "FinancialReportAnalysis"
 - Click REFRESH.
 - The library "pdfbox-app-2.0.15.jar" should appear under "Referenced Libraries"
+- If it does not, right click on Java Project "FinancialReportAnalysis" -> Build Path -> Configure Build Path
+- Under "Libraries" tab, click "Add JARs", select "FinancialReportAnalysis/lib" and select "pdfbox-app-2.0.15.jar". Click OK and Apply to Close.
 
 ## Setup - Sentiment Analysis 
 - Download the Sentiment Analysis project developed by Ruthwik from https://github.com/Ruthwik/Sentiment-Analysis
@@ -37,3 +39,12 @@ A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 - Click Buildpath>Configure Buildpath>Projects>Add
 - Select Java Project SentimentAnalysis
 - Click Apply and Close
+
+## Setup - SuperCSV 
+- Download the super-csv-distribution-2.4.0-bin.zip file here: https://github.com/super-csv/super-csv/releases
+- Save the file "super-csv-2.4.0.jar" under the the Folder "FinancialReportAnalysis\lib\"
+- On the Eclipse IDE, right click on the Java Project "FinancialReportAnalysis"
+- Click REFRESH.
+- The library "super-csv-2.4.0.jar" should appear under "Referenced Libraries"
+- If it does not, right click on Java Project "FinancialReportAnalysis" -> Build Path -> Configure Build Path
+- Under "Libraries" tab, click "Add JARs", select "FinancialReportAnalysis/lib" and select "super-csv-2.4.0.jar". Click OK and Apply to Close.
