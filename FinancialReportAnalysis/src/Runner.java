@@ -2,7 +2,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -95,13 +94,12 @@ public class Runner {
 	/**
 	 * The generateReports method calls the ReportGenerator class to produce a
 	 * .csv and a .txt file summarizing the findings.
-	 * 
-	 * @throws FileNotFoundException
+	 * @throws IOException 
 	 */
-	public void generateReports() throws FileNotFoundException {
+	public void generateReports() throws IOException {
 		ReportGenerator generator = new ReportGenerator(finDataHM, senResultHM);
-		//TODO generator.generateCSV();
 		generator.generateTxtReports();
+		generator.generateCSV();
 	}
 
 	/**

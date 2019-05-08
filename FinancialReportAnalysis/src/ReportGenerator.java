@@ -1,7 +1,19 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
+
+import org.supercsv.cellprocessor.constraint.NotNull;
+import org.supercsv.cellprocessor.ift.CellProcessor;
+import org.supercsv.io.CsvListWriter;
+import org.supercsv.io.CsvMapWriter;
+import org.supercsv.prefs.CsvPreference;
 
 /**
  * The ReportGenerator class generates a .csv file and a .txt file describing
@@ -32,12 +44,59 @@ public class ReportGenerator {
 	}
 	
 	/**
+	 * Sets up processors for CSV file
+	 */
+	private static CellProcessor[] getProcessors() {
+		final CellProcessor[] processors = new CellProcessor[] {
+				new NotNull(), //company name
+				new NotNull(), // year
+				new NotNull() // quarter		
+		};
+		
+		return processors;
+	}
+	
+	/**
 	 * generateCSV prints all financial data and sentiment analysis data to one
 	 * CSV file. 
+	 * @throws IOException 
 	 */
 	
 	//TODO
-	public void generateCSV() {
+	public void generateCSV() throws IOException {
+		
+		// Construct headers list
+		final String[] header = new String[] { "Company", "Year", "Quarter" };
+		
+		// Create set of keys in hashmaps to print
+		Set<String> keys = new HashSet<String>();
+		for (String key : finDataHM.keySet()) {
+			keys.add(key);
+		}
+
+		// Construct Lists for each entry of finDataHM
+		List<Object> baba201409 = Arrays.asList(new Object[] {
+				finDataHM.get("Alibaba_2014_9").getCompanyName(),
+				finDataHM.get("Alibaba_2014_9").getFinYear(), 
+				finDataHM.get("Alibaba_2014_9").getFinQuarter()
+		});
+				
+		// Add to Lists for each entry of senResultHM
+		
+		// Construct ListWriter
+		CsvListWriter listWriter = new CsvListWriter(new FileWriter("dataset/allData.csv"), 
+				CsvPreference.STANDARD_PREFERENCE);
+		
+		// Construct processor
+		final CellProcessor[] processors = getProcessors();
+		
+		// Write header
+		listWriter.writeHeader(header);;
+		
+		// Write financial data lists
+		listWriter.write(baba201409, processors);
+		
+		listWriter.close();
 		
 	}
 	
