@@ -50,7 +50,11 @@ public class ReportGenerator {
 		final CellProcessor[] processors = new CellProcessor[] {
 				new NotNull(), //company name
 				new NotNull(), // year
-				new NotNull() // quarter		
+				new NotNull(), // quarter
+				new NotNull(), // revenue
+				new NotNull(), // net income
+				new NotNull(), // adjusted net income
+				new NotNull() // difference between net and adjusted net
 		};
 		
 		return processors;
@@ -66,7 +70,10 @@ public class ReportGenerator {
 	public void generateCSV() throws IOException {
 		
 		// Construct headers list
-		final String[] header = new String[] { "Company", "Year", "Quarter" };
+		final String[] header = new String[] { "Company", "Year", "Quarter",
+			"Revenue (RMB in Millions)", "Net Income (RMB in Millions)", 
+			"Adjusted Net Income (RMB in Millions)", 
+			"Difference Between Net and Adjusted Income (RMB in Millions)"};
 		
 		// Create set of keys in hashmaps to print
 		Set<String> keys = new HashSet<String>();
@@ -78,7 +85,12 @@ public class ReportGenerator {
 		List<Object> baba201409 = Arrays.asList(new Object[] {
 				finDataHM.get("Alibaba_2014_9").getCompanyName(),
 				finDataHM.get("Alibaba_2014_9").getFinYear(), 
-				finDataHM.get("Alibaba_2014_9").getFinQuarter()
+				finDataHM.get("Alibaba_2014_9").getFinQuarter(), 
+				finDataHM.get("Alibaba_2014_9").getRevenue(),
+				finDataHM.get("Alibaba_2014_9").getNetIncome(),
+				finDataHM.get("Alibaba_2014_9").getAdjustedNetIncome(),
+				finDataHM.get("Alibaba_2014_9").getNetIncome() - 
+					finDataHM.get("Alibaba_2014_9").getAdjustedNetIncome()
 		});
 				
 		// Add to Lists for each entry of senResultHM
@@ -118,13 +130,17 @@ public class ReportGenerator {
 
 			PrintWriter pw = new PrintWriter(out);
 
+			pw.println("\n\n====================================================\n"
+					+ "Comp Statement\n"
+					+ "====================================================\n\n");
+			pw.flush();
 			String text = finDataHM.get(key).getCompStatement();
 			pw.print(text);
 			pw.flush();
 			
 			// Print the top word count data from WordCounter here
 			Map <String, Integer> topWords = finDataHM.get(key).getWordCount();
-			pw.println("\n\n================================================\n"
+			pw.println("\n\n====================================================\n"
 					+ "Below is the count of top words, minus most common:\n\n");
 			pw.flush();
 			pw.printf("%-10s%10s", "Word", "Count\n");
