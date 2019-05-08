@@ -376,7 +376,7 @@ public class ParserBaba extends DataParser {
 				// between.
 				compStatement = compStatement + " " + word;
 				// stop when we come across the word "Webcast"
-				if (word.contentEquals("Webcast")) {
+				if (word.contentEquals("Webcast") ||word.contentEquals("WEBCAST")) {
 					keepGoing = false;
 				}
 			} // end while loop
