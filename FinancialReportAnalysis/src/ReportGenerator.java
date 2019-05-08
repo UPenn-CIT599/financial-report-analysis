@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -54,7 +55,14 @@ public class ReportGenerator {
 				new NotNull(), // revenue
 				new NotNull(), // net income
 				new NotNull(), // adjusted net income
-				new NotNull() // difference between net and adjusted net
+				new NotNull(), // difference between net and adjusted net
+				new NotNull(), // sentiment score
+				new NotNull(), // sentiment type
+				new NotNull(), // very positive
+				new NotNull(), // positive
+				new NotNull(), // neutral
+				new NotNull(), // negative
+				new NotNull() // very negative
 		};
 		
 		return processors;
@@ -73,7 +81,9 @@ public class ReportGenerator {
 		final String[] header = new String[] { "Company", "Year", "Quarter",
 			"Revenue (RMB in Millions)", "Net Income (RMB in Millions)", 
 			"Adjusted Net Income (RMB in Millions)", 
-			"Difference Between Net and Adjusted Income (RMB in Millions)"};
+			"Difference Between Net and Adjusted Income (RMB in Millions)",
+			"Sentiment Score", "Sentiment Type", "Very Positive (%)", "Positive (%)",
+			"Neutral (%)", "Negative (%)", "Very Negative (%)"};
 		
 		// Create set of keys in hashmaps to print
 		Set<String> keys = new HashSet<String>();
@@ -82,19 +92,25 @@ public class ReportGenerator {
 		}
 
 		// Construct Lists for each entry of finDataHM
-		List<Object> baba201409 = Arrays.asList(new Object[] {
-				finDataHM.get("Alibaba_2014_9").getCompanyName(),
-				finDataHM.get("Alibaba_2014_9").getFinYear(), 
-				finDataHM.get("Alibaba_2014_9").getFinQuarter(), 
-				finDataHM.get("Alibaba_2014_9").getRevenue(),
-				finDataHM.get("Alibaba_2014_9").getNetIncome(),
-				finDataHM.get("Alibaba_2014_9").getAdjustedNetIncome(),
-				finDataHM.get("Alibaba_2014_9").getNetIncome() - 
-					finDataHM.get("Alibaba_2014_9").getAdjustedNetIncome()
-		});
+		List<Object> baba201409 = new ArrayList<Object>();
+		baba201409.add(finDataHM.get("Alibaba_2014_9").getCompanyName());
+		baba201409.add(finDataHM.get("Alibaba_2014_9").getFinYear());
+		baba201409.add(finDataHM.get("Alibaba_2014_9").getFinQuarter());
+		baba201409.add(finDataHM.get("Alibaba_2014_9").getRevenue());
+		baba201409.add(finDataHM.get("Alibaba_2014_9").getNetIncome());
+		baba201409.add(finDataHM.get("Alibaba_2014_9").getAdjustedNetIncome());
+		baba201409.add(finDataHM.get("Alibaba_2014_9").getNetIncome() - 
+				finDataHM.get("Alibaba_2014_9").getAdjustedNetIncome());
 				
 		// Add to Lists for each entry of senResultHM
-		
+		baba201409.add(senResultHM.get("Alibaba_2014_9").getSentimentScore());
+		baba201409.add(senResultHM.get("Alibaba_2014_9").getSentimentType());
+		baba201409.add(senResultHM.get("Alibaba_2014_9").getVeryPositive());
+		baba201409.add(senResultHM.get("Alibaba_2014_9").getPositive());
+		baba201409.add(senResultHM.get("Alibaba_2014_9").getNeutral());
+		baba201409.add(senResultHM.get("Alibaba_2014_9").getNegative());
+		baba201409.add(senResultHM.get("Alibaba_2014_9").getVeryNegative());
+
 		// Construct ListWriter
 		CsvListWriter listWriter = new CsvListWriter(new FileWriter("dataset/allData.csv"), 
 				CsvPreference.STANDARD_PREFERENCE);
