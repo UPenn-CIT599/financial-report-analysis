@@ -123,6 +123,16 @@ public class ReportGenerator {
 		baba201412.add(finDataHM.get("Alibaba_2014_12").getAdjustedNetIncome());
 		baba201412.add(finDataHM.get("Alibaba_2014_12").getNetIncome() - 
 				finDataHM.get("Alibaba_2014_12").getAdjustedNetIncome());
+		
+		List<Object> baba201512 = new ArrayList<Object>();
+		baba201512.add(finDataHM.get("Alibaba_2015_12").getCompanyName());
+		baba201512.add(finDataHM.get("Alibaba_2015_12").getFinYear());
+		baba201512.add(finDataHM.get("Alibaba_2015_12").getFinQuarter());
+		baba201512.add(finDataHM.get("Alibaba_2015_12").getRevenue());
+		baba201512.add(finDataHM.get("Alibaba_2015_12").getNetIncome());
+		baba201512.add(finDataHM.get("Alibaba_2015_12").getAdjustedNetIncome());
+		baba201512.add(finDataHM.get("Alibaba_2015_12").getNetIncome() - 
+				finDataHM.get("Alibaba_2015_12").getAdjustedNetIncome());
 				
 		// Add to Lists for each entry of senResultHM
 		baba201409.add(senResultHM.get("Alibaba_2014_9").getSentimentScore());
@@ -140,6 +150,14 @@ public class ReportGenerator {
 		baba201412.add(senResultHM.get("Alibaba_2014_12").getNeutral());
 		baba201412.add(senResultHM.get("Alibaba_2014_12").getNegative());
 		baba201412.add(senResultHM.get("Alibaba_2014_12").getVeryNegative());
+		
+		baba201512.add(senResultHM.get("Alibaba_2015_12").getSentimentScore());
+		baba201512.add(senResultHM.get("Alibaba_2015_12").getSentimentType());
+		baba201512.add(senResultHM.get("Alibaba_2015_12").getVeryPositive());
+		baba201512.add(senResultHM.get("Alibaba_2015_12").getPositive());
+		baba201512.add(senResultHM.get("Alibaba_2015_12").getNeutral());
+		baba201512.add(senResultHM.get("Alibaba_2015_12").getNegative());
+		baba201512.add(senResultHM.get("Alibaba_2015_12").getVeryNegative());
 
 		// Construct ListWriter
 		CsvListWriter listWriter = new CsvListWriter(new FileWriter("dataset/allData.csv"), 
@@ -154,6 +172,7 @@ public class ReportGenerator {
 		// Write financial data lists
 		listWriter.write(baba201409, processors);
 		listWriter.write(baba201412, processors);
+		listWriter.write(baba201512, processors);
 
 		listWriter.close();
 		
@@ -177,7 +196,7 @@ public class ReportGenerator {
 
 			PrintWriter pw = new PrintWriter(out);
 
-			pw.println("\n\n====================================================\n"
+			pw.println("====================================================\n"
 					+ "Comp Statement\n"
 					+ "====================================================\n\n");
 			pw.flush();
