@@ -1,8 +1,8 @@
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.logging.Level; //not using in this implementation, but we like it anyway. 
+import java.util.logging.Logger; 
 
 /**
  * PDFBoxReadFromFile collaborates with PDFManager to read a PDF file and 
@@ -13,6 +13,9 @@ import java.util.logging.Logger;
 public class PDFBoxReadFromFile {
 	private PDFManager pdfManager = new PDFManager();
 	private String fileName;
+	
+	//dynamically creates a folder called "txt" to which .txt files are saved
+	//this makes it easy to loop through and grab those .txt files for analysis later
 	public static final String outputFolder = "txt";
 
 	/**
