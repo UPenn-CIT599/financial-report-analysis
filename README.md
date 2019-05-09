@@ -11,11 +11,12 @@ A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 - Download the PDFBox .jar file here: https://pdfbox.apache.org/download.cgi 
 - It is the file labeled "pdfbox-app-2.0.15.jar"
 - Save it under the the Folder "FinancialReportAnalysis\lib\"
-- On the Eclipse IDE, right click on the Java Project "FinancialReportAnalysis"
+- In Eclipse, RIGHT CLICK on the Java Project "FinancialReportAnalysis"
 - Click REFRESH.
 - The library "pdfbox-app-2.0.15.jar" should appear under "Referenced Libraries"
 - If it does not, right click on Java Project "FinancialReportAnalysis" -> Build Path -> Configure Build Path
-- Under "Libraries" tab, click "Add JARs", select "FinancialReportAnalysis/lib" and select "pdfbox-app-2.0.15.jar". Click OK and Apply to Close.
+- Under "Libraries" tab, click "Add JARs", select "FinancialReportAnalysis/lib" and select "pdfbox-app-2.0.15.jar". 
+-Click OK and Apply to Close.
 
 ## Setup - Sentiment Analysis 
 - Download the Sentiment Analysis project developed by Ruthwik from https://github.com/Ruthwik/Sentiment-Analysis
@@ -23,22 +24,23 @@ A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 - Point to the "SentimentAnalysis" Folder
 - Select "SentimentAnalysis" in the Folder list
 - Click FINISH
-- The Java project SentimentAnalysis should appear in the Package Explorer window
+- The Java project SentimentAnalysis should appear in the Package Explorer window (note, you may need to scroll down your Eclipse Project Explorer window to find it)
 
 ### Setup - Stanford NLP for Sentiment Analysis
 - Download the Stanford CoreNLP v3.9.2 from https://stanfordnlp.github.io/CoreNLP/download.html
-- Once download has completed, save stanford-corenlp-3.9.2.jar and stanford-corenlp-3.9.2-models.jar under the the Folder "SentimentAnalysis\lib\"
-- On the Eclipse IDE, right click on the Java Project "SentimentAnalysis". Click REFRESH.
+- Once download has completed, save stanford-corenlp-3.9.2.jar and stanford-corenlp-3.9.2-models.jar within the the Folder "SentimentAnalysis\lib\"
+- In Eclipse IDE, right click on the Java Project "SentimentAnalysis". Click REFRESH.
 - Right click on the Java Project "SentimentAnalysis". 
 - Click BuildPath>Configure BuildPath>Libraries.
-- Delete the .jar of stanford-corenlp-3.8.0.jar and stanford-corenlp-3.8.0-models.jar
-- Click Add JAR, point to the downloaded stanford-corenlp-3.9.2.jar and stanford-corenlp-3.9.2-models.jar under Folder "SentimentAnalysis\lib\"
+- DELETE the .jar of stanford-corenlp-3.8.0.jar and stanford-corenlp-3.8.0-models.jar (these are OLD versions, we want the new ones .. next step)
+- Click Add JAR, point to the downloaded stanford-corenlp-3.9.2.jar and stanford-corenlp-3.9.2-models.jar within the Folder "SentimentAnalysis\lib\"
 
 ## Setup - Import Java Project SentimentAnalysis into FinancialReportAnalysis
 - Right click on Java Project FinancialReportAnalysis
-- Click Buildpath>Configure Buildpath>Projects>Add
+- Click Buildpath>Configure Buildpath>
+	- on the tab "Projects" click > Add
 - Select Java Project SentimentAnalysis
-- Click Apply and Close
+- Apply and Close
 
 ## Setup - Apache CommonsCSV 
 - GO TO the Download Apache Commons CSV page, here:
@@ -49,11 +51,11 @@ commons-csv-1.6-bin.zip
 - COPY the file commons-csv-1.6.jar, go to Eclipse, and PASTE it within the folder "FinancialReportAnalysis\lib\"
 - Click REFRESH
 - in Eclipse, right-click on the Java Project "FinancialReportAnalysis" go to:
-	Build Path > Configure BuildPath > 
+	- Build Path > Configure BuildPath > 
 	click tab "Libraries"
-	if commons-csv-1.6.jar is not already there
-	>Add JARs> and look for it in 			"FinancialReportAnalysis/lib" 
-	>Apply and Close
+	-if commons-csv-1.6.jar is not already there:
+		-Add JARs> and look for it in 			"FinancialReportAnalysis/lib" 
+	-Apply and Close
 - In Eclipse - click REFRESH
  	
 
