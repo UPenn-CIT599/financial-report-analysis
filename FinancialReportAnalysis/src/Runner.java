@@ -142,6 +142,13 @@ public class Runner {
 		try {
 			Runner runner = new Runner();
 			runner.generateReports();
+			System.out.println("=====================================================");
+			System.out.println("Parsing and analysis complete!");
+			System.out.println("Please check the /dataset folder for a .csv file");
+			System.out.println("containing financial data and sentiment analysis");
+			System.out.println("data and .txt files for each PDf containing the");
+			System.out.println("comp statement and most common words from each.");
+			System.out.println("=====================================================");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
