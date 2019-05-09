@@ -102,8 +102,9 @@ public class ReportGenerator {
 
 			PrintWriter pw = new PrintWriter(out);
 
-			pw.println("====================================================\n" + "Comp Statement\n"
-					+ "====================================================\n\n");
+			pw.println("=========================================================\n" + 
+					"Comp Statement (Sentiment Analysis Run on This Statement)\n"
+					+ "==========================================================\n\n");
 			pw.flush();
 			String text = finDataHM.get(key).getCompStatement();
 			pw.print(text);
@@ -111,8 +112,9 @@ public class ReportGenerator {
 
 			// Print the top word count data from WordCounter here
 			Map<String, Integer> topWords = finDataHM.get(key).getWordCount();
-			pw.println("\n\n====================================================\n"
-					+ "Below is the count of top words, minus most common:\n\n");
+			pw.println("\n\n===========================================================\n"
+					+ "Below is the count of top words in the entire converted .txt\n"
+					+ "file, excluding common words such as 'the' and 'and':\n\n");
 			pw.flush();
 			pw.printf("%-10s%10s", "Word", "Count\n");
 			pw.flush();
