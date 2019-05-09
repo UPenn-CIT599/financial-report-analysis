@@ -2,8 +2,10 @@ import java.io.*;
 import java.util.*;
 
 /**
- * Class contains methods required to parse data for Alibaba. The data is 
- * stored in instance variables within DataParser class.
+ * Thus Subclass contains methods required to parse data for Alibaba. 
+ * The data is stored in instance variables within DataParser class.
+ * Similar subclasses could be used for other companies
+ * 
  * 
  * @author Tim Culpan, Angela Wen currently testing on BABA201409.pdf
  * 
@@ -28,8 +30,7 @@ public class ParserBaba extends DataParser {
 	/**
 	 * this method goes through the file, finds where it says "Revenue" AND is
 	 * followed by digits then pulls the second set of digits, which is our target
-	 * current Revenue for the period
-	 * 
+	 * current Revenue for the period	 
 	 */
 
 	public void parseRevenue() {
@@ -42,7 +43,14 @@ public class ParserBaba extends DataParser {
 		String sentence[];
 
 		int indexOfWordRevenue = 0;
-
+		//Note, in this project we're trying a few different methods of finding and grabbing data
+		//	and before you ask, yes we tried Regex. 
+		// 	however: multiple approaches to implementing Regex failed 
+		// 	in addition, since regex is relatively resource intense
+		//			and we only need to grab a number once in each method, 
+		//		 	we went with a looping approach as the chosen strategy (
+		//		(let's be frank: NOBODY likes Regex. But who doesn't like loops!! )
+		//	Anyway, this project is quite memory-hungry, so perhaps this alleviates that appetite a little. Maybe(?!)
 		try {
 
 			Scanner scanner = new Scanner(babaQuarter);
@@ -169,7 +177,7 @@ public class ParserBaba extends DataParser {
 
 			String grabLine1 = null;
 			String grabLine2 = "notYetFound";
-			String grabLine3 = "grabLine3";
+			String grabLine3 = "grabLine3";  //not used in current implementation
 			while (scanner.hasNext() && (counter < 2)) {
 				// String word = scanner.next();
 				String line = scanner.nextLine();
@@ -201,30 +209,16 @@ public class ParserBaba extends DataParser {
 					
 				} //end if "Counter == 1" loop
 				
-//				if (counter==2) {
-//					grabLine3 = line;
-//					counter++;
-//					System.out.println("grabLine3 :" + grabLine3);
-//				}
-				
-				
-				
+		
 				// below is loop is our FIRST trigger
 				if (line.startsWith("Non-GAAP Net Income") || line.startsWith("Non-GAAP net income") ) {
 					grabLine1 = line;
 					counter++;
-					
+		//can be deleted after JUnit Tests are done
 					System.out.println("grabLine1: " + grabLine1);
 					System.out.println("grabLine1 length: " + grabLine1.length());
-		//			if (grabLine1.length()> 19) {
-		//				targetLine = grabLine1;
-		//				counter = counter + 2; //exit the while loop entirely
-						
-		//			}
 					System.out.println("grabLine1 in loop: " + grabLine1);
-					// advance the counter again to stop the WHILE loop
 					
-				
 				} // end if startsWith 
 				
 					
@@ -357,7 +351,7 @@ public class ParserBaba extends DataParser {
 
 	/**
 	 * Method grabs all the information in the initial statement up to and including
-	 * the words "Webcast" which is the keyword signaling the end of the prose part
+	 * the words "highlights" which is the keyword signaling the end of the prose part
 	 * prior to data tables
 	 * 
 	 */
@@ -376,7 +370,7 @@ public class ParserBaba extends DataParser {
 				// between.
 				compStatement = compStatement + " " + word;
 				// stop when we come across the word "Webcast"
-				if (word.contentEquals("Webcast") ||word.contentEquals("WEBCAST")) {
+				if (word.contentEquals("Highlights") ||word.contentEquals("highlights")) {
 					keepGoing = false;
 				}
 			} // end while loop
