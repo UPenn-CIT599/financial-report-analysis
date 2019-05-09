@@ -6,13 +6,29 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * The program utilize two external libraries PDF Box and SentimentAnalysis to
- * read from PDFs and conduct sentiment analysis on financial statements
+ * NOTE: 
+ *  Please read the README first
+ *  This code requires the installation of FOUR external components.
+ *  	PDFBox
+ *  	SentimentAnalysis
+ *  	Stanford NLP for Sentiment Analysis
+ *  	//SuperCSV// ApacheCommons CSV
+ *   
+ *  
+ *  We envision that this might take about 10-15mins, depending on download speed.
+ *  So open the README, click on the various downloads, grab a cup (of Java, of course)
+ *  and come right back for the ride of your life  
+ *  
+ *  oh. and remember to click REFRESH when you have downloaded and installed everything.
+ *  	
+ *  This here RUNNER Class ties together all the various components of the project
+ *  As implemented here, it's processing and analysis just FOUR PDF documents
+ *  	this is just to give you a taste of what it can do because it's quite CPU & memory intensive
+ *  	
  * 
- * @author Cryrus Cheng, Angela Wen
+ * @author Cryrus Cheng, Angela Wen, Tim Culpan
  *
- *         Credit to Ruthwik at https://github.com/Ruthwik/Sentiment-Analysis
- * 
+ *         Credit to Ruthwik at https://github.com/Ruthwik/Sentiment-Analysis * 
  *         Credit to RadixCode at
  *         https://radixcode.com/pdfbox-example-code-how-to-extract-text-from-pdf-file-with-java
  * 
