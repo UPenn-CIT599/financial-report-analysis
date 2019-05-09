@@ -2,8 +2,9 @@
 A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 
 This project requires three libraries and one external package
--Libraries: PDFBox, Sentiment Analysis, Apache CommonsCSV
--External package: Stanford NLP for Sentiment Analysis
+
+- Libraries: PDFBox, Sentiment Analysis, Apache CommonsCSV
+- External package: Stanford NLP for Sentiment Analysis
 
 ## Setup - Java project FinancialReportAnalysis
 - Open an IDE (Instructions below for Eclipse)
