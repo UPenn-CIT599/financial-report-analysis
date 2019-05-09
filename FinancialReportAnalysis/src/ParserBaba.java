@@ -362,18 +362,23 @@ public class ParserBaba extends DataParser {
 		boolean keepGoing = true;
 
 		String word = null;
+		String line = null;
 		try {
 			Scanner scanner = new Scanner(babaQuarter);
 			while (scanner.hasNext() && keepGoing) {
-				word = scanner.next();
+					line = scanner.nextLine();
+				if (!line.contains("%") || (line.length()>60) ) {
+					word = scanner.next();
 				// use simple concatenation to add each word to the string, with a space in
 				// between.
-				compStatement = compStatement + " " + word;
+					compStatement = compStatement + " " + word;
 				// stop when we come across the word "Webcast"
-				if (word.contentEquals("Highlights") ||word.contentEquals("highlights") ||word.contentEquals("highlights:") || word.contentEquals("HIGHLIGHTS") ) {
+					if (word.contentEquals("Webcast") ||word.contentEquals("WEBCAST") ) {
 					keepGoing = false;
-				}
-			} // end while loop
+					}//ends delimiting if
+				}//ends contains %
+			}
+				// end while loop
 
 			scanner.close();
 		} // end try
