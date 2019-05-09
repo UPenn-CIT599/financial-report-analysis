@@ -1,6 +1,10 @@
 # Hope v. Reality in Financial Reporting
 A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 
+This project requires three libraries and one external package
+-Libraries: PDFBox, Sentiment Analysis, Apache CommonsCSV
+-External package: Stanford NLP for Sentiment Analysis
+
 ## Setup - Java project FinancialReportAnalysis
 - Open an IDE (Instructions below for Eclipse)
 - Select the final-project-financial-reporting-analysis folder as the workspace 
@@ -15,7 +19,7 @@ A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 - Click REFRESH.
 - The library "pdfbox-app-2.0.15.jar" should appear under "Referenced Libraries"
 - If it does not, right click on Java Project "FinancialReportAnalysis" -> Build Path -> Configure Build Path
-- Under "Libraries" tab, click "Add JARs", select "FinancialReportAnalysis/lib" and select "pdfbox-app-2.0.15.jar". 
+- Under "Libraries" tab, click "Add JARs", select "FinancialReportAnalysis/lib" and select "pdfbox-app-2.0.15.jar"
 -Click OK and Apply to Close.
 
 ## Setup - Sentiment Analysis 
@@ -55,7 +59,7 @@ commons-csv-1.6-bin.zip
 	click tab "Libraries"
 	-if commons-csv-1.6.jar is not already there:
 		-Add JARs> and look for it in 			"FinancialReportAnalysis/lib" 
-	-Apply and Close
+-Apply and Close
 - In Eclipse - click REFRESH
  	
 
