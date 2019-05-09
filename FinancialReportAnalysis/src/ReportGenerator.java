@@ -44,9 +44,6 @@ public class ReportGenerator {
 	 * generateCSV prints all financial data and sentiment analysis data to one CSV
 	 * file.
 	 * 
-	 * Currently the file will only work if only running 201409, 201412, 201512, 201612.
-	 * The values are hard-coded in. 
-	 * 
 	 * @throws IOException
 	 */
 

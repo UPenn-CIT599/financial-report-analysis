@@ -1,6 +1,5 @@
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -77,13 +76,13 @@ public class Runner {
 
 			ParserBaba parser = new ParserBaba(file.getPath());
 			WordCounter counter = new WordCounter(file);
-
+			
 			// Construct financial data object with data from parser and word counter's top
 			// 10 words
 			FinancialData financialData = new FinancialData(parser.getCurrRevenue(), parser.getCurrNetIncome(),
 					parser.getCurrAdjustedNetIncome(), parser.getFinancialYear(), parser.getFinQuarter(),
 					parser.getCompanyName(), parser.getCompStatement(), counter.topWordCount(10));
-
+			
 			// Create unique key with company name, year, quarter
 			String hmKey = financialData.getCompanyName() + "_" + financialData.getFinYear() + "_"
 					+ financialData.getFinQuarter();

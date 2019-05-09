@@ -12,10 +12,6 @@ import java.util.*;
 public class WordCounter {
 	File f;
 	HashMap<String, Integer> wordCount = new HashMap<>();
-	WordCounter incoming;
-
-	
-	String currentWord;
 
 	/**
 	 * CONSTRUCTOR
@@ -26,6 +22,7 @@ public class WordCounter {
 
 	public WordCounter(File f) throws IOException {
 		this.f = f;
+		countOfWords();
 	}
 
 	/**
