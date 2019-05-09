@@ -44,7 +44,7 @@ public class ReportGenerator {
 	 * generateCSV prints all financial data and sentiment analysis data to one CSV
 	 * file.
 	 * 
-	 * Currently the file will only work if only running 201409. 
+	 * Currently the file will only work if only running 201409, 201412, 201512, 201612.
 	 * The values are hard-coded in. 
 	 * 
 	 * @throws IOException
@@ -65,10 +65,20 @@ public class ReportGenerator {
 				"Neutral (%)", "Negative (%)", "Very Negative (%)"};
 		dataToPrint.add(header);
 		
-		// Add data for first file
-		String alibaba201409 = finDataHM.get("Alibaba_2014_9").toString() + "," +
-				senResultHM.get("Alibaba_2014_9").toString();
-		dataToPrint.add(alibaba201409.split(","));
+		// Create list of PDFs
+		List<String> allFiles = new ArrayList<String> ();
+		
+		// Iterate through hashmaps
+		for (String key : finDataHM.keySet()) {
+		   String stringName = (key.replaceAll("_", ""));
+		   stringName = finDataHM.get(key).toString() + "," + senResultHM.get(key).toString();
+		   allFiles.add(stringName);
+		}
+		
+		// Iterate through list of PDFs and add data to other list
+		for (String file : allFiles) {
+			dataToPrint.add(file.split(","));
+		}
 		
 		// Print to CSV
 		printer.printRecords(dataToPrint);

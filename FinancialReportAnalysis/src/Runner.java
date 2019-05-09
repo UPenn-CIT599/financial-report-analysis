@@ -78,13 +78,6 @@ public class Runner {
 			ParserBaba parser = new ParserBaba(file.getPath());
 			WordCounter counter = new WordCounter(file);
 
-			// This prints the whole hashmap as it should
-			// System.out.println(counter.countOfWords());
-
-			// This does print an empty hashmap
-			// System.out.println(counter.topWordCount(10));
-
-
 			// Construct financial data object with data from parser and word counter's top
 			// 10 words
 			FinancialData financialData = new FinancialData(parser.getCurrRevenue(), parser.getCurrNetIncome(),
