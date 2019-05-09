@@ -89,5 +89,16 @@ public class SentimentAnalysisResult {
 		return percentVeryNegative;
 	}
 	
+	/**
+	 * The toString method prints the appropriate values with comma separated
+	 * delineators to print to CSV file
+	 */
+	@Override
+	public String toString() {
+		return sentimentScore + "," + sentimentType + "," + percentVeryPositive + ","
+				+ percentPositive + "," + percentNeutral + "," + percentNegative + 
+				"," + percentVeryNegative;
+	}
+	
 	
 }

@@ -61,4 +61,15 @@ public class FinancialData {
 		return wordCount;
 	}
 	
+	/**
+	 * The toString method prints the appropriate values with comma separated
+	 * delineators to print to CSV file 
+	 */
+	@Override
+	public String toString() {
+		double difference = netIncome - adjustedNetIncome;
+		return companyName + "," + finYear + "," + finQuarter + "," + revenue + 
+				"," + netIncome + "," + adjustedNetIncome + "," + difference;
+	}
+	
 }
