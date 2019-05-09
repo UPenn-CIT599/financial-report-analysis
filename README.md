@@ -40,11 +40,20 @@ A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 - Select Java Project SentimentAnalysis
 - Click Apply and Close
 
-## Setup - SuperCSV 
-- Download the super-csv-distribution-2.4.0-bin.zip file here: https://github.com/super-csv/super-csv/releases
-- Save the file "super-csv-2.4.0.jar" under the the Folder "FinancialReportAnalysis\lib\"
-- On the Eclipse IDE, right click on the Java Project "FinancialReportAnalysis"
-- Click REFRESH.
-- The library "super-csv-2.4.0.jar" should appear under "Referenced Libraries"
-- If it does not, right click on Java Project "FinancialReportAnalysis" -> Build Path -> Configure Build Path
-- Under "Libraries" tab, click "Add JARs", select "FinancialReportAnalysis/lib" and select "super-csv-2.4.0.jar". Click OK and Apply to Close.
+## Setup - Apache CommonsCSV 
+- GO TO the Download Apache Commons CSV page, here:
+http://commons.apache.org/proper/commons-csv/download_csv.cgi
+- look for and DOWNLOAD this file (note, it will automatically download from your nearest mirror site): 
+commons-csv-1.6-bin.zip
+- UNZIP that file once it's downloaded (we recommend unzipping to a folder next to where you saved the above libraries)
+- COPY the file commons-csv-1.6.jar, go to Eclipse, and PASTE it within the folder "FinancialReportAnalysis\lib\"
+- Click REFRESH
+- in Eclipse, right-click on the Java Project "FinancialReportAnalysis" go to:
+	Build Path > Configure BuildPath > 
+	click tab "Libraries"
+	if commons-csv-1.6.jar is not already there
+	>Add JARs> and look for it in 			"FinancialReportAnalysis/lib" 
+	>Apply and Close
+- In Eclipse - click REFRESH
+ 	
+
