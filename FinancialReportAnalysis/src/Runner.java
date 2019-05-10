@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * NOTE: Please read the README first This code requires the installation of
- * FOUR external components. PDFBox; SentimentAnalysis; Stanford NLP for
+ * NOTE: Please read the README first. This code requires the installation of
+ * FOUR external components: PDFBox; SentimentAnalysis; Stanford NLP for
  * Sentiment Analysis; ApacheCommons CSV
  * 
  * 
@@ -59,8 +59,8 @@ public class Runner {
 	}
 
 	/**
-	 * convertURLToTxt uses the URLtoTxt class to convert PDF files from URLs
-	 * into txt files within the "txt" folder.
+	 * convertURLToTxt uses the URLtoTxt class to convert PDF files from URLs into
+	 * txt files within the "txt" folder.
 	 * 
 	 * @throws IOException
 	 */
@@ -103,9 +103,12 @@ public class Runner {
 			DataParser parser = new ParserBaba(file.getPath());
 			WordCounter counter = new WordCounter(file);
 
+			// Print status update for user on console
 			System.out.println(
 					"Parsing and running analysis on " + parser.getCompanyName() + "\'s" + " statement from year "
 							+ parser.getFinancialYear() + " in quarter " + parser.getFinQuarter() + "...");
+
+			// For testing
 			System.out.println(parser.getCompStatement());
 
 			// Construct financial data object with data from parser and word counter's top
@@ -123,7 +126,6 @@ public class Runner {
 
 			// Run the sentiment Analysis and add to hashmap
 			SentimentAnalysisResult sentimentAnalysis = new SentimentAnalysisResult(financialData.getCompStatement());
-			sentimentAnalysis.showSentimentScore();
 			senResultHM.put(hmKey, sentimentAnalysis);
 
 			// End of the For Loop
@@ -163,7 +165,7 @@ public class Runner {
 	 * name, quarter, year and the FinancialData object representing the data
 	 * retrieved after parsing the PDF files
 	 * 
-	 * @return
+	 * @return finDataHM hashmap
 	 */
 	public Map<String, FinancialData> getFinDataHM() {
 		return finDataHM;
@@ -174,7 +176,7 @@ public class Runner {
 	 * name, quarter, year and the SentimentAnalysis object representing the data
 	 * retrieved from sentiment analysis
 	 * 
-	 * @return
+	 * @return senResultHM hashmap
 	 */
 	public Map<String, SentimentAnalysisResult> getSenResultHM() {
 		return senResultHM;

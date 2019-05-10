@@ -1,8 +1,8 @@
 import java.util.Map;
 
 /**
- * The FinancialData class represents objects of a PDF file. It includes
- * methods to get and set each of its attributes.
+ * The FinancialData class represents objects of a PDF file. It includes methods
+ * to get and set each of its attributes.
  *
  */
 public class FinancialData {
@@ -16,9 +16,20 @@ public class FinancialData {
 	private String compStatement;
 	private Map<String, Integer> wordCount;
 
-	//Constructor
-	public FinancialData(double revenue, double netIncome, double adjustedNetIncome, int finYear, 
-			int finQuarter, String companyName, String compStatement, Map<String, Integer> wordCount) {
+	/**
+	 * The constructor initializes all instance variables with parameters passed in.
+	 * 
+	 * @param revenue
+	 * @param netIncome
+	 * @param adjustedNetIncome
+	 * @param finYear
+	 * @param finQuarter
+	 * @param companyName
+	 * @param compStatement
+	 * @param wordCount
+	 */
+	public FinancialData(double revenue, double netIncome, double adjustedNetIncome, int finYear, int finQuarter,
+			String companyName, String compStatement, Map<String, Integer> wordCount) {
 		this.revenue = revenue;
 		this.netIncome = netIncome;
 		this.adjustedNetIncome = adjustedNetIncome;
@@ -29,6 +40,7 @@ public class FinancialData {
 		this.wordCount = wordCount;
 	}
 
+	// Accessor methods for all instance variables below
 	public double getRevenue() {
 		return revenue;
 	}
@@ -60,16 +72,16 @@ public class FinancialData {
 	public Map<String, Integer> getWordCount() {
 		return wordCount;
 	}
-	
+
 	/**
 	 * The toString method prints the appropriate values with comma separated
-	 * delineators to print to CSV file 
+	 * delineators to print to CSV file
 	 */
 	@Override
 	public String toString() {
 		double difference = netIncome - adjustedNetIncome;
-		return companyName + "," + finYear + "," + finQuarter + "," + revenue + 
-				"," + netIncome + "," + adjustedNetIncome + "," + difference;
+		return companyName + "," + finYear + "," + finQuarter + "," + revenue + "," + netIncome + ","
+				+ adjustedNetIncome + "," + difference;
 	}
-	
+
 }

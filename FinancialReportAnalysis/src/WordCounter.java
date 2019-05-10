@@ -3,7 +3,7 @@ import java.util.*;
 
 /**
  * a WordCounter class to grab a file, then count how many occurrences of each
- * word
+ * word. It also has a method to create a hashmap of the topN meaningful words.
  * 
  * @author Tim Culpan, Angela Wen, Cryrus Cheng
  * 
@@ -14,7 +14,8 @@ public class WordCounter {
 	HashMap<String, Integer> wordCount = new HashMap<>();
 
 	/**
-	 * CONSTRUCTOR
+	 * The constructor initializes the file to be read and immediately calls the
+	 * countOfWords method to fill the hashmap with all words and counts.
 	 * 
 	 * @param File f
 	 * @throws IOException
@@ -56,7 +57,7 @@ public class WordCounter {
 	/**
 	 * this method return the top N frequent words appeared in the wordCount HashMap
 	 * the method filter out common words like "a", "the", "period", and number or
-	 * symbols see method isCommonWord() for list of filered words
+	 * symbol. See method isCommonWord() for list of filtered words
 	 * 
 	 * @param topN
 	 * @return HashMap<String, Integer> topWordCount for the topN frequent word
@@ -64,7 +65,6 @@ public class WordCounter {
 	public Map<String, Integer> topWordCount(int topN) {
 		Map<String, Integer> topWordCount = new HashMap<String, Integer>();
 		ArrayList<String> topWords = new ArrayList<String>();
-		int minWordCnt = 0;
 
 		for (String candidateWord : wordCount.keySet()) {
 			// only execute if the candidate word is not a common word (a, the, an, etc)
@@ -112,18 +112,12 @@ public class WordCounter {
 	 * @return
 	 */
 	private static boolean isCommonWord(String word) {
-		ArrayList<String> commonWord = new ArrayList<String>(
-				Arrays.asList("null", "a", "an", "the", "those", "that",
-						"september", "december", "march", "june", "million",
-						"thousand", "billion", "dollar", "in", "and", "of",
-						"is", "was", "to", "quarter", "30", "31", "same", "-",
-						"ended", "increase", "decrease", "compared", "income",
-						"from", "net", "on", "revenue", "diluted", "_", "or",
-						"by", "due", "expense", "at", "with", "gmv", "rmb",
-						"were", "eps", "end", "period", "result", "new",
-						"which", "twelve", "respective", "us$", "be", "its",
-						"per"));
-
+		ArrayList<String> commonWord = new ArrayList<String>(Arrays.asList("null", "a", "an", "the", "those", "that",
+				"september", "december", "march", "june", "million", "thousand", "billion", "dollar", "in", "and", "of",
+				"is", "was", "to", "quarter", "30", "31", "same", "-", "ended", "increase", "decrease", "compared",
+				"income", "from", "net", "on", "revenue", "diluted", "_", "or", "by", "due", "expense", "at", "with",
+				"gmv", "rmb", "were", "eps", "end", "period", "result", "new", "which", "twelve", "respective", "us$",
+				"be", "its", "per"));
 
 		// Regex check for number / symbols
 		if (word.matches("\\d*."))
