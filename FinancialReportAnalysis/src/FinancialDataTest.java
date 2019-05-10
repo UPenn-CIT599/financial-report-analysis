@@ -15,7 +15,11 @@ class FinancialDataTest {
 
 	@Test
 	void revenueTest() {
+<<<<<<< HEAD
 		assertEquals(100, data.getRevenue());
+=======
+		assertEquals(100, data.getRevenue();
+>>>>>>> 262a7ae81df3ad47ae5a57a9b3938087b5279908
 	}
 
 	@Test

@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 // a test being run on only one of the financial statements
 class ParserBabaTest {
 
-
 	DataParser parser = new ParserBaba("txt/BABA201412_converted.txt");
 
 	@Test
