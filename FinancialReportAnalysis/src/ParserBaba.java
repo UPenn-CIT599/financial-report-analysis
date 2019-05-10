@@ -215,11 +215,11 @@ public class ParserBaba extends DataParser {
 			// work BACKWARD
 			// pull them as String first, parse to Doubles later
 
+			
 			// String yoyPercent = sentence[(sentence.length) - 1]; // not used
 			// String yoyChange = sentence[(sentence.length) - 2];
 			String currYear = sentence[(sentence.length) - 3];
-			// String prevYear = sentence[(sentence.length) - 4];
-
+			
 			scanner.close();
 			// yoyChangeAdjustedNetIncome = Double.parseDouble(yoyChange);
 			// prevAdjustedNetIncome = Double.parseDouble(prevYear);
@@ -333,8 +333,9 @@ public class ParserBaba extends DataParser {
 				line = scanner.nextLine();
 				if (!line.contains("%") || (line.length() > 60)) {
 					word = scanner.next();
-					// use simple concatenation to add each word to the string, with a space in
-					// between.
+					// use simple concatenation to add each word to the string, 
+					// adding a space in between each word
+					
 					compStatement = compStatement + " " + word;
 					// stop when we come across the word "Webcast"
 					if (word.contentEquals("Webcast") || word.contentEquals("WEBCAST")) {
@@ -344,7 +345,7 @@ public class ParserBaba extends DataParser {
 			}
 			// end while loop
 
-			scanner.close();
+			scanner.close(); //close resource
 		} // end try
 
 		catch (FileNotFoundException e) {
