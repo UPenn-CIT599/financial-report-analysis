@@ -140,7 +140,6 @@ public class WordCounter {
 		commonWord.add("ended");
 		commonWord.add("increase");
 		commonWord.add("decrease");
-		commonWord.add("our");
 		commonWord.add("compared");
 		commonWord.add("income");
 		commonWord.add("from");
@@ -171,7 +170,6 @@ public class WordCounter {
 		commonWord.add("us$");
 		commonWord.add("be");
 		commonWord.add("its");
-		commonWord.add("we");
 		commonWord.add("per");
 
 		// Regex check for number / symbols
