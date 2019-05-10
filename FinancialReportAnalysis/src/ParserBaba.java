@@ -7,7 +7,7 @@ import java.util.*;
  * Similar subclasses could be used for other companies
  * 
  * 
- * @author Tim Culpan, Angela Wen currently testing on BABA201409.pdf
+ * @author Tim Culpan, Angela Wen
  * 
  */
 public class ParserBaba extends DataParser {
@@ -82,7 +82,7 @@ public class ParserBaba extends DataParser {
 					indexOfWordRevenue = x;
 				}
 			}
-			System.out.println();
+
 			int indexOfPrevRevenue = indexOfWordRevenue + 1;
 			int indexOfCurrRevenue = indexOfWordRevenue + 2;
 			int indexOfyoyChangeRevenue = indexOfWordRevenue + 3;
@@ -96,9 +96,6 @@ public class ParserBaba extends DataParser {
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} // end catch
-
-		// TEST>
-		System.out.println("currRevenue is : " + currRevenue + " should be: 16829.0");
 	} // END parseRevenue
 
 	/**
@@ -131,8 +128,6 @@ public class ParserBaba extends DataParser {
 				} // end if
 			} // end while
 			
-			System.out.println("targetLine :" + targetLine);
-
 			targetLine = line.replaceAll(",", "");
 			sentence = targetLine.split(" ");
 			prevNetIncome = Double.parseDouble(sentence[2]);
@@ -145,9 +140,6 @@ public class ParserBaba extends DataParser {
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} // end catch
-
-		// TEST>
-		System.out.println("currNetIncome is: " + currNetIncome + " should be: 3030.0");
 
 	} // END parseNetIncome method
 
@@ -179,25 +171,20 @@ public class ParserBaba extends DataParser {
 			String grabLine2 = "notYetFound";
 			String grabLine3 = "grabLine3";  //not used in current implementation
 			while (scanner.hasNext() && (counter < 2)) {
-				// String word = scanner.next();
 				String line = scanner.nextLine();
-				//String word = scanner.next();
 
 				// this loop only triggers if keyword already found in earlier pass of loop
 				if ((counter==1) && (line.length()>3) ) {
 					grabLine2 = line;
-					System.out.println("grabLine2 in first loop : " + grabLine2);
 					// advance the counter ONCE so that we don't keep reading (ie, stop here)
 					counter++;
 					
 					
 					int x = grabLine2.length();
-					System.out.println("length of grabLine2 :" + x);
 					targetLine = grabLine2;
 												
 					if ((grabLine2.length()>5) || ( grabLine2.length()>3 && (grabLine2.contains("(")) ) ) { // this is a defacto empty test
 						targetLine = grabLine2;
-							System.out.println("grabLine2 in second loop: " + grabLine2);
 					
 					}//end grabLine2 length check
 					
@@ -214,10 +201,6 @@ public class ParserBaba extends DataParser {
 				if (line.startsWith("Non-GAAP Net Income") || line.startsWith("Non-GAAP net income") ) {
 					grabLine1 = line;
 					counter++;
-		//can be deleted after JUnit Tests are done
-					System.out.println("grabLine1: " + grabLine1);
-					System.out.println("grabLine1 length: " + grabLine1.length());
-					System.out.println("grabLine1 in loop: " + grabLine1);
 					
 				} // end if startsWith 
 				
@@ -230,7 +213,6 @@ public class ParserBaba extends DataParser {
 			// turn it into an Array
 			sentence = targetLine.split(" ");
 			
-			System.out.println("targetLine :" + targetLine);
 			// work BACKWARD
 			// pull them as String first, parse to Doubles later
 
@@ -247,9 +229,6 @@ public class ParserBaba extends DataParser {
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} // end catch
-
-		// TEST>>
-		System.out.println("currAdjustedNetIncome is: " + currAdjustedNetIncome + " should be: 6808.0");
 
 	} // END parseAdjustedNetIncome method
 
@@ -270,9 +249,7 @@ public class ParserBaba extends DataParser {
 		int indexOfWordQuarter = 0;
 		int indexOfYear = 0;
 		int indexOfQuarter = 0;
-
 		int quarter = 0;
-		//String companyName;
 
 		try {
 			Scanner scanner = new Scanner(babaQuarter);
@@ -317,27 +294,21 @@ public class ParserBaba extends DataParser {
 			if (sentence[indexOfQuarter].contains("Mar")) {
 				quarter = 03;
 			}
-			if (sentence[indexOfQuarter].contains("Jun")) {
+			else if (sentence[indexOfQuarter].contains("Jun")) {
 				quarter = 06;
 			}
-			if (sentence[indexOfQuarter].contains("Sep")) {
+			else if (sentence[indexOfQuarter].contains("Sep")) {
 				quarter = 9;
 			}
-			if (sentence[indexOfQuarter].contains("Dec")) {
+			else if (sentence[indexOfQuarter].contains("Dec")) {
 				quarter = 12;
 			}
 			// pulls company name
 			companyName = (sentence[indexOfCompanyName]);
-
-			// TEST>
+			
 			finQuarter = quarter;
 			companyName = (sentence[indexOfCompanyName]);
 			financialYear = Integer.parseInt(sentence[indexOfYear]);
-
-			// TEST>>
-			System.out.println("financialYear: " + financialYear + " should be: 2014");
-			System.out.println("finQuarter: " + finQuarter + " should be: 09");
-			System.out.println("companyName: " + companyName + " should be: Alibaba");
 
 		} // end try
 
