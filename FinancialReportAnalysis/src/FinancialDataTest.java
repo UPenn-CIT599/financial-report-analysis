@@ -15,32 +15,32 @@ class FinancialDataTest {
 
 	@Test
 	void revenueTest() {
-		assertEquals(data.getRevenue(), 100);
+		assertEquals(100, data.getRevenue());
 	}
 
 	@Test
 	void netIncomeTest() {
-		assertEquals(data.getNetIncome(), 200);
+		assertEquals(200, data.getNetIncome());
 	}
 
 	@Test
 	void adjustedNetIncomeTest() {
-		assertEquals(data.getAdjustedNetIncome(), 300);
+		assertEquals(300, data.getAdjustedNetIncome());
 	}
 
 	@Test
 	void finYearTest() {
-		assertEquals(data.getFinYear(), 2010);
+		assertEquals(2010, data.getFinYear());
 	}
 
 	@Test
 	void finQuarterTest() {
-		assertEquals(data.getFinQuarter(), 3);
+		assertEquals(3, data.getFinQuarter());
 	}
 
 	@Test
 	void companyNameTest() {
-		assertEquals(data.getCompanyName(), "Google");
+		assertEquals("Google", data.getCompanyName());
 	}
 
 	@Test
