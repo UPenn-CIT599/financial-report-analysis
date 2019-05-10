@@ -1,8 +1,11 @@
 import java.util.*;
 
 /**
- * This class takes a string or .txt file and parses the required data 
+ * This is an ABSTRACT class takes a string or .txt file and parses the required data 
  * for subsequent use in FinancialData and SentimentAnalysis.
+ * 
+ * We chose to do an Abstract class with Subclasses for future flexibility
+ * 	eg, if we add documents from a different company that follows a different format
  * 
  * It includes accessor methods for each instance variable.
  *  
@@ -12,6 +15,7 @@ import java.util.*;
 
 abstract class DataParser {
 	
+	//these are the ones we need for this implementation of the project
 	protected String filePath;
 	protected double currRevenue;
 	protected double currNetIncome;
@@ -22,7 +26,7 @@ abstract class DataParser {
 	protected String companyName;
 	protected String compStatement;
 	
-	//following are created, but we don't have to use them
+	//these are created, but not directly used in this implementation of the project
 	protected double prevRevenue;
 	protected double prevNetIncome;
 	protected double prevAdjustedNetIncome;
