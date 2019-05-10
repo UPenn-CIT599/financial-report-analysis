@@ -49,24 +49,25 @@ public class URLtoTxt {
 		document.close();
 		return pdfContent;
 	}
-	
+
 	/**
-	 * createTxtName removes the .pdf extension of the URL being read and
-	 * returns the .txt name of the file to write to
+	 * createTxtName removes the .pdf extension of the URL being read and returns
+	 * the .txt name of the file to write to
+	 * 
 	 * @return the .txt name of the file to write to
 	 */
 	private String createTxtName() {
 		// Assume input URL ends in .pdf
-		
+
 		// Get substring of PDF file without .pdf
 		String outputFileName = urlToOpen.substring(urlToOpen.indexOf(".") + 1, urlToOpen.lastIndexOf("."));
-		
+
 		// Append _converted.txt
 		outputFileName += "_converted.txt";
-		
+
 		// Remove all slashes from name
-		outputFileName = outputFileName.replaceAll("/","");
-		
+		outputFileName = outputFileName.replaceAll("/", "");
+
 		return outputFileName;
 	}
 
@@ -78,9 +79,12 @@ public class URLtoTxt {
 	public void printToTxt() throws IOException {
 		String text = readPDF();// Retrieves String from PDF Manager
 
+		// create a directory called txt
+		File folder = new File("txt");
+		folder.mkdir();
+
 		// Print to file
-		 File out = new File(createTxtName()); 
-//		File out = new File("alibaba_test.txt");
+		File out = new File(folder, createTxtName());
 
 		PrintWriter pw = new PrintWriter(out);
 		pw.print(text);
@@ -88,12 +92,4 @@ public class URLtoTxt {
 		pw.close();
 	}
 
-	public static void main(String[] args) {
-		URLtoTxt reader = new URLtoTxt("https://www.alibabagroup.com/en/news/press_pdf/p190130.pdf");
-		try {
-			reader.printToTxt();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
 }

@@ -1,11 +1,11 @@
 # Hope v. Reality in Financial Reporting
 A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 
-- Please also read Summary.txt for details of this project before running the code
-- NOTE: If you're running it more than once, remember to Delete the file allData.csv, Move It to another folder, or at least ensure that it's NOT OPEN when the code is run.
+You may view our project design and CRCs at: [project-design.md](https://github.com/UPenn-CIT599/final-project-financial-reporting-analysis/blob/master/project-design.md)
 
-This project requires three libraries and one external package
+You may view our project summary (RTF format) at: [summary.txt](https://github.com/UPenn-CIT599/final-project-financial-reporting-analysis/blob/master/summary.txt)
 
+This project requires **three libraries and one external package**:
 - Libraries: PDFBox, Sentiment Analysis, Apache CommonsCSV
 - External package: Stanford NLP for Sentiment Analysis
 
@@ -51,19 +51,15 @@ This project requires three libraries and one external package
 - Apply and Close
 
 ## Setup - Apache CommonsCSV 
-- GO TO the Download Apache Commons CSV page, here:
+- Go to the Download Apache Commons CSV page, here:
 http://commons.apache.org/proper/commons-csv/download_csv.cgi
-- look for and DOWNLOAD this file (note, it will automatically download from your nearest mirror site): 
-commons-csv-1.6-bin.zip
+- Look for and DOWNLOAD this file (note, it will automatically download from your nearest mirror site): commons-csv-1.6-bin.zip
 - UNZIP that file once it's downloaded (we recommend unzipping to a folder next to where you saved the above libraries)
 - COPY the file commons-csv-1.6.jar, go to Eclipse, and PASTE it within the folder "FinancialReportAnalysis\lib\"
 - Click REFRESH
 - in Eclipse, right-click on the Java Project "FinancialReportAnalysis" go to:
-	- Build Path > Configure BuildPath > 
-	click tab "Libraries"
+	- Build Path > Configure BuildPath > click tab "Libraries"
 	-if commons-csv-1.6.jar is not already there:
-		-Add JARs> and look for it in 			"FinancialReportAnalysis/lib" 
--Apply and Close
+		-Add JARs> and look for it in "FinancialReportAnalysis/lib" 
+- Apply and Close
 - In Eclipse - click REFRESH
- 	
-
