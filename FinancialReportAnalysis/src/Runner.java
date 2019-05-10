@@ -101,7 +101,7 @@ public class Runner {
 
 	/**
 	 * The generateReports method calls the ReportGenerator class to produce a .csv
-	 * and a .txt file summarizing the findings.
+	 * and .txt and .csv files for each PDF summarizing the findings.
 	 * 
 	 * @throws IOException
 	 */
@@ -109,6 +109,7 @@ public class Runner {
 		ReportGenerator generator = new ReportGenerator(finDataHM, senResultHM);
 		generator.generateTxtReports();
 		generator.generateCSV();
+		generator.generateWordCountCSVs();
 	}
 
 	/**
@@ -146,8 +147,9 @@ public class Runner {
 			System.out.println("Parsing and analysis complete!");
 			System.out.println("Please check the /dataset folder for a .csv file");
 			System.out.println("containing financial data and sentiment analysis");
-			System.out.println("data and .txt files for each PDf containing the");
-			System.out.println("comp statement and most common words from each.");
+			System.out.println("data; .txt files for each PDF containing the comp");
+			System.out.println("statement and most common words; and .csv files for");
+			System.out.println("each PDF with the top 10 most common words.");
 			System.out.println("=====================================================");
 		} catch (IOException e) {
 			e.printStackTrace();
