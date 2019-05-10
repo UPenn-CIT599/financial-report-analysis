@@ -140,7 +140,6 @@ public class Runner {
 	 */
 	public void generateReports() throws IOException {
 		ReportGenerator generator = new ReportGenerator(finDataHM, senResultHM);
-		generator.generateTxtReports();
 		generator.generateCSV();
 		generator.generateWordCountCSVs();
 	}

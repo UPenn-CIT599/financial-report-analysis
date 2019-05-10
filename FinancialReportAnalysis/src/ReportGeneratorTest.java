@@ -44,12 +44,8 @@ class ReportGeneratorTest {
 	void test() {
 		try {
 			ReportGenerator newReport = new ReportGenerator(finDataHM, senResultHM);
-			newReport.generateTxtReports();
 			newReport.generateCSV();
 			newReport.generateWordCountCSVs();
-
-			File txtFile = new File("dataset/Alibaba_2014_12.txt");
-			assertTrue(txtFile.exists());
 
 			File csvFile = new File("dataset/Alibaba_2014_12_WordCount.csv");
 			assertTrue(csvFile.exists());

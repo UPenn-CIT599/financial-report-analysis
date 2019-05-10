@@ -11,9 +11,9 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 
 /**
- * The ReportGenerator class generates an overall .csv file, as well as a .txt
- * file and a .csv file for each PDF analyzed describing the two HashMaps of
- * financial data and sentiment analysis it contains.
+ * The ReportGenerator class generates an overall .csv file, as well as a .csv
+ * file for each PDF analyzed describing the two HashMaps of financial data
+ * and sentiment analysis it contains.
  * 
  * @author Angela Wen
  *
@@ -36,50 +36,6 @@ public class ReportGenerator {
 			throws FileNotFoundException {
 		this.finDataHM = finDataHM;
 		this.senResultHM = senResultHM;
-	}
-
-	/**
-	 * generateTxtReports creates one txt file per entry in hashmap containing the
-	 * compStatement from the PDf as well as the most frequent significant words in
-	 * the PDF.
-	 * 
-	 * @throws FileNotFoundException
-	 */
-	public void generateTxtReports() throws FileNotFoundException {
-		for (String key : finDataHM.keySet()) {
-			// create folder dataset
-			File folder = new File("dataset");
-			folder.mkdir();
-
-			// Print comp statement to file
-			File out = new File(folder, key + ".txt");
-
-			PrintWriter pw = new PrintWriter(out);
-
-			pw.println("=========================================================\n"
-					+ "Comp Statement (Sentiment Analysis Run on This Statement)\n"
-					+ "==========================================================\n\n");
-			pw.flush();
-			String text = finDataHM.get(key).getCompStatement();
-			pw.print(text);
-			pw.flush();
-
-			// Print the top word count data from WordCounter here
-			Map<String, Integer> topWords = finDataHM.get(key).getWordCount();
-			pw.println("\n\n===========================================================\n"
-					+ "Below is the count of top words in the entire converted .txt\n"
-					+ "file, excluding common words such as 'the' and 'and':\n\n");
-			pw.flush();
-			pw.printf("%-10s%10s", "Word", "Count\n");
-			pw.flush();
-			for (String word : topWords.keySet()) {
-				pw.printf("%-10s%10d", word, topWords.get(word));
-				pw.flush();
-				pw.println();
-				pw.flush();
-			}
-			pw.close();
-		}
 	}
 
 	/**
