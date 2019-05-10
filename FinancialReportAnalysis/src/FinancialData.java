@@ -7,13 +7,17 @@ import java.util.Map;
  */
 public class FinancialData {
 
+	//we chose Double instead of int to give more freedom to manipulate data later
 	private double revenue;
 	private double netIncome;
 	private double adjustedNetIncome;
+	
 	private int finYear;
 	private int finQuarter;
+	
 	private String companyName;
 	private String compStatement;
+	//this is the perfect case study for when and how to use a HashMap
 	private Map<String, Integer> wordCount;
 
 	/**
