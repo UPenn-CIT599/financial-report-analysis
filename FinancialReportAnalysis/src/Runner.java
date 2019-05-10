@@ -18,9 +18,9 @@ import java.util.Map;
  * everything.
  * 
  * This here RUNNER Class ties together all the various components of the
- * project As implemented here, it's processing and analysis just FOUR PDF
- * documents this is just to give you a taste of what it can do because it's
- * quite CPU & memory intensive
+ * project As implemented here, it's processing and analysing a limited number of
+ * documents. 
+ * This is just to give you a taste of what it can do because it's quite CPU & memory intensive
  * 
  * 
  * @author Cryrus Cheng, Angela Wen, Tim Culpan
