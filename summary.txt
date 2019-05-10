@@ -2,11 +2,9 @@ MCIT 591 Spring 2019 Final Project
 Dreams v Reality in Financial Reporting
 Angela Wen, Cryrus Cheng, Tim Culpan
 
-Synopsis:
-
+Synopsis-
 Every quarter, publicly-listed companies are required to report their financial numbers for the quarter.
 In doing so, they seek to dress up those numbers with ebullient words and hand-selected metrics that present them in the best light possible.They're still required to present data following standardized accounting rules - known as Generally-Accepted Accounting Principles - but seek to divert attention away from standardized figures.
-
 We wanted to find a way to investigate the disparities between the real picture under standardized rules and the prettier picture companies want investors to see.
 
 We chose to look at Alibaba, one of the world's largest e-commerce companies which is listed in the U.S.
@@ -26,36 +24,27 @@ To do this, we needed to:
 So, we turned to various libraries:
 * PDFBox Reader to convert from .pdf to .txt
 * Sentiment Analysis
-* Apache's Commons CSV CSV reader/creating
+* Apache's Commons CSV CSV reader/writer
 We also implemented the Sentiment Analysis package of Stanford's Natural Language Processing (NLP) Group
 
-The Journey:
-
+The Journey-
 The process wasn't easy. But the results were fascinating.
-
-Among the largest challenges was finding the best libraries and working out the best way to implement them. Seemingly simple tasks, like downloading and plugging them into Eclipse, took much trial and error. One library we chose was flagged as having a Trojan virus, so we rushed to find another. And finding the right way to parse data across multiple files when the converted .txt didn¡¦t follow a standard pattern was a journey of despair and lots of coffee.
-
-Processing power and memory usage became key bottlenecks. We didn¡¦t realise how much CPU cycles and DRAM would be required to crunch all this data. It¡¦s for that reason we trimmed the scope to just a few reporting periods and to just the one company (we¡¦d originally planned 16 quarters for three different companies).
-
+Among the largest challenges was finding the best libraries and working out the best way to implement them. Seemingly simple tasks, like downloading and plugging them into Eclipse, took much trial and error. One library we chose was flagged as having a Trojan virus, so we rushed to find another. And finding the right way to parse data across multiple files when the converted .txt didn't follow a standard pattern was a journey of despair and lots of coffee.
+Processing power and memory usage became key bottlenecks. We didnÂ¡Â¦t realise how much CPU cycles and DRAM would be required to crunch all this data. ItÂ¡Â¦s for that reason we trimmed the scope to just a few reporting periods and to just the one company (we'd originally planned 16 quarters for three different companies).
 Angela climbed the twin peaks of PDF Reading and CSV creating while Cryrus swam the English Channel of Sentiment Analysis, meanwhile Tim paddled up the creek of Regex and parsing (turns out, he forgot his paddle). In the end we found a way to create convenient-to-use CSV spreadsheets that present the data in a simple form.
 
-Results: 
+Results-
+Sentiment at Alibaba rose over time, according to the NLP analysis, while the spread between adjusted (prettier) numbers and standardized narrowed. Keywords such as "mobile" gave us hints as to the topics executives want to expound on for investors. 
+By tracking this data, we can make some early conclusions about the future arc of the company (improved financial performance, a more positive tone). There seems to be correlation between the two, but that doesn't mean causality.
 
-Sentiment at Alibaba rose over time, according to the NLP analysis, while the spread between adjusted (prettier) numbers and standardized narrowed. Keywords such as ¡§mobile¡¨ gave us hints as to the topics executives want to expound on for investors. 
-By tracking this data, we can make some early conclusions about the future arc of the company (improved financial performance, a more positive tone). There seems to be correlation between the two, but that doesn¡¦t mean causality.
+What we would do differently-
+We would like to explore different libraries to see how else we could parse, compile and analyse data. What we have works, but perhaps there are better libraries or more-efficient approaches. Finding a way to optimize code and minimize processing resources would improve the overall functionality. And it would be great to find better uses of regex or looping to grab data more cleanly.
 
-What we would do differently:
-
-We¡¦d like to explore different libraries to see how else we could parse, compile and analyse data. What we have works, but perhaps there¡¦s better libraries or more-efficient approaches. Finding a way to optimize code and minimize processing resources would improve the overall functionality. And it would be great to find better uses of regex or looping to grab data more cleanly.
-
-Future expansion:
-
+Future expansion-
 This project ends up being a proof of concept. We could expand into more companies, over more periods, and pulling more financial data. Use of further machine learning and financial analysis libraries may provide better predictive power. As it stands now, though, we feel this package could be deployed in the wild for real-world use.
 
-So Here's What You Get:
-
+So Here's What You Get-
 Input: PDFs from Alibaba, or URLs that contain them
 Output (in the Datasets Folder): 
 	1) a CSV, allData.csv, that has all the financial data and Sentiment Analysis scores
-	2) a CSV file for each PDF run with its most frequently used and meaningful word
-	
+	2) a CSV file for each PDF run with its most frequently used and meaningful words
