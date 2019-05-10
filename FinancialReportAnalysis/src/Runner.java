@@ -6,8 +6,8 @@ import java.util.Map;
 
 /**
  * NOTE: Please read the README first This code requires the installation of
- * FOUR external components. PDFBox SentimentAnalysis Stanford NLP for Sentiment
- * Analysis //SuperCSV// ApacheCommons CSV
+ * FOUR external components. PDFBox; SentimentAnalysis; Stanford NLP for Sentiment
+ * Analysis; ApacheCommons CSV
  * 
  * 
  * We envision that this might take about 10-15mins, depending on download
@@ -77,6 +77,10 @@ public class Runner {
 			ParserBaba parser = new ParserBaba(file.getPath());
 			WordCounter counter = new WordCounter(file);
 			
+			System.out.println("Parsing and running analysis on " + parser.getCompanyName() + "\'s" +
+			" statement from year " + parser.getFinancialYear() + " in quarter " + parser.getFinQuarter() + "...");
+			System.out.println(parser.getCompStatement());
+			
 			// Construct financial data object with data from parser and word counter's top
 			// 10 words
 			FinancialData financialData = new FinancialData(parser.getCurrRevenue(), parser.getCurrNetIncome(),
@@ -111,6 +115,21 @@ public class Runner {
 		generator.generateCSV();
 		generator.generateWordCountCSVs();
 	}
+	
+	/**
+	 * printCompletion prints a message to console to let the user know that
+	 * the parsing and analyses have completed.
+	 */
+	public void printCompletion() {
+		System.out.println("=====================================================");
+		System.out.println("Parsing and analysis complete!");
+		System.out.println("Please check the /dataset folder for a .csv file");
+		System.out.println("containing financial data and sentiment analysis");
+		System.out.println("data; .txt files for each PDF containing the comp");
+		System.out.println("statement and most common words; and .csv files for");
+		System.out.println("each PDF with the top 10 most common words.");
+		System.out.println("=====================================================");
+	}
 
 	/**
 	 * getFinDataHM returns the value of the Map with the String key representing
@@ -135,7 +154,7 @@ public class Runner {
 	}
 
 	/**
-	 * For testing
+	 * This is the main method that will be called when the program is run.
 	 * 
 	 * @param args
 	 */
@@ -143,14 +162,7 @@ public class Runner {
 		try {
 			Runner runner = new Runner();
 			runner.generateReports();
-			System.out.println("=====================================================");
-			System.out.println("Parsing and analysis complete!");
-			System.out.println("Please check the /dataset folder for a .csv file");
-			System.out.println("containing financial data and sentiment analysis");
-			System.out.println("data; .txt files for each PDF containing the comp");
-			System.out.println("statement and most common words; and .csv files for");
-			System.out.println("each PDF with the top 10 most common words.");
-			System.out.println("=====================================================");
+			runner.printCompletion();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
