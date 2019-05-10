@@ -1,6 +1,9 @@
 # Hope v. Reality in Financial Reporting
 A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 
+- Please also read Summary.txt for details of this project before running the code
+- NOTE: If you're running it more than once, remember to Delete the file allData.csv, Move It to another folder, or at least ensure that it's NOT OPEN when the code is run.
+
 This project requires three libraries and one external package
 
 - Libraries: PDFBox, Sentiment Analysis, Apache CommonsCSV
