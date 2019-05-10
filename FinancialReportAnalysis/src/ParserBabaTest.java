@@ -6,37 +6,36 @@ import org.junit.jupiter.api.Test;
 // a test being run on only one of the financial statements
 class ParserBabaTest {
 
-
 	DataParser parser = new ParserBaba("txt/BABA201412_converted.txt");
 
 	@Test
 	void revenueTest() {
-		assertEquals(parser.getCurrRevenue(), 26179.0);
+		assertEquals(26179.0, parser.getCurrRevenue());
 	}
 
 	@Test
 	void netIncomeTest() {
-		assertEquals(parser.getCurrNetIncome(), 5983.0);
+		assertEquals(5983.0, parser.getCurrNetIncome());
 	}
 
 	@Test
 	void adjustedNetIncomeTest() {
-		assertEquals(parser.getCurrAdjustedNetIncome(), 13115.0);
+		assertEquals(13115.0, parser.getCurrAdjustedNetIncome());
 	}
 
 	@Test
 	void financialYearTest() {
-		assertEquals(parser.getFinancialYear(), 2014);
+		assertEquals(2014, parser.getFinancialYear());
 	}
 
 	@Test
 	void financialQuarterTest() {
-		assertEquals(parser.getFinQuarter(), 12);
+		assertEquals(12, parser.getFinQuarter());
 	}
 
 	@Test
 	void companyNameTest() {
-		assertEquals(parser.getCompanyName(), "Alibaba");
+		assertEquals("Alibaba", parser.getCompanyName());
 	}
 
 }
