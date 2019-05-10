@@ -7,7 +7,7 @@ import java.util.*;
  * Similar subclasses could be used for other companies
  * 
  * 
- * @author Tim Culpan, Angela Wen currently testing on BABA201409.pdf
+ * @author Tim Culpan, Angela Wen 
  * 
  */
 public class ParserBaba extends DataParser {
@@ -100,6 +100,7 @@ public class ParserBaba extends DataParser {
 		// TEST>
 		System.out.println("currRevenue is : " + currRevenue + " should be: 16829.0");
 	} // END parseRevenue
+	
 
 	/**
 	 * method goes through file, finds the netIncome line and returns it NOTE:
@@ -135,6 +136,7 @@ public class ParserBaba extends DataParser {
 
 			targetLine = line.replaceAll(",", "");
 			sentence = targetLine.split(" ");
+			//we grab some extra data here that's not used in this implementation
 			prevNetIncome = Double.parseDouble(sentence[2]);
 			currNetIncome = Double.parseDouble(sentence[3]);
 			yoyChangeNetIncomeChange = Double.parseDouble(sentence[4]);
@@ -186,19 +188,14 @@ public class ParserBaba extends DataParser {
 				// this loop only triggers if keyword already found in earlier pass of loop
 				if ((counter==1) && (line.length()>3) ) {
 					grabLine2 = line;
-					System.out.println("grabLine2 in first loop : " + grabLine2);
 					// advance the counter ONCE so that we don't keep reading (ie, stop here)
 					counter++;
-					
-					
-					int x = grabLine2.length();
-					System.out.println("length of grabLine2 :" + x);
+																				
 					targetLine = grabLine2;
 												
 					if ((grabLine2.length()>5) || ( grabLine2.length()>3 && (grabLine2.contains("(")) ) ) { // this is a defacto empty test
 						targetLine = grabLine2;
-							System.out.println("grabLine2 in second loop: " + grabLine2);
-					
+												
 					}//end grabLine2 length check
 					
 					else {
@@ -206,22 +203,17 @@ public class ParserBaba extends DataParser {
 						counter++;
 					}
 					
-					
 				} //end if "Counter == 1" loop
-				
 		
-				// below is loop is our FIRST trigger
+				// below loop is our FIRST trigger
 				if (line.startsWith("Non-GAAP Net Income") || line.startsWith("Non-GAAP net income") ) {
 					grabLine1 = line;
 					counter++;
-		//can be deleted after JUnit Tests are done
-					System.out.println("grabLine1: " + grabLine1);
-					System.out.println("grabLine1 length: " + grabLine1.length());
-					System.out.println("grabLine1 in loop: " + grabLine1);
-					
+		
 				} // end if startsWith 
+
+
 				
-					
 
 			} // end while
 
@@ -230,7 +222,6 @@ public class ParserBaba extends DataParser {
 			// turn it into an Array
 			sentence = targetLine.split(" ");
 			
-			System.out.println("targetLine :" + targetLine);
 			// work BACKWARD
 			// pull them as String first, parse to Doubles later
 
@@ -351,8 +342,8 @@ public class ParserBaba extends DataParser {
 
 	/**
 	 * Method grabs all the information in the initial statement up to and including
-	 * the words "highlights" which is the keyword signaling the end of the prose part
-	 * prior to data tables
+	 * the words "Webcast" which is the keyword signaling the end of the prose part
+	 * prior to data tables. We throw in some neat filters to avoid tables or pure data
 	 * 
 	 */
 	public void parseCompStatement() {
@@ -367,6 +358,7 @@ public class ParserBaba extends DataParser {
 			Scanner scanner = new Scanner(babaQuarter);
 			while (scanner.hasNext() && keepGoing) {
 					line = scanner.nextLine();
+					//to avoid lines that are just numbers (ie tables)
 				if (!line.contains("%") || (line.length()>60) ) {
 					word = scanner.next();
 				// use simple concatenation to add each word to the string, with a space in
