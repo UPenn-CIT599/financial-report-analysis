@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 class SentimentAnalysisResultTest {
 
 	@Test
-	void test() {
+	void sentimentTest() {
 		String text = "Hangzhou, China, November 4, 2014 – Alibaba Group Holding Limited (NYSE: BABA) today announced \n" + 
 				"its financial results for the quarter ended September 30, 2014.  \n" + 
 				"“We delivered a strong quarter with significant growth across our key operating metrics,” said Jonathan Lu, \n" + 
@@ -23,9 +23,9 @@ class SentimentAnalysisResultTest {
 				"shareholder value.”  \n" + 
 				"";
 		
-		SentimentAnalysisResult SentimentAnalyzer = new SentimentAnalysisResult(text);
-		SentimentAnalyzer.showSentimentScore();
+		SentimentAnalysisResult sentimentAnalyzer = new SentimentAnalysisResult(text);
+		sentimentAnalyzer.showSentimentScore();
+		assertTrue(sentimentAnalyzer.toString().contains("1.0,Negative"));
 		
 	}
-
 }

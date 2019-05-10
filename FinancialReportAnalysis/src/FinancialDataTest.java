@@ -52,5 +52,10 @@ class FinancialDataTest {
 	void wordCountTest() {
 		assertNotNull(data.getWordCount());
 	}
+	
+	@Test
+	void toStringTest() {
+		assertTrue(data.toString().contains("Google,2010,3"));
+	}
 
 }
