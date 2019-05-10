@@ -1,0 +1,101 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;\f1\fswiss\fcharset0 Arial-BoldMT;\f2\ftech\fcharset77 Symbol;
+\f3\fswiss\fcharset0 Arial-ItalicMT;\f4\fswiss\fcharset0 Arial-BoldItalicMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+{\info
+{\author tculpan}
+{\*\company Bloomberg LP}}\margl1440\margr1440\vieww12540\viewh16140\viewkind1
+\deftab720
+\pard\pardeftab720\ri0\sl276\slmult1\sa120\partightenfactor0
+
+\f0\fs20 \cf0 MCIT 591 \'96 Spring 2019 Final Project
+\fs22 \uc0\u8232 
+\fs28 Dreams v Reality in Financial Reporting
+\fs22 \uc0\u8232 
+\fs20 Angela Wen, Cryrus Cheng, Tim Culpan
+\fs22 \uc0\u8232 \u8232 \ul Synopsis\ulnone \uc0\u8232 Every quarter, publicly-listed companies are required to report their financial numbers for the quarter.\
+In doing so, they seek to dress up those numbers with ebullient words and hand-selected metrics that present them in the best light possible.They're still required to present data following standardized accounting rules - known as Generally-Accepted Accounting Principles - but seek to divert attention away from standardized figures.\
+We wanted to find a way to investigate the disparities between the real picture under standardized rules and the prettier picture companies want investors to see.\
+We chose to look at 
+\f1\b Alibaba
+\f0\b0 , one of the world's largest e-commerce companies which is listed in the U.S.\
+\pard\pardeftab720\ri0\sl276\slmult1\sa120\partightenfactor0
+
+\f1\b \cf0 Multiple points of analysis were chosen:\
+\pard\pardeftab720\li720\fi-360\ri0\sl276\slmult1\sa120\partightenfactor0
+\ls1\ilvl0
+\f2\b0 \cf0 \'a5	
+\f0 The difference between standardized profit and the company's chosen "adjusted" profit\
+\ls1\ilvl0
+\f2 \'a5	
+\f0 Common words used in press releases that accompany financial statements\
+\ls1\ilvl0
+\f2 \'a5	
+\f0 Overall sentiment and tone of those written sentiments\
+\pard\pardeftab720\ri0\sl276\slmult1\sa120\partightenfactor0
+
+\f3\i \cf0 To do this, we needed to:\
+\pard\pardeftab720\li720\fi-360\ri0\sl276\slmult1\sa120\partightenfactor0
+\ls2\ilvl0
+\f2\i0 \cf0 \'a5	
+\f0 Read a PDF document and convert to it to .txt\
+\ls2\ilvl0
+\f2 \'a5	
+\f0 Run through that .txt to pull relevant financial numbers\
+\ls2\ilvl0
+\f2 \'a5	
+\f0 Collate and rank words by frequency\
+\ls2\ilvl0
+\f2 \'a5	
+\f0 Separate the written statements (prose) from the financial tables\
+\ls2\ilvl0
+\f2 \'a5	
+\f0 Run sentiment analysis on the written statements of the company\
+\ls2\ilvl0
+\f2 \'a5	
+\f0 Output the results to a CSV for easy viewing\
+\pard\pardeftab720\ri0\sl276\slmult1\sa120\partightenfactor0
+
+\f3\i \cf0 So, we turned to various libraries:\
+\pard\pardeftab720\li720\fi-360\ri0\sl276\slmult1\sa120\partightenfactor0
+\ls3\ilvl0
+\f2\i0 \cf0 \'a5	
+\f0 PDFBox Reader to convert from .pdf to .txt\
+\ls3\ilvl0
+\f2 \'a5	
+\f0 Sentiment Analysis\
+\ls3\ilvl0
+\f2 \'a5	
+\f0 Apache's Commons CSV CSV reader/creating\
+\pard\pardeftab720\ri0\sl276\slmult1\sa120\partightenfactor0
+\cf0 We also implemented the 
+\f3\i Sentiment Analysis
+\f0\i0  package of 
+\f4\i\b Stanford's Natural Language Processing (NLP) Group\
+\pard\pardeftab720\ri0\sl276\slmult1\sa120\partightenfactor0
+
+\f1\i0 \cf0 \
+The Journey\
+\pard\pardeftab720\ri0\sl276\slmult1\sa120\partightenfactor0
+
+\f0\b0 \cf0 The process wasn't easy. But the results were fascinating.\
+Among the largest challenges was finding the best libraries and working out the best way to implement them. Seemingly simple tasks, like downloading and plugging them into Eclipse, took much trial and error. One library we chose was flagged as having a Trojan virus, so we rushed to find another. And finding the right way to parse data across multiple files when the converted .txt didn\'92t follow a standard pattern was a journey of despair and lots of coffee.\
+Processing power and memory usage became key bottlenecks. We didn\'92t realise how much CPU cycles and DRAM would be required to crunch all this data. It\'92s for that reason we trimmed the scope to just a few reporting periods and to just the one company (we\'92d originally planned 16 quarters for three different companies).\uc0\u8232 \u8232 Angela climbed the twin peaks of PDF Reading and CSV creating while Cryrus swam the English Channel of Sentiment Analysis, meanwhile Tim paddled up the creek of Regex and parsing (turns out, he forgot his paddle). In the end we found a way to create convenient-to-use CSV spreadsheets that present the data in a simple form.\
+\uc0\u8232 
+\f1\b \ul Results
+\f0\b0 \ulnone  \uc0\u8232 Sentiment at Alibaba rose over time, according to the NLP analysis, while the spread between adjusted (prettier) numbers and standardized narrowed. Keywords such as \'93mobile\'94 gave us hints as to the topics executives want to expound on for investors. \u8232 By tracking this data, we can make some early conclusions about the future arc of the company (improved financial performance, a more positive tone). There seems to be correlation between the two, but that doesn\'92t mean causality.\u8232 \u8232 
+\f1\b What we would do differently
+\f0\b0 \uc0\u8232 We\'92d like to explore different libraries to see how else we could parse, compile and analyse data. What we have works, but perhaps there\'92s better libraries or more-efficient approaches. Finding a way to optimize code and minimize processing resources would improve the overall functionality. And it would be great to find better uses of regex or looping to grab data more cleanly.\u8232 
+\f1\b \uc0\u8232 Future expansion
+\f0\b0 \uc0\u8232 This project ends up being a proof of concept. We could expand into more companies, over more periods, and pulling more financial data. Use of further machine learning and financial analysis libraries may provide better predictive power. As it stands now, though, we feel this package could be deployed in the wild for real-world use.\u8232 \u8232 \ul So Here\'92s What You Get\ulnone \uc0\u8232 Input: 	PDFs from Alibaba, or URLs that contain them\u8232 Output (in the Datasets Folder): \
+\pard\pardeftab720\fi720\ri0\sl276\slmult1\sa120\partightenfactor0
+\cf0 1) a CSV, allData.csv, that has all the financial data and Sentiment Analysis scores\
+\pard\pardeftab720\ri0\sl276\slmult1\sa120\partightenfactor0
+\cf0 	2) a CSV file for each PDF run with its most frequently used and meaningful words \
+	\
+}
