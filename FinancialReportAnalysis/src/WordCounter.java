@@ -112,65 +112,18 @@ public class WordCounter {
 	 * @return
 	 */
 	private static boolean isCommonWord(String word) {
-		ArrayList<String> commonWord = new ArrayList<String>();
-		commonWord.add("a");
-		commonWord.add("an");
-		commonWord.add("the");
-		commonWord.add("those");
-		commonWord.add("that");
-		commonWord.add("september");
-		commonWord.add("december");
-		commonWord.add("march");
-		commonWord.add("june");
-		commonWord.add("million");
-		commonWord.add("thousand");
-		commonWord.add("billion");
-		commonWord.add("dollar");
-		commonWord.add("in");
-		commonWord.add("and");
-		commonWord.add("of");
-		commonWord.add("is");
-		commonWord.add("was");
-		commonWord.add("to");
-		commonWord.add("quarter");
-		commonWord.add("30");
-		commonWord.add("31");
-		commonWord.add("same");
-		commonWord.add("-");
-		commonWord.add("ended");
-		commonWord.add("increase");
-		commonWord.add("decrease");
-		commonWord.add("compared");
-		commonWord.add("income");
-		commonWord.add("from");
-		commonWord.add("net");
-		commonWord.add("on");
-		commonWord.add("revenue");
-		commonWord.add("diluted");
-		commonWord.add("_");
-		commonWord.add("or");
-		commonWord.add("by");
-		commonWord.add("due");
-		commonWord.add("expense");
-		commonWord.add("commerce");
-		commonWord.add("with");
-		commonWord.add("gmv");
-		commonWord.add("rmb");
-		commonWord.add("were");
-		commonWord.add("eps");
-		commonWord.add("ucweb");
-		commonWord.add("end");
-		commonWord.add("period");
-		commonWord.add("result");
-		commonWord.add("new");
-		commonWord.add("which");
-		commonWord.add("twelve");
-		commonWord.add("respective");
-		commonWord.add("such");
-		commonWord.add("us$");
-		commonWord.add("be");
-		commonWord.add("its");
-		commonWord.add("per");
+		ArrayList<String> commonWord = new ArrayList<String>(
+				Arrays.asList("null", "a", "an", "the", "those", "that",
+						"september", "december", "march", "june", "million",
+						"thousand", "billion", "dollar", "in", "and", "of",
+						"is", "was", "to", "quarter", "30", "31", "same", "-",
+						"ended", "increase", "decrease", "compared", "income",
+						"from", "net", "on", "revenue", "diluted", "_", "or",
+						"by", "due", "expense", "at", "with", "gmv", "rmb",
+						"were", "eps", "end", "period", "result", "new",
+						"which", "twelve", "respective", "us$", "be", "its",
+						"per"));
+
 
 		// Regex check for number / symbols
 		if (word.matches("\\d*."))
