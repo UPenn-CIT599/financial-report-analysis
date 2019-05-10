@@ -109,7 +109,7 @@ public class Runner {
 							+ parser.getFinancialYear() + " in quarter " + parser.getFinQuarter() + "...");
 
 			// For testing
-			System.out.println(parser.getCompStatement());
+			//System.out.println(parser.getCompStatement());
 
 			// Construct financial data object with data from parser and word counter's top
 			// 10 words
