@@ -59,7 +59,7 @@ public class WordCounter {
 	 * the method filter out common words like "a", "the", "period", and number or
 	 * symbol. See method isCommonWord() for list of filtered words
 	 * 
-	 * @param topN
+	 * @param topN the limit to how many most-frequent words we wish to return
 	 * @return HashMap<String, Integer> topWordCount for the topN frequent word
 	 */
 	public Map<String, Integer> topWordCount(int topN) {
@@ -107,6 +107,8 @@ public class WordCounter {
 
 	/**
 	 * Checks if a word is a common word e.g. a, the, an, or pure number or symbols
+	 * This is hard-coded. A more resource-intense approach would allow us
+	 * to manually add words which we wish to exclude from our topN word list
 	 * 
 	 * @param word
 	 * @return

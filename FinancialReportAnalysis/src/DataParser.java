@@ -1,6 +1,11 @@
+
+
 /**
  * This class takes a string or .txt file and parses the required data for
  * subsequent use in FinancialData and SentimentAnalysis.
+ * we Chose a SuperClass - SubClass structure to allow us to add more companies later
+ * Those companies would likely require their own method implementations due to 
+ * the fact that their statements follow a different pattern
  * 
  * It includes accessor methods for each instance variable.
  * 

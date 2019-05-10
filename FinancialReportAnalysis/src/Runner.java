@@ -18,9 +18,9 @@ import java.util.Map;
  * everything.
  * 
  * This here RUNNER Class ties together all the various components of the
- * project As implemented here, it's processing and analysis just FOUR PDF
- * documents this is just to give you a taste of what it can do because it's
- * quite CPU & memory intensive
+ * project As implemented here, it's processing and analysing a limited number of
+ * documents. 
+ * This is just to give you a taste of what it can do because it's quite CPU & memory intensive
  * 
  * 
  * @author Cryrus Cheng, Angela Wen, Tim Culpan
@@ -109,7 +109,7 @@ public class Runner {
 							+ parser.getFinancialYear() + " in quarter " + parser.getFinQuarter() + "...");
 
 			// For testing
-			System.out.println(parser.getCompStatement());
+			//System.out.println(parser.getCompStatement());
 
 			// Construct financial data object with data from parser and word counter's top
 			// 10 words
