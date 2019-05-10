@@ -22,6 +22,13 @@ import java.util.Map;
  * documents. 
  * This is just to give you a taste of what it can do because it's quite CPU & memory intensive
  * 
+ * For the sake of time the code currently runs on 2 URLs, Alibaba's 201409 and
+ * Alibaba's 201412 statements. If you want to run the other PDFs from the 
+ * December quarters of following years, you can uncomment out the code
+ * containing the appropriate URLs (lines 52 - 55 in this class). 
+ * 
+ * Please make sure that your txt/ folder is empty prior to running.
+ * 
  * 
  * @author Cryrus Cheng, Angela Wen, Tim Culpan
  *
@@ -44,10 +51,10 @@ public class Runner {
 		// Initialize all URLs of PDF files to read
 		URLs = new String[] { "https://www.alibabagroup.com/en/news/press_pdf/p141104.pdf", // BABA201409
 				"https://www.alibabagroup.com/en/news/press_pdf/p150129.pdf", // BABA201412
-				"https://www.alibabagroup.com/en/news/press_pdf/p160128.pdf", // BABA201512
-				"https://www.alibabagroup.com/en/news/press_pdf/p170124.pdf", // BABA201612
-				"https://www.alibabagroup.com/en/news/press_pdf/p180201.pdf", // BABA201712
-				"https://www.alibabagroup.com/en/news/press_pdf/p190130.pdf" // BABA201812
+				// "https://www.alibabagroup.com/en/news/press_pdf/p160128.pdf", // BABA201512
+				// "https://www.alibabagroup.com/en/news/press_pdf/p170124.pdf", // BABA201612
+				// "https://www.alibabagroup.com/en/news/press_pdf/p180201.pdf", // BABA201712
+				// "https://www.alibabagroup.com/en/news/press_pdf/p190130.pdf" // BABA201812
 		};
 
 		// Loop through all PDFs in URL and export to .txt files

@@ -1,8 +1,8 @@
 # Hope v. Reality in Financial Reporting
 A project by Cryrus Cheng, Tim Culpan, and Angela Wen
 
-NOTE: this project will take 1min 30 sec per PDF to run, depending on your CPU & Memory
-NOTE: If you've already run the code, please close or delete allData.csv before running it again (save to another folder, if you like)
+NOTE: this project will take 1min 30 sec per PDF to run, depending on your CPU & Memory. Currently the project works on statements from Alibaba's September 2014 and December 2014 quarters. If you prefer to run it on more files, you may uncomment lines 52 - 55 in Runner class (but computing time be much longer). 
+NOTE: If you've already run the code, please make sure that the txt/ folder is empty
 
 You may view our project design and CRCs at: [project-design.md](https://github.com/UPenn-CIT599/final-project-financial-reporting-analysis/blob/master/project-design.md)
 
