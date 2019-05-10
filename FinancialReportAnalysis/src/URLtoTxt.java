@@ -77,10 +77,13 @@ public class URLtoTxt {
 	 */
 	public void printToTxt() throws IOException {
 		String text = readPDF();// Retrieves String from PDF Manager
-
+		
+		//create a directory called txt
+		File folder = new File("txt");
+		folder.mkdir();
+				
 		// Print to file
-		 File out = new File(createTxtName()); 
-//		File out = new File("alibaba_test.txt");
+		File out = new File(folder, createTxtName());
 
 		PrintWriter pw = new PrintWriter(out);
 		pw.print(text);

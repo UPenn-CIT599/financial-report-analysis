@@ -6,8 +6,8 @@ import java.util.Map;
 
 /**
  * NOTE: Please read the README first This code requires the installation of
- * FOUR external components. PDFBox; SentimentAnalysis; Stanford NLP for Sentiment
- * Analysis; ApacheCommons CSV
+ * FOUR external components. PDFBox; SentimentAnalysis; Stanford NLP for
+ * Sentiment Analysis; ApacheCommons CSV
  * 
  * 
  * We envision that this might take about 10-15mins, depending on download
@@ -34,14 +34,24 @@ public class Runner {
 
 	private Map<String, FinancialData> finDataHM = new HashMap<String, FinancialData>();
 	private Map<String, SentimentAnalysisResult> senResultHM = new HashMap<String, SentimentAnalysisResult>();
+	private String[] URLs;
 
 	/**
-	 * The Runner constructor loops through all PDFs in a folder and exports them to
-	 * .txt
+	 * The Runner constructor loops through all PDFs from a list of URLs and exports
+	 * them to .txt. Then it fills the instance variable hashmaps.
 	 */
 	public Runner() throws IOException {
-		// Loop through all PDFs in a folder and export to .txt files in folder "txt"
-		PDFtoTxt();
+		// Initialize all URLs of PDF files to read
+		URLs = new String[] { "https://www.alibabagroup.com/en/news/press_pdf/p141104.pdf", // BABA201409
+				"https://www.alibabagroup.com/en/news/press_pdf/p150129.pdf", // BABA201412
+				"https://www.alibabagroup.com/en/news/press_pdf/p160128.pdf", // BABA201512
+				"https://www.alibabagroup.com/en/news/press_pdf/p170124.pdf", // BABA201612
+				"https://www.alibabagroup.com/en/news/press_pdf/p180201.pdf", // BABA201712
+				"https://www.alibabagroup.com/en/news/press_pdf/p190130.pdf" // BABA201812
+		};
+
+		// Loop through all PDFs in URL and export to .txt files
+		convertURLToTxt();
 
 		// Loop through all txt files to fill hashmaps
 		readTxts();
@@ -49,8 +59,24 @@ public class Runner {
 	}
 
 	/**
+	 * convertURLToTxt uses the URLtoTxt class to convert PDF files from URLs
+	 * into txt files within the "txt" folder.
+	 * 
+	 * @throws IOException
+	 */
+	private void convertURLToTxt() throws IOException {
+		for (String URL : URLs) {
+			URLtoTxt converter = new URLtoTxt(URL);
+			converter.printToTxt();
+		}
+	}
+
+	/**
 	 * PDFtoTxt opens all PDFs within the "pdf" folder and creates a txt file with
 	 * PDFBoxReadFromFile.
+	 * 
+	 * Currently this method does not need to be used because of the use of
+	 * convertURLToTxt() which allows to read PDF directly from URL.
 	 * 
 	 * @throws IOException
 	 */
@@ -74,26 +100,27 @@ public class Runner {
 		File txtFolder = new File("txt");
 		for (File file : txtFolder.listFiles(new TxtFileFilter())) {
 
-			ParserBaba parser = new ParserBaba(file.getPath());
+			DataParser parser = new ParserBaba(file.getPath());
 			WordCounter counter = new WordCounter(file);
-			
-			System.out.println("Parsing and running analysis on " + parser.getCompanyName() + "\'s" +
-			" statement from year " + parser.getFinancialYear() + " in quarter " + parser.getFinQuarter() + "...");
+
+			System.out.println(
+					"Parsing and running analysis on " + parser.getCompanyName() + "\'s" + " statement from year "
+							+ parser.getFinancialYear() + " in quarter " + parser.getFinQuarter() + "...");
 			System.out.println(parser.getCompStatement());
-			
+
 			// Construct financial data object with data from parser and word counter's top
 			// 10 words
 			FinancialData financialData = new FinancialData(parser.getCurrRevenue(), parser.getCurrNetIncome(),
 					parser.getCurrAdjustedNetIncome(), parser.getFinancialYear(), parser.getFinQuarter(),
 					parser.getCompanyName(), parser.getCompStatement(), counter.topWordCount(10));
-			
+
 			// Create unique key with company name, year, quarter
 			String hmKey = financialData.getCompanyName() + "_" + financialData.getFinYear() + "_"
 					+ financialData.getFinQuarter();
 
 			// Add appropriate data to financial data hashmap
 			finDataHM.put(hmKey, financialData);
-			
+
 			// Run the sentiment Analysis and add to hashmap
 			SentimentAnalysisResult sentimentAnalysis = new SentimentAnalysisResult(financialData.getCompStatement());
 			sentimentAnalysis.showSentimentScore();
@@ -115,10 +142,10 @@ public class Runner {
 		generator.generateCSV();
 		generator.generateWordCountCSVs();
 	}
-	
+
 	/**
-	 * printCompletion prints a message to console to let the user know that
-	 * the parsing and analyses have completed.
+	 * printCompletion prints a message to console to let the user know that the
+	 * parsing and analyses have completed.
 	 */
 	public void printCompletion() {
 		System.out.println("=====================================================");
