@@ -22,22 +22,9 @@ abstract class DataParser {
 	protected String companyName;
 	protected String compStatement;
 	
-	//following are created, but we don't have to use them
-	protected double prevRevenue;
-	protected double prevNetIncome;
-	protected double prevAdjustedNetIncome;
-		
-	protected double yoyChangeRevenue;
-	protected double yoyChangeNetIncomeChange;
-	protected double yoyChangeAdjustedNetIncome;
-	
 	//constructor -  
 	public DataParser(String companyDataFile) {
 		filePath = companyDataFile;
-	}
-
-	public String getFilePath() {
-		return filePath;
 	}
 
 	public double getCurrRevenue() {
@@ -67,30 +54,5 @@ abstract class DataParser {
 	public String getCompStatement() {
 		return compStatement;
 	}
-
-	public double getPrevRevenue() {
-		return prevRevenue;
-	}
-
-	public double getPrevNetIncome() {
-		return prevNetIncome;
-	}
-
-	public double getPrevAdjustedNetIncome() {
-		return prevAdjustedNetIncome;
-	}
-
-	public double getYoyChangeRevenue() {
-		return yoyChangeRevenue;
-	}
-
-	public double getYoyChangeNetIncomeChange() {
-		return yoyChangeNetIncomeChange;
-	}
-
-	public double getYoyChangeAdjustedNetIncome() {
-		return yoyChangeAdjustedNetIncome;
-	}
-	
 
 }//END DataParser Class

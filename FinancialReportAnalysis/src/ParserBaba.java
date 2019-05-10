@@ -83,13 +83,13 @@ public class ParserBaba extends DataParser {
 				}
 			}
 
-			int indexOfPrevRevenue = indexOfWordRevenue + 1;
+			// int indexOfPrevRevenue = indexOfWordRevenue + 1;
 			int indexOfCurrRevenue = indexOfWordRevenue + 2;
-			int indexOfyoyChangeRevenue = indexOfWordRevenue + 3;
+			// int indexOfyoyChangeRevenue = indexOfWordRevenue + 3;
 
-			prevRevenue = Double.parseDouble(sentence[indexOfPrevRevenue]);
+			// prevRevenue = Double.parseDouble(sentence[indexOfPrevRevenue]);
 			currRevenue = Double.parseDouble(sentence[indexOfCurrRevenue]);
-			yoyChangeRevenue = Double.parseDouble(sentence[indexOfyoyChangeRevenue]);
+			// yoyChangeRevenue = Double.parseDouble(sentence[indexOfyoyChangeRevenue]);
 
 		} // end try
 
@@ -130,9 +130,9 @@ public class ParserBaba extends DataParser {
 			
 			targetLine = line.replaceAll(",", "");
 			sentence = targetLine.split(" ");
-			prevNetIncome = Double.parseDouble(sentence[2]);
+			// prevNetIncome = Double.parseDouble(sentence[2]);
 			currNetIncome = Double.parseDouble(sentence[3]);
-			yoyChangeNetIncomeChange = Double.parseDouble(sentence[4]);
+			// yoyChangeNetIncomeChange = Double.parseDouble(sentence[4]);
 
 			scanner.close();
 		} // end try
@@ -217,13 +217,13 @@ public class ParserBaba extends DataParser {
 			// pull them as String first, parse to Doubles later
 
 			//String yoyPercent = sentence[(sentence.length) - 1]; // not used
-			String yoyChange = sentence[(sentence.length) - 2];
+			// String yoyChange = sentence[(sentence.length) - 2];
 			String currYear = sentence[(sentence.length) - 3];
-			String prevYear = sentence[(sentence.length) - 4];
+			// String prevYear = sentence[(sentence.length) - 4];
 
 			scanner.close();
-			yoyChangeAdjustedNetIncome = Double.parseDouble(yoyChange);
-			prevAdjustedNetIncome = Double.parseDouble(prevYear);
+			// yoyChangeAdjustedNetIncome = Double.parseDouble(yoyChange);
+			// prevAdjustedNetIncome = Double.parseDouble(prevYear);
 			currAdjustedNetIncome = Double.parseDouble(currYear);
 		} // end try
 		catch (FileNotFoundException e) {
