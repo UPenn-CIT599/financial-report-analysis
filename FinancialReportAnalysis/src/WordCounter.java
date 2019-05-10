@@ -37,7 +37,7 @@ public class WordCounter {
 		Scanner inbound = new Scanner(f);
 
 		while (inbound.hasNext()) {
-			String currentWord = inbound.next().toLowerCase(); //only count in lowercase form
+			String currentWord = inbound.next().toLowerCase(); // only count in lowercase form
 
 			if (wordCount.containsKey(currentWord)) {
 				wordCount.put(currentWord, wordCount.get(currentWord) + 1);
@@ -52,11 +52,12 @@ public class WordCounter {
 		return wordCount;
 
 	}// END countOfWords method
-	
-	/** this method return the top N frequent words appeared in the wordCount HashMap
-	 *  the method filter out common words like "a", "the", "period", and number or symbols
-	 *  see method isCommonWord() for list of filered words
-	 *  
+
+	/**
+	 * this method return the top N frequent words appeared in the wordCount HashMap
+	 * the method filter out common words like "a", "the", "period", and number or
+	 * symbols see method isCommonWord() for list of filered words
+	 * 
 	 * @param topN
 	 * @return HashMap<String, Integer> topWordCount for the topN frequent word
 	 */
@@ -64,48 +65,48 @@ public class WordCounter {
 		Map<String, Integer> topWordCount = new HashMap<String, Integer>();
 		ArrayList<String> topWords = new ArrayList<String>();
 		int minWordCnt = 0;
-		
-		for (String candidateWord : wordCount.keySet()) {		
+
+		for (String candidateWord : wordCount.keySet()) {
 			// only execute if the candidate word is not a common word (a, the, an, etc)
-			if (!isCommonWord(candidateWord)){ 
-				//To initialize the topWord ArrayList
+			if (!isCommonWord(candidateWord)) {
+				// To initialize the topWord ArrayList
 				if (topWords.isEmpty()) {
 					topWords.add(candidateWord);
 				} else {
 					boolean replaceCnt = false;
-					
-					for (int x = 0 ; x < topWords.size() && replaceCnt == false ; x++) {
-						if (wordCount.get(candidateWord) 
-								> wordCount.get(topWords.get(x))) {
-							topWords.add(x, candidateWord);	//insert at x, push all other elements to right				
-							replaceCnt = true; //this will immediately exit the loop 
+
+					for (int x = 0; x < topWords.size() && replaceCnt == false; x++) {
+						if (wordCount.get(candidateWord) > wordCount.get(topWords.get(x))) {
+							topWords.add(x, candidateWord); // insert at x, push all other elements to right
+							replaceCnt = true; // this will immediately exit the loop
 						}
 					}
-					
-					//if replaceCnt remain false, that means the candidate word count is lower than
-					//all elements of the topWords so it will be added to the end of ArrayList topWords
-					if (replaceCnt == false) { 
-						topWords.add(candidateWord);				
+
+					// if replaceCnt remain false, that means the candidate word count is lower than
+					// all elements of the topWords so it will be added to the end of ArrayList
+					// topWords
+					if (replaceCnt == false) {
+						topWords.add(candidateWord);
 					}
-					
-					//Trim the ArrayList topWords if exceed TopN
-					if(topWords.size() > topN) {
+
+					// Trim the ArrayList topWords if exceed TopN
+					if (topWords.size() > topN) {
 						topWords.remove(topN);
 					}
-				} //end of if statement
-			}	
-		} //end of for loop
-		
-		//We now have an ArrayList of the topN common words
-		//Just need to put them in the HashMap for output
-		for (int x = 0 ; x < topWords.size() ; x++) {
+				} // end of if statement
+			}
+		} // end of for loop
+
+		// We now have an ArrayList of the topN common words
+		// Just need to put them in the HashMap for output
+		for (int x = 0; x < topWords.size(); x++) {
 			topWordCount.put(topWords.get(x), wordCount.get(topWords.get(x)));
 		}
-	return topWordCount;		
+		return topWordCount;
 	}
-	
-	
-	/** Checks if a word is a common word e.g. a, the, an, or pure number or symbols
+
+	/**
+	 * Checks if a word is a common word e.g. a, the, an, or pure number or symbols
 	 * 
 	 * @param word
 	 * @return
@@ -121,7 +122,7 @@ public class WordCounter {
 		commonWord.add("december");
 		commonWord.add("march");
 		commonWord.add("june");
-		commonWord.add("million");		
+		commonWord.add("million");
 		commonWord.add("thousand");
 		commonWord.add("billion");
 		commonWord.add("dollar");
@@ -173,13 +174,15 @@ public class WordCounter {
 		commonWord.add("we");
 		commonWord.add("per");
 
-		//Regex check for number / symbols 
-		if (word.matches("\\d*.")) return true;
-		if (word.matches(".\\d.*")) return true;
-		if (word.matches("\\W.*")) return true;
+		// Regex check for number / symbols
+		if (word.matches("\\d*."))
+			return true;
+		if (word.matches(".\\d.*"))
+			return true;
+		if (word.matches("\\W.*"))
+			return true;
 
-
-		//check for common words
+		// check for common words
 		for (String str : commonWord) {
 			if (word.contains(str)) {
 				return true;
@@ -187,20 +190,5 @@ public class WordCounter {
 		}
 		return false;
 	}
-	
-	public static void main(String[] args) {
-		File f = new File("dataset/Alibaba_2014_9.txt");
-		WordCounter count;
-		try {
-			count = new WordCounter(f);
-			System.out.println(count.countOfWords());
-			System.out.println("Top 10 words are ");
-			System.out.println(count.topWordCount(10));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-	}
-	
-	
+
 }// END WordCounter Class
